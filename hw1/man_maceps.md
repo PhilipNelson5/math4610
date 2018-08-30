@@ -10,7 +10,9 @@ This is a template file for 'maceps'
 
 **Author:** Philip Nelson
 
-**Language:** C++. The code can be compiled using the GNU C++ compiler (gcc). A make file is included to compile an example program
+**Language:** C++.
+
+The code can be compiled using the GNU C++ compiler (gcc). A make file is included to compile an example program
 
 For example,
 
