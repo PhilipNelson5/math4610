@@ -28,7 +28,7 @@ usually will need to be run one time for each computer.
 
 **Usage/Example:**
 
-'''c++
+{% highlight c++ %}
 int main()
 {
   auto [float_prec, float_eps] = maceps<float>();
@@ -54,26 +54,24 @@ int main()
 
   return EXIT_SUCCESS;
 }
-'''
+{% endhighlight %}
 
 **Output** from the lines above
-'''
-float
-precision:	24
-maceps:		1.19209e-07
-std::numeric:	1.19209e-07
 
-double
-precision:	53
-maceps:		2.22045e-16
-std::numeric:	2.22045e-16
+    float
+    precision:	24
+    maceps:		1.19209e-07
+    std::numeric:	1.19209e-07
 
-long double
-precision:	64
-maceps:		1.0842e-19
-std::numeric:	1.0842e-19
+    double
+    precision:	53
+    maceps:		2.22045e-16
+    std::numeric:	2.22045e-16
 
-'''
+    long double
+    precision:	64
+    maceps:		1.0842e-19
+    std::numeric:	1.0842e-19
 
 The values labeled precision represent the number of binary digits that define the machine epsilon.
 The values labeled maceps are related to the decimal version of the same value.
@@ -81,7 +79,7 @@ The values labeled std::numeric are the result of std::numeric\_limits<type>::ep
 
 **Implementation/Code:** The following is the code for maceps()
 
-'''c++
+{% highlight c++ %}
 template <typename T>
 std::tuple<int, T> maceps()
 {
@@ -97,6 +95,6 @@ std::tuple<int, T> maceps()
 
   return std::make_tuple(prec, e);
 }
-'''
+{% endhighlight %}
 
 **Last Modified:** August 2018
