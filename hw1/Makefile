@@ -10,3 +10,6 @@ release: $(OBJS)
 
 debug: $(OBJS)
 	$(CC) $(DEBUG_FLAGS) $(FLAGS) $(OBJS) -o debug.out
+
+clean:
+	rm *.gch *.out *.o &> /dev/null
