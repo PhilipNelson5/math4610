@@ -1,3 +1,8 @@
+---
+title: Machine Epsilon
+layout: default
+---
+<a href="https://philipnelson5.github.io/math4610/SoftwareManual"> Table of Contents </a>
 # Math 4610 Fundamentals of Computational Mathematics Maceps Software Manual
 This is a template file for 'maceps'
 
