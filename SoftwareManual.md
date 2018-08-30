@@ -12,4 +12,4 @@ title: MATH 4610 Software Manual
 
 | Problem           | Software Manual|
 | :-----------------|:---------------|
-| **Problem 1**     | [Machine Epsilon](./hw1/man_macheps.md)|
+| **Problem 1**     | [Machine Epsilon](./hw1/man_maceps.md)|
