@@ -80,7 +80,7 @@ The values labeled precision represent the number of binary digits that define t
 The values labeled maceps are related to the decimal version of the same value.
 The values labeled std::numeric are the result of std::numeric\_limits<type>::epsilon, for comparison.
 
-**Implementation/Code:** The following is the code for maceps()
+**Implementation/Code:** The following is the code for `maceps`
 
 {% highlight c++ %}
 template <typename T>
