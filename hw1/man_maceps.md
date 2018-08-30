@@ -11,7 +11,7 @@ For example,
 
     make
 
-will produce an executable **./maceps.out** than can be executed.
+will produce an executable **./maceps.out** that can be executed.
 
 **Description/Purpose:** This routine will compute the precision value for the machine epsilon or the number of digits
 in the representation of real numbers for any numeric type. This is a routine for analyzing the behavior of any computer. This
@@ -51,7 +51,7 @@ int main()
 }
 '''
 
-**Output**
+**Output** from the lines above
 '''
 float
 precision:	24
