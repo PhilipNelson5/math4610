@@ -4,9 +4,8 @@ layout: default
 ---
 <a href="https://philipnelson5.github.io/math4610/SoftwareManual"> Table of Contents </a>
 # Maceps Software Manual
-This is a template file for 'maceps'
 
-**Routine Name:** 'maceps'
+**Routine Name:** `maceps`
 
 **Author:** Philip Nelson
 
@@ -16,7 +15,7 @@ The code can be compiled using the GNU C++ compiler (gcc). A make file is includ
 
 For example,
 
-    make
+`make`
 
 will produce an executable **./maceps.out** that can be executed.
 
@@ -60,20 +59,22 @@ int main()
 
 **Output** from the lines above
 
-    float
-    precision:	24
-    maceps:		1.19209e-07
-    std::numeric:	1.19209e-07
+```
+float
+precision:	24
+maceps:		1.19209e-07
+std::numeric:	1.19209e-07
 
-    double
-    precision:	53
-    maceps:		2.22045e-16
-    std::numeric:	2.22045e-16
+double
+precision:	53
+maceps:		2.22045e-16
+std::numeric:	2.22045e-16
 
-    long double
-    precision:	64
-    maceps:		1.0842e-19
-    std::numeric:	1.0842e-19
+long double
+precision:	64
+maceps:		1.0842e-19
+std::numeric:	1.0842e-19
+```
 
 The values labeled precision represent the number of binary digits that define the machine epsilon.
 The values labeled maceps are related to the decimal version of the same value.
