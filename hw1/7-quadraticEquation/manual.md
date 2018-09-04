@@ -1,14 +1,14 @@
 ---
-title: Quadratic Formula
+title: Quadratic Equation
 math: true
 layout: default
 ---
 <a href="https://philipnelson5.github.io/math4610/SoftwareManual"> Table of Contents </a>
-# Quadratic Formula Software Manual
+# Quadratic Equation Software Manual
 This is a template file for building an entry in the student software manual project. You should use the formatting below to
 define an entry in your software manual.
 
-**Routine Name:** `quadraticFourmula`
+**Routine Name:** `quadratic_equation`
 
 **Author:** Philip Nelson
 
@@ -36,7 +36,7 @@ will produce an executable **./quadratic.out** that can be executed.
 
 int main()
 {
-  auto res = quadratic_formula(2.0, 9.0, -5.0);
+  auto res = quadratic_equation(2.0, 9.0, -5.0);
   if (res)
   {
     auto [r1, r2] = res.value();
@@ -47,7 +47,7 @@ int main()
     std::cout << "imaginary roots\n";
   }
 
-  res = quadratic_formula(2.0, 3.0, 5.0);
+  res = quadratic_equation(2.0, 3.0, 5.0);
   if (res)
   {
     auto [r1, r2] = res.value();
@@ -69,7 +69,7 @@ imaginary roots
 
 The first line contains the roots from the equation \\(2x^2 + 9x - 5\\). The second equation \\(2x^2 + 3x + 5\\) has imaginary roots as is reported in the second line.
 
-**Implementation/Code:** The following is the code for `quadratic_formula`
+**Implementation/Code:** The following is the code for `quadratic_equation`
 
 {% highlight c++ %}
 #include <array>
@@ -77,7 +77,7 @@ The first line contains the roots from the equation \\(2x^2 + 9x - 5\\). The sec
 #include <optional>
 
 template <typename T>
-std::optional<std::array<T, 2>> quadratic_formula(T a, T b, T c)
+std::optional<std::array<T, 2>> quadratic_equation(T a, T b, T c)
 {
   const auto descrim = (b * b) - (4.0 * a * c);
   if (descrim > 0)
