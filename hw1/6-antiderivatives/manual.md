@@ -8,5 +8,6 @@ layout: default
 **Author:** Philip Nelson
 
 ![](./6.1.jpg)
+![](./6.2.jpg)
 
 **Last Modified:** September 2018
