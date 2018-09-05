@@ -14,3 +14,4 @@ title: MATH 4610 Software Manual
 | **Problem 4**     | [Hello OpenMP](./hw1/4-openMP/manual.md)|
 | **Problem 7**     | [Quadratic Equation](./hw1/7-quadraticEquation/manual.md)|
 | **Problem 9**     | [Machine Precision in Practice](./hw1/9-macepsApplications/manual.md)|
+| **Problem 10**    | [Graphs](./hw1/10-graphs/manual.md)|
