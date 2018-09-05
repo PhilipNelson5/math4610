@@ -8,9 +8,11 @@ layout: default
 **Author:** Philip Nelson
 
 10 a:
+
 ![10 a.](./1.png)
 
 10 b:
+
 ![10 b.](./2.png)
 
 **Last Modified:** September 2018
