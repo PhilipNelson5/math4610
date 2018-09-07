@@ -31,13 +31,13 @@ The code can be run on a Linux commandline as shown below:
 ```
 
 **Output** from the lines above
-'''
+```
 Number of threads is 4
 Hello World from thread 0
 Hello World from thread 3
 Hello World from thread 1
 Hello World from thread 2
-'''
+```
 
 The first line displays the number of threads of execution available on the system.
 The following lines are messages from each thread ending in their thread id.
