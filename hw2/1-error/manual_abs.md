@@ -49,7 +49,6 @@ int main()
             << std::endl;
 
   std::cout << "Absolute: " << absoluteError(approx, value) << std::endl;
-  std::cout << "Relative: " << relativeError(approx, value) << std::endl;
 }
 {% endhighlight %}
 
