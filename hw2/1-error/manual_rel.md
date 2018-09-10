@@ -1,11 +1,11 @@
 ---
-title: Absolute Error
+title: Relative Error
 math: true
 layout: default
 ---
 {% include mathjax.html %}
 <a href="https://philipnelson5.github.io/math4610/SoftwareManual"> Table of Contents </a>
-# Absolute Error Software Manual
+# Relative Error Software Manual
 
 **Routine Name:** relative_error
 
@@ -21,9 +21,9 @@ make
 
 will produce an executable **./error.out** that can be executed.
 
-**Description/Purpose:** This routine will compute the absolute error of an approximation.
+**Description/Purpose:** This routine will compute the relative error of an approximation.
 
-Relative error \\(= \eta := \frac{\epsilon}{\lvert v \rvert} \\)
+Relative error \\(= \eta := \frac{\epsilon}{\lvert v \rvert}, \epsilon := \Big \lvert v - v_{\text{approx}} \Big \rvert \\)
 
 **Input:** The two inputs are the approximate value and the accurate value
 
@@ -49,7 +49,7 @@ int main()
             << "\nApproximate: " << approx << std::endl
             << std::endl;
 
-  std::cout << "Relative: " << relativeError(approx, value) << std::endl;
+  std::cout << "Relative: " << relative_error(approx, value) << std::endl;
 }
 {% endhighlight %}
 
