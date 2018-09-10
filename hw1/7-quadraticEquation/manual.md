@@ -3,6 +3,7 @@ title: Quadratic Equation
 math: true
 layout: default
 ---
+{% include mathjax.html %}
 <a href="https://philipnelson5.github.io/math4610/SoftwareManual"> Table of Contents </a>
 # Quadratic Equation Software Manual
 This is a template file for building an entry in the student software manual project. You should use the formatting below to

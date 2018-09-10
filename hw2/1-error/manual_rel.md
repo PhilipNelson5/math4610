@@ -3,6 +3,7 @@ title: Absolute Error
 math: true
 layout: default
 ---
+{% include mathjax.html %}
 <a href="https://philipnelson5.github.io/math4610/SoftwareManual"> Table of Contents </a>
 # Absolute Error Software Manual
 
