@@ -21,7 +21,8 @@ title: MATH 4610 Software Manual
 
 # Software Manual
 
-|| **Software Manual** |
-| :--------------------------|:------------------|
-| **maceps**                 | [Machine Epsilon](./hw1/1-maceps/manual.md)|
-| **quadratic_equation**     | [Create Library](./hw1/7-quadraticEquation/manual.md)|
+**Basic Routines**
+* Machine Epsilon - [maceps](./hw1/1-maceps/manual.md)|
+
+**Root Finding**
+* Quadratic Equation - [quadratic_equation](./hw1/7-quadraticEquation/manual.md)|
