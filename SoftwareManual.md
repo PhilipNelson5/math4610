@@ -15,4 +15,7 @@ title: MATH 4610 Software Manual
 * Relative Error - [relative_error](./hw2/1-error/manual_rel.md)
 
 **Root Finding**
-* Quadratic Equation - [quadratic_equation](./hw1/7-quadraticEquation/manual.md)|
+* Quadratic Equation - [quadratic_equation](./hw1/7-quadraticEquation/manual.md)
+
+**Derivative Approximation**
+* Definition of the Derivative - [deriv_approx](./hw2/2-derivativeApproximation/manual.md)
