@@ -47,7 +47,7 @@ value and the second is an integer.
 <++>
 ```
 
-_explanation of output_
+_explanation of output_:
 <++>
 
 **Implementation/Code:** The following is the code for <++>
