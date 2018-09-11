@@ -27,9 +27,9 @@ will produce an executable **./release.out** that can be executed.
 
 ```
 @paramt T The type of x, h, and the function f's param and return
-@param f The T(T) function to approximate
-@param x The point to approximate the function at
-@param h The value of h to use in the approximation
+@param f  The T(T) function to approximate
+@param x  The point to approximate the function at
+@param h  The value of h to use in the approximation
 ```
 
 **Output:** The approximation of the function `f` at `x` using `h` in the equation above.
