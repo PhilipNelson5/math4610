@@ -24,4 +24,5 @@ title: MATH 4610 Software Manual
 | **Problem 1**     | [Absolute Error](./hw2/1-error/manual_abs.md)|
 |                   | [Relative Error](./hw2/1-error/manual_rel.md)|
 | **Problem 2**     | [Derivative Approximation](./hw2/2-derivativeApproximation/manual.md)|
+| **Problem 3**     | [Problem 3](./hw2/3-/manual.md)|
 
