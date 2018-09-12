@@ -5,7 +5,7 @@ math: true
 ---
 {% include mathjax.html %}
 <a href="https://philipnelson5.github.io/math4610/SoftwareManual"> Table of Contents </a>
-# Homework 2 Problem 3
+# Problem 3
 
 **Author:** Philip Nelson
 
@@ -35,8 +35,6 @@ math: true
 ![](./images/newSqrtApprox.png)
 ![](./images/newSqrtError.png)
 
-{% highlight c++ %}
-<++>
-{% endhighlight %}
+**b.**
 
-**Last Modified:** <++>September 2018
+**Last Modified:** September 2018
