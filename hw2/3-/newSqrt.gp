@@ -1,6 +1,6 @@
 set term png
 set output "images/newSqrtApprox.png"
-set title "new approximation of d/dx sqrt(3)"
+set title "new approximation of d/dx sqrt (3)"
 set xlabel "value of h" offset 0,-1
 set ylabel "d/dx sqrt (3)"
 set key outside
