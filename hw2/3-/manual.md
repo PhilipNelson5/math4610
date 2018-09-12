@@ -1,7 +1,9 @@
 ---
 title: HW2 Problem 3
 layout: default
+math: true
 ---
+{% include mathjax.html %}
 <a href="https://philipnelson5.github.io/math4610/SoftwareManual"> Table of Contents </a>
 # Homework 2 Problem 3
 
