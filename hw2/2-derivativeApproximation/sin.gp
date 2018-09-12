@@ -1,6 +1,5 @@
 set term png
 set output "sinApprox.png"
-set logscale x
 set title "approximation of d/dx sin(1)"
 set xlabel "value of h" offset 0,-5
 set ylabel "d/dx sin (1)"
