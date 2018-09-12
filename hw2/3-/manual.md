@@ -11,7 +11,7 @@ math: true
 
 **a.**
 
-\\[\frac{d}{dx}\\]
+\\[\frac{d}{dx} \sqrt{x}\\]
 
 \\[=\frac{\sqrt(x+h)-\sqrt(x)}{h}\\]
 
