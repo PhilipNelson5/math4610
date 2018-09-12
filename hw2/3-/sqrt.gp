@@ -2,7 +2,7 @@ set term png
 set output "images/sqrtApprox.png"
 set title "approximation of d/dx sqrt (3)"
 set xlabel "value of h" offset 0,-1
-set ylabel "d/dx sqrt(3)"
+set ylabel "d/dx sqrt (3)"
 set key outside
 set xtics rotate
 set xtics axis nomirror in
