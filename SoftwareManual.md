@@ -16,6 +16,7 @@ title: MATH 4610 Software Manual
 
 **Root Finding**
 * Quadratic Equation - [quadratic_equation](./hw1/7-quadraticEquation/manual.md)
+* Bisection Method - [root_finder_bisection](./hw2/5-bisection/manual.md)
 
 **Derivative Approximation**
 * Definition of the Derivative - [deriv_approx](./hw2/2-derivativeApproximation/manual.md)
