@@ -1,7 +1,9 @@
 ---
 title: Root Finder Bisection
 layout: default
+math: true
 ---
+{% include mathjax.html %}
 <a href="https://philipnelson5.github.io/math4610/SoftwareManual"> Table of Contents </a>
 # Root Finder Bisection Software Manual
 
