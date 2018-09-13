@@ -38,7 +38,7 @@ will produce an executable **./bisection.out** that can be executed.
 
 **Usage/Example:**
 
-The following is an example using two functions, \\(f(x) = x^2 - 3\\) and \\(g(x) = sin(\pi \cdot x\\).
+The following is an example using two functions, \\(f(x) = x^2 - 3\\) and \\(g(x) = sin(\pi \cdot x)\\).
 
 {% highlight c++ %}
 int main()
@@ -78,7 +78,7 @@ int main()
 _explanation of output_:
 The first line is the root of \\(f(x)\\) on the interval \\((0, 5)\\).
 
-The second line is the root if \\(g(x)\\) on the interval \\(4.5, 5.5)||)
+The second line is the root if \\(g(x)\\) on the interval \\((4.5, 5.5)\\)
 
 **Implementation/Code:** The following is the code for `root_finder_bisection`
 
