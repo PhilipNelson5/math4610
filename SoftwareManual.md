@@ -8,7 +8,7 @@ title: MATH 4610 Software Manual
 # Software Manual
 
 **Basic Routines**
-* Machine Epsilon - [maceps](./hw1/1-maceps/manual.md)|
+* Machine Epsilon - [maceps](./hw1/1-maceps/manual.md)
 
 **Error Routines**
 * Absolute Error - [absolute_error](./hw2/1-error/manual_abs.md)
