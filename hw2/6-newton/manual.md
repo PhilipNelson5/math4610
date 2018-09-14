@@ -38,6 +38,7 @@ will produce an executable **./newton.out** that can be executed.
 
 **Usage/Example:**
 
+The following is an example using two functions, \\(f(x) = x^2 - 3\\) and \\(g(x) = sin(\pi \cdot x)\\).
 {% highlight c++ %}
 int main()
 {
