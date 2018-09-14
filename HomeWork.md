@@ -25,6 +25,6 @@ title: MATH 4610 Software Manual
 |                   | [Relative Error](./hw2/1-error/manual_rel.md)|
 | **Problem 2**     | [Derivative Approximation](./hw2/2-derivativeApproximation/manual.md)|
 | **Problem 3**     | [Problem 3](./hw2/3-/manual.md)|
-| **Problem 5**     | [Problem 5](./hw2/5-bisection/manual.md)|
-| **Problem 6**     | [Problem 6](./hw2/6-newton/manual.md)|
+| **Problem 5**     | [Bisection Method](./hw2/5-bisection/manual.md)|
+| **Problem 6**     | [Newton's Method](./hw2/6-newton/manual.md)|
 
