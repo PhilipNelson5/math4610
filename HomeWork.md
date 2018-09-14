@@ -27,4 +27,5 @@ title: MATH 4610 Software Manual
 | **Problem 3**     | [Problem 3](./hw2/3-/manual.md)|
 | **Problem 5**     | [Bisection Method](./hw2/5-bisection/manual.md)|
 | **Problem 6**     | [Newton's Method](./hw2/6-newton/manual.md)|
+| **Problem 7**     | [Secant Method](./hw2/7-secant/manual.md)|
 
