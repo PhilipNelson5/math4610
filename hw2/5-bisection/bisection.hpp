@@ -7,7 +7,7 @@
 
 /**
  * Implementation of the bisection method for root finding
- * on a function f on the interval (a, b)
+ * on a function f on the interval [a, b]
  *
  * @tparam T  Type of a and b, determines the return type
  * @tparam F  A function of type T(T)
@@ -19,25 +19,38 @@
 template <typename T, typename F>
 std::optional<T> root_finder_bisection(F f, T a, T b, T tol)
 {
-  if (a > b || f(a) * f(b) >= 0 || tol <= 0)
+  if (a > b)
+  {
+    std::swap(a, b);
+  }
+
+  auto fa = f(a);
+  auto fb = f(b);
+
+  if (fa * fb > 0 || tol <= 0)
   {
     return {};
   }
 
-  T p;
+  if (fa == 0) return a;
+  if (fb == 0) return b;
+
+  T p, fp;
   auto n = std::ceil(log2((b - a) / (2 * tol)));
 
-  for (auto i = 0.0; i <= n; ++i)
+  for (auto i = 0; i < n; ++i)
   {
     p = (a + b) / 2;
+    fp = f(p);
 
-    if (f(a) * f(p) < 0) // root on interval [a, p]
+    if (fa * fp < 0) // root on interval [a, p]
     {
       b = p;
     }
     else // root in interval [p, b]
     {
       a = p;
+      fa = fp;
     }
   }
 
