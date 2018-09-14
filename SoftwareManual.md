@@ -20,6 +20,7 @@ title: MATH 4610 Software Manual
 * Newton's Method - [root_finder_newton](./hw2/6-newton/manual.md)
 * Secant Method - [root_finder_secant](./hw2/7-secant/manual.md)
 * Hybrid Newton's Method - [root_finder_hybrid_newton](./hw2/8-hybridNewton/manual.md)
+* Hybrid Secant Method -  [root_finder_secant_method](./hw2/9-hybridSecant/manual.md)
 
 **Derivative Approximation**
 * Definition of the Derivative - [deriv_approx](./hw2/2-derivativeApproximation/manual.md)
