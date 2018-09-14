@@ -1,7 +1,9 @@
 ---
 title: Root Finder Hybrid Newton
 layout: default
+math: true
 ---
+{% include mathjax.html %}
 <a href="https://philipnelson5.github.io/math4610/SoftwareManual"> Table of Contents </a>
 # Root Finder Hybrid Newton's Method Software Manual
 
