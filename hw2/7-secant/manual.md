@@ -1,7 +1,9 @@
 ---
 title: Root Finder Secant
 layout: default
+math: true
 ---
+{% include mathjax.html %}
 <a href="https://philipnelson5.github.io/math4610/SoftwareManual"> Table of Contents </a>
 # Root Finder Secant Method Software Manual
 This is a template file for building an entry in the student software manual project. You should use the formatting below to
