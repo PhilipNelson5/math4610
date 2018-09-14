@@ -12,7 +12,7 @@
  * @return  The approximation of the derivative f at x
  */
 template <typename T, typename F>
-T deriv_approx(F f, T x, T h)
+inline T deriv_approx(F f, T x, T h)
 {
   return (f(x + h) - f(x)) / h;
 }
