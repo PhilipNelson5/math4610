@@ -32,8 +32,8 @@ std::optional<T> root_finder_bisection(F f, T a, T b, T tol)
     return {};
   }
 
-  if (fa == 0) return a;
-  if (fb == 0) return b;
+  if (std::abs(fa) < tol) return a;
+  if (std::abs(fb) < tol) return b;
 
   T p, fp;
   auto n = std::ceil(log2((b - a) / (2 * tol)));

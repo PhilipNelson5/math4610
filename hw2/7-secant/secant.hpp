@@ -17,12 +17,16 @@
 template <typename T, typename F>
 T root_finder_secant(F f, T x0, T x1, T tol, const int MAX_ITER = 100)
 {
+  if (std::abs(f(x0)) < tol) return x0;
+  if (std::abs(f(x1)) < tol) return x1;
+
   T x2, fx1;
+
   for (auto i = 0; i < MAX_ITER; ++i)
   {
     fx1 = f(x1);
     x2 = x1 - fx1 * (x1 - x0) / (fx1 - f(x0));
-    if (std::abs(x1 - x0) < tol * std::abs(x1))
+    if (std::abs(f(x2)) <= tol)
     {
       return x2;
     }

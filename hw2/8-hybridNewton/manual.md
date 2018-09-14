@@ -21,7 +21,7 @@ make
 
 will produce an executable **./hybridNewton.out** that can be executed.
 
-**Description/Purpose:** This routine will find the roof of a function \\(f\\) on the interval from \\([a, b]\\) using a hybrid method composed of Newton's method and the bisection method. Hybrid method which takes advantage of the bisection method to reduce the interval by ~one order of magnitude, then test newton's method for convergent behavior. If Newton's method stays bounded, then the root is found with newton's method. If Newton's method leaves the interval, then bisection is used again to reduce the interval.
+**Description/Purpose:** This routine will find the roof of a function \\(f\\) on the interval from \\([a, b]\\) using a hybrid method composed of Newton's method and the bisection method. Hybrid Newton's method takes advantage of the bisection method to reduce the interval by ~one order of magnitude, then test newton's method for convergent behavior. If Newton's method stays bounded, then the root is found with newton's method. If Newton's method leaves the interval, then bisection is used again to reduce the interval.
 
 **Input:** There are five needed inputs, a function, it's derivative, the lower bound of the interval, the upper bound of the interval, and the tolerance.
 
@@ -98,7 +98,7 @@ T root_finder_hybrid_newton(F f, Fprime fprime, T a, T b, T tol)
   {
     // four iterations of bisection to reduce interval
     // by ~one order of magnitude
-    std::tie(a, b) = bisection_n(f, a, b, fa, 4);
+    std::tie(a, b) = bisection_n(f, a, b, f(a), 4);
 
     // check newton's for convergent behavior
     x0 = root_finder_newton(f, fprime, (a + b) / 2, tol, 1);

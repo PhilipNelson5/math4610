@@ -29,7 +29,7 @@ std::tuple<T, T> bisection_n(F f, T a, T b, T fa, const int n)
 }
 
 /**
- * Hybrid method which takes advantage of the bisection method to reduce the 
+ * Hybrid method which takes advantage of the bisection method to reduce the
  * interval by ~one order of magnitude, then test newton's method for convergent
  * behavior. If Newton's method stays bounded, then the root is found with
  * newton's method. If Newton's method leaves the interval, then bisection is
@@ -67,7 +67,7 @@ T root_finder_hybrid_newton(F f, Fprime fprime, T a, T b, T tol)
   {
     // four iterations of bisection to reduce interval
     // by ~one order of magnitude
-    std::tie(a, b) = bisection_n(f, a, b, fa, 4);
+    std::tie(a, b) = bisection_n(f, a, b, f(a), 4);
 
     // check newton's for convergent behavior
     x0 = root_finder_newton(f, fprime, (a + b) / 2, tol, 1);
