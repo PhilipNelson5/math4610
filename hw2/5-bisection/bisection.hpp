@@ -7,7 +7,7 @@
 
 /**
  * Implementation of the bisection method for root finding
- * on a function f on the interval [a, b]
+ * on a function f on the interval (a, b)
  *
  * @tparam T  Type of a and b, determines the return type
  * @tparam F  A function of type T(T)

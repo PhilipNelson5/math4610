@@ -2,9 +2,11 @@
 #define NEWTON_HPP
 
 #include <cmath>
-#include <iostream>
 
 /**
+ * Implementation of Newton's method for root finding
+ * on a function f with derivative fprime at an initial guess x0
+ *
  * @tparam T       The type of x0 and tolerance
  * @tparam F       A function of type T(T)
  * @tparam Fprime  A function of type T(T)
