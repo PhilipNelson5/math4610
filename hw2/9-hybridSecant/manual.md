@@ -111,4 +111,4 @@ std::optional<T> root_finder_hybrid_secant(F f, T a, T b, T tol)
 }
 {% endhighlight %}
 
-**Last Modified:** <++>September 2018
+**Last Modified:** September 2018
