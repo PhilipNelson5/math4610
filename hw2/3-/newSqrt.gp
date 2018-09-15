@@ -4,7 +4,6 @@ set title "new approximation of d/dx sqrt (3)"
 set xlabel "value of h" offset 0,-1
 set ylabel "d/dx sqrt (3)"
 set key outside
-set xtics rotate
 set xtics axis nomirror in
 set ytics axis nomirror in
 plot "data/newSqrt.dat" using 1:2 title "calculated value" with linespoints lw 3, \
