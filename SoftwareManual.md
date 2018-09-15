@@ -16,6 +16,7 @@ title: MATH 4610 Software Manual
 
 **Root Finding**
 * Quadratic Equation - [quadratic_equation](./hw1/7-quadraticEquation/manual.md)
+* Fixed Point Iteration - [root_finder_fixed_point_iteration](./hw2/4-fixedPointIteratoin/manual.md)
 * Bisection Method - [root_finder_bisection](./hw2/5-bisection/manual.md)
 * Newton's Method - [root_finder_newton](./hw2/6-newton/manual.md)
 * Secant Method - [root_finder_secant](./hw2/7-secant/manual.md)
