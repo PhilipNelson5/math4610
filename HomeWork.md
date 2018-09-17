@@ -25,7 +25,7 @@ title: MATH 4610 Software Manual
 |                   | [Relative Error](./hw2/1-error/manual_rel.md)|
 | **Problem 2**     | [Derivative Approximation](./hw2/2-derivativeApproximation/manual.md)|
 | **Problem 3**     | [Problem 3](./hw2/3-/manual.md)|
-| **Problem 4**     | [Fixed Point Iteration](./hw2/4-fixedPointIteratoin/manual.md)|
+| **Problem 4**     | [Fixed Point Iteration](./hw2/4-fixedPointIteration/manual.md)|
 | **Problem 5**     | [Bisection Method](./hw2/5-bisection/manual.md)|
 | **Problem 6**     | [Newton's Method](./hw2/6-newton/manual.md)|
 | **Problem 7**     | [Secant Method](./hw2/7-secant/manual.md)|
