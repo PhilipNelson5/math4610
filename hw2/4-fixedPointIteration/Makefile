@@ -1,4 +1,4 @@
-OBJS = *.hpp *.cpp
+OBJS = main.cpp
 
 CC = g++
 FLAGS = -std=c++17
@@ -7,7 +7,7 @@ RELEASE_FLAGS = -g0 -O3
 WARNINGS = -Wall -Wextra -Werror
 
 release: $(OBJS)
-	$(CC) $(FLAGS) $(RELEASE_FLAGS) $(WARNINGS) $(OBJS) -o <++>.out
+	$(CC) $(FLAGS) $(RELEASE_FLAGS) $(WARNINGS) $(OBJS) -o fixedIter.out
 
 debug: $(OBJS)
 	$(CC) $(FLAGS) $(DEBUG_FLAGS) $(WARNINGS) $(OBJS) -o debug.out
