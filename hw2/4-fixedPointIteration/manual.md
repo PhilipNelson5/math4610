@@ -30,15 +30,17 @@ will produce an executable **./fixedIter.out** that can be executed.
 @tparam G       A function of type T(T)
 @param x0       The initial guess
 @param tol      The tolerance
-@param MAX_ITER The maximum number of iterations```
+@param MAX_ITER The maximum number of iterations
 ```
 
 **Output:** This routine returns the root of type `T` of the original function \\(f(x)\\).
 
 **Usage/Example:**
 
-Examples of functional iteration using \\f_1(x) = x^2 - 3\\) where \\(g_1(x) = x - \frac{x^2 - 3}{10}\\)
+Examples of functional iteration using \\(f_1(x) = x^2 - 3\\) where \\(g_1(x) = x - \frac{x^2 - 3}{10}\\)
+
 and \\(f_2(x) = \sin(\pi\cdot x)\\) where \\(g_2(x) = x - \frac{\sin(\pi\cdot x)}{2}\\)
+
 {% highlight c++ %}
 int main()
 {
