@@ -21,7 +21,7 @@ make
 
 will produce an executable **./norm.out** that can be executed.
 
-**Description/Purpose:** This is a template function that can be used to calculate the \\(l_n\\) norm of any vector where \\(n \in \mathbb{R}\\) s.t. \\(|| v ||_p = (|x_1|^p + |x_2|^p + \cdots + |x_n|^p)^\frac{1}{p}\\)
+**Description/Purpose:** This is a template function that can be used to calculate the \\(l_n\\) norm of any vector where \\(n \in \mathbb{R}\\) s.t. \\(\|\| v \|\|_p = (\|x_1\|^p + \|x_2\|^p + \cdots + \|x_n\|^p)^\frac{1}{p}\\)
 
 **Input:** The function takes two arguments, a vector and the value of p
 
@@ -60,7 +60,7 @@ The first line is the vector
 
 The second line is the \\(l_1\\) norm of \\(v\\)
 
-The third line is the \\(l_2\\_ norm of  \\(v\\)
+The third line is the \\(l_2\\) norm of  \\(v\\)
 
 **Implementation/Code:** The following is the code for `l_pNorm`
 
