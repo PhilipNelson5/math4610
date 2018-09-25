@@ -41,7 +41,7 @@ will produce an executable **./secant.out** that can be executed.
 **Usage/Example:**
 
 The following is an example using two functions, \\(f(x) = x^2 - 3\\) and \\(g(x) = sin(\pi \cdot x)\\).
-{% highlight c++ %}
+``` c++
 int main()
 {
   auto f = [](double x) { return x * x - 3; };
@@ -53,7 +53,7 @@ int main()
   root = root_finder_secant(g, 3.5, 6.5, 1e-10);
   std::cout << std::setprecision(20) << root << '\n';
 }
-{% endhighlight %}
+```
 
 **Output** from the lines above
 ```
@@ -70,7 +70,7 @@ The second line is the root of \\(g(x)\\) starting with guesses \\(3.5\\) and \\
 
 **Implementation/Code:** The following is the code for root_finder_secant
 
-{% highlight c++ %}
+``` c++
 template <typename T, typename F>
 T root_finder_secant(F f, T x0, T x1, T tol, const int MAX_ITER = 100)
 {
@@ -88,6 +88,6 @@ T root_finder_secant(F f, T x0, T x1, T tol, const int MAX_ITER = 100)
   }
   return x1;
 }
-{% endhighlight %}
+```
 
 **Last Modified:** September 2018

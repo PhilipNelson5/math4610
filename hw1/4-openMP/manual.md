@@ -44,7 +44,7 @@ The following lines are messages from each thread ending in their thread id.
 
 **Implementation/Code:** The following is the code for `helloWorld.cpp`
 
-{% highlight c++ %}
+``` c++
 #include <iostream>
 #include <omp.h>
 
@@ -71,6 +71,6 @@ int main()
 
   return EXIT_SUCCESS;
 }
-{% endhighlight %}
+```
 
 **Last Modified:** September 2018

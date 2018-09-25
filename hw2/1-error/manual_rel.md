@@ -39,7 +39,7 @@ _Note:_ `approx` and `value` must be the same type.
 
 **Usage/Example:**
 
-{% highlight c++ %}
+``` c++
 int main()
 {
   auto value = M_PI;
@@ -51,7 +51,7 @@ int main()
 
   std::cout << "Relative: " << relative_error(approx, value) << std::endl;
 }
-{% endhighlight %}
+```
 
 **Output** from the lines above
 ```
@@ -67,12 +67,12 @@ The relative error is computed and displayed.
 
 **Implementation/Code:** The following is the code for `relative_error`
 
-{% highlight c++ %}
+``` c++
 template <typename T>
 inline T relative_error(const T approx, const T value)
 {
   return std::abs((value - approx) / value);
 }
-{% endhighlight %}
+```
 
 **Last Modified:** September 2018

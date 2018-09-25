@@ -31,7 +31,7 @@ will produce an executable **./quadratic.out** that can be executed.
 
 **Usage/Example:**
 
-{% highlight c++ %}
+``` c++
 #include "quadraticEquation.hpp"
 #include <iostream>
 
@@ -60,7 +60,7 @@ int main()
   }
   return EXIT_SUCCESS;
 }
-{% endhighlight %}
+```
 
 **Output** from the lines above
 ```
@@ -72,7 +72,7 @@ The first line contains the roots from the equation \\(2x^2 + 9x - 5\\). The sec
 
 **Implementation/Code:** The following is the code for `quadratic_equation`
 
-{% highlight c++ %}
+``` c++
 #include <array>
 #include <cmath>
 #include <optional>
@@ -90,6 +90,6 @@ std::optional<std::array<T, 2>> quadratic_equation(T a, T b, T c)
   }
   return {};
 }
-{% endhighlight %}
+```
 
 **Last Modified:** September 2018

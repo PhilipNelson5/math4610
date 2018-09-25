@@ -39,7 +39,7 @@ will produce an executable **./hybridNewton.out** that can be executed.
 
 **Usage/Example:**
 
-{% highlight c++ %}
+``` c++
 int main()
 {
   auto f = [](double x) { return x * x - 3; };
@@ -54,7 +54,7 @@ int main()
   root = root_finder_hybrid_newton(g, gprime, 4.1, 5.9, 1e-100);
   std::cout << std::setprecision(15) << root << std::endl;
 }
-{% endhighlight %}
+```
 
 **Output** from the lines above
 ```
@@ -73,7 +73,7 @@ The second line is the root if \\(g(x)\\) on the interval \\((4.1, 5.9)\\)
 
 _note_: `bisection_n` is the [bisection method](../5-bisection/manual.md) where the last argument determines the number of iterations.
 
-{% highlight c++ %}
+``` c++
 template <typename T, typename F, typename Fprime>
 T root_finder_hybrid_newton(F f, Fprime fprime, T a, T b, T tol)
 {
@@ -107,6 +107,6 @@ T root_finder_hybrid_newton(F f, Fprime fprime, T a, T b, T tol)
 
   return root_finder_newton(f, fprime, x0, tol);
 }
-{% endhighlight %}
+```
 
 **Last Modified:** September 2018

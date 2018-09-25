@@ -36,7 +36,7 @@ will produce an executable **./release.out** that can be executed.
 
 **Usage/Example:**
 
-{% highlight c++ %}
+``` c++
 int main()
 {
   auto x = 1.0;
@@ -46,7 +46,7 @@ int main()
   auto approx = deriv_approx(f, x, h);
   std::cout << approx << std::endl;
 }
-{% endhighlight %}
+```
 
 **Output** from the lines above
 ```
@@ -58,13 +58,13 @@ The routine output the approximation of the derivative of \\(sin(x)\\) at \\(x=1
 
 **Implementation/Code:** The following is the code for deriv_approx
 
-{% highlight c++ %}
+``` c++
 template <typename T, typename F>
 T deriv_approx(F f, T x, T h)
 {
   return (f(x + h) - f(x)) / h;
 }
-{% endhighlight %}
+```
 
 ---
 **Experimentation**

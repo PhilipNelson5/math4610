@@ -32,7 +32,7 @@ usually will need to be run one time for each computer.
 **Usage/Example:**
 The routine is simply called with the template argument and no parameters. Since the routine returns a `std::tuple`, we can use structured bindings to assign the precision and machine epsilon to different variables after the function call.
 
-{% highlight c++ %}
+``` c++
 int main()
 {
   auto [float_prec, float_eps] = maceps<float>();
@@ -58,7 +58,7 @@ int main()
 
   return EXIT_SUCCESS;
 }
-{% endhighlight %}
+```
 
 **Output** from the lines above
 
@@ -85,7 +85,7 @@ The values labeled std::numeric are the result of std::numeric\_limits<type>::ep
 
 **Implementation/Code:** The following is the code for `maceps`
 
-{% highlight c++ %}
+``` c++
 template <typename T>
 std::tuple<int, T> maceps()
 {
@@ -101,6 +101,6 @@ std::tuple<int, T> maceps()
 
   return std::make_tuple(prec, e);
 }
-{% endhighlight %}
+```
 
 **Last Modified:** August 2018

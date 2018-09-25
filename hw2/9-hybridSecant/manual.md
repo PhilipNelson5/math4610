@@ -38,7 +38,7 @@ will produce an executable **./hybridSecant.out** that can be executed.
 
 **Usage/Example:**
 
-{% highlight c++ %}
+``` c++
 int main()
 {
   auto f = [](double x) { return x * x - 3; };
@@ -57,7 +57,7 @@ int main()
   else
     std::cout << "error\n";
 }
-{% endhighlight %}
+```
 
 **Output** from the lines above
 ```
@@ -75,7 +75,7 @@ The second line is the root if \\(g(x)\\) on the interval \\((4.1, 5.9)\\)
 **Implementation/Code:** The following is the code for root_finder_hybrid_secant
 
 _note_: `bisection_n` is the [bisection method](../5-bisection/manual.md) where the last argument determines the number of iterations.
-{% highlight c++ %}
+``` c++
 template <typename T, typename F>
 std::optional<T> root_finder_hybrid_secant(F f, T a, T b, T tol)
 {
@@ -109,6 +109,6 @@ std::optional<T> root_finder_hybrid_secant(F f, T a, T b, T tol)
 
   return root_finder_secant(f, a, b, tol);
 }
-{% endhighlight %}
+```
 
 **Last Modified:** September 2018

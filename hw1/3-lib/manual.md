@@ -25,7 +25,7 @@ will produce an executable that is linked to libmaceps.a **./maceps .out** that 
 
 **Usage/Example:**
 
-{% highlight c++ %}
+``` c++
 #include <iostream>
 #include "maceps.hpp"
 
@@ -37,7 +37,7 @@ int main()
   std::cout << "single\t" << sprec << '\t' << seps << '\n';
   std::cout << "double\t" << dprec << '\t' << deps << '\n';
 }
-{% endhighlight %}
+```
 
 **Output** from the lines above
 ```

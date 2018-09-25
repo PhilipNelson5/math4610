@@ -41,7 +41,7 @@ Examples of functional iteration using \\(f_1(x) = x^2 - 3\\) where \\(g_1(x) = 
 
 and \\(f_2(x) = \sin(\pi\cdot x)\\) where \\(g_2(x) = x - \frac{\sin(\pi\cdot x)}{2}\\)
 
-{% highlight c++ %}
+``` c++
 int main()
 {
   auto g1 = [](double x) { return x - (x * x - 3) / 10; };
@@ -53,7 +53,7 @@ int main()
   auto approx2 = root_finder_fixed_point_iteration(g2, 5.8, 1.0e-5);
   std::cout << approx2 << '\n';
 }
-{% endhighlight %}
+```
 
 **Output** from the lines above
 ```
@@ -70,7 +70,7 @@ The second line is a root of \\(f_2(x)\\)
 
 **Implementation/Code:** The following is the code for root_finder_fixed_point_iteration
 
-{% highlight c++ %}
+``` c++
 template <typename T, typename G>
 T root_finder_fixed_point_iteration(G g, T x0, T tol, const int MAX_ITER = 100)
 {
@@ -84,6 +84,6 @@ T root_finder_fixed_point_iteration(G g, T x0, T tol, const int MAX_ITER = 100)
   }
   return x0;
 }
-{% endhighlight %}
+```
 
 **Last Modified:** September 2018

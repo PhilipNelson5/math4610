@@ -39,7 +39,7 @@ will produce an executable **./newton.out** that can be executed.
 **Usage/Example:**
 
 The following is an example using two functions, \\(f(x) = x^2 - 3\\) and \\(g(x) = sin(\pi \cdot x)\\).
-{% highlight c++ %}
+``` c++
 int main()
 {
   auto f = [](double x) { return x * x - 3; };
@@ -54,7 +54,7 @@ int main()
   root = root_finder_newton(g, gprime, 4.75, 1e-100, 100);
   std::cout << std::setprecision(15) << root << std::endl;
 }
-{% endhighlight %}
+```
 
 **Output** from the lines above
 ```
@@ -70,7 +70,7 @@ The second line is the root if \\(g(x)\\) starting at \\(4.75\\)
 
 **Implementation/Code:** The following is the code for root_finder_newton
 
-{% highlight c++ %}
+``` c++
 template <typename T, typename F, typename Fprime>
 T root_finder_newton(F f, Fprime fprime, T x0, T tol, const int MAX_ITER = 100)
 {
@@ -88,6 +88,6 @@ T root_finder_newton(F f, Fprime fprime, T x0, T tol, const int MAX_ITER = 100)
 
   return x1;
 }
-{% endhighlight %}
+```
 
 **Last Modified:** September 2018

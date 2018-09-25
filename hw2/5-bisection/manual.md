@@ -40,7 +40,7 @@ will produce an executable **./bisection.out** that can be executed.
 
 The following is an example using two functions, \\(f(x) = x^2 - 3\\) and \\(g(x) = sin(\pi \cdot x)\\).
 
-{% highlight c++ %}
+``` c++
 int main()
 {
   auto f = [](double x) { return x * x - 3; };
@@ -66,7 +66,7 @@ int main()
     std::cout << "no roots on specified interval\n";
   }
 }
-{% endhighlight %}
+```
 
 **Output** from the lines above
 ```
@@ -82,7 +82,7 @@ The second line is the root if \\(g(x)\\) on the interval \\((4.5, 5.5)\\)
 
 **Implementation/Code:** The following is the code for `root_finder_bisection`
 
-{% highlight c++ %}
+``` c++
 template <typename T, typename F>
 std::optional<T> root_finder_bisection(F f, T a, T b, T tol)
 {
@@ -123,6 +123,6 @@ std::optional<T> root_finder_bisection(F f, T a, T b, T tol)
 
   return (a + b) / 2;
 }
-{% endhighlight %}
+```
 
 **Last Modified:** September 2018
