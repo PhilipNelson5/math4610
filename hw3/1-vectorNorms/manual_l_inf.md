@@ -23,11 +23,11 @@ make
 
 will produce an executable **./norms.out** that can be executed.
 
-**Description/Purpose:** This is a template function that can be used to calculate the \\(l_\infty\\) norm of any a vector of any type s.t. \\(|| v ||_\infty = max \{|x_1|, |x_2|, \cdots , |x_n|\}\\)
+**Description/Purpose:** This is a template function that can be used to calculate the \\(l_\infty\\) norm of any a vector of any type s.t. \\(\|\| v \|\|_\infty = max \{\|x_1\|, \|x_2\|, \cdots , \|x_n\|\}\\)
 
 **Input:** The function takes on argument, the vector
 
-**Output:** The l_inf norm of v
+**Output:** The \\(l_\infty\\) norm of \\(v\\)
 
 **Usage/Example:**
 
