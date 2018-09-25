@@ -35,5 +35,5 @@ title: MATH 4610 Software Manual
 
 || **Homework** 3 <br> _due: Sometime_ <br>|
 | :-----------------|:---------------------------|
-| **Problem 1**     | [l_p Norms](./hw3/1-vectorNorms/manual_l_pNorms.md)|
-|                   | [l Infinity Norm](./hw3/1-vectorNorms/manual_l_inf.md)|
+| **Problem 1**     | [l_p Vector Norms](./hw3/1-vectorNorms/manual_l_pNorms.md)|
+|                   | [l Infinity Vector Norm](./hw3/1-vectorNorms/manual_l_inf.md)|

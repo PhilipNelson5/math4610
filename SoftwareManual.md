@@ -25,3 +25,7 @@ title: MATH 4610 Software Manual
 
 **Derivative Approximation**
 * Definition of the Derivative - [deriv_approx](./hw2/2-derivativeApproximation/manual.md)
+
+**l Norms**
+* l_p Vector Norms - [l_pNorm](./hw3/1-vectorNorms/manual_l_pNorms.md)
+* l Infinity Vector Norm - [l_inf](./hw3/1-vectorNorms/manual_l_inf.md)
