@@ -32,3 +32,8 @@ title: MATH 4610 Software Manual
 | **Problem 8**     | [Hybrid Newton's Method](./hw2/8-hybridNewton/manual.md)|
 | **Problem 9**     | [Hybrid secant Method](./hw2/9-hybridSecant/manual.md)|
 | **Problem 10**     | [Online Search for Bracketing of Roots](./hw2/10-bracketingRootsResearch/manual.md)|
+
+|| **Homework** 3 <br> _due: Sometime_ <br>|
+| :-----------------|:---------------------------|
+| **Problem 1**     | [l_p Norms](./hw3/1-vectorNorms/manual_l_pNorms.md)|
+|                   | [l Infinity Norm](./hw3/1-vectorNorms/manual_l_inf.md)|

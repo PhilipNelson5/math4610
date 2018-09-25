@@ -7,8 +7,16 @@
 #include <vector>
 
 /* clang-format off */
-template <typename T>
-inline T l_pNorm(std::vector<T> const& a, unsigned int const& p)
+/**
+ * Determine the l_pNorm of a vector
+ *
+ * @tparam T The type of the elements in `a`
+ * @tparam P The type of `p`
+ * @param a  The vector
+ * @param p  The `p` of the l_pNorm
+ */
+template <typename T, typename P>
+inline T l_pNorm(std::vector<T> const& a, P const p)
 {
   return std::pow(
       std::accumulate(
@@ -18,6 +26,13 @@ inline T l_pNorm(std::vector<T> const& a, unsigned int const& p)
       1.0/p);
 }
 
+/**
+ * Determine the l_pNorm of a vector
+ *
+ * @tparam T The type of the elements in `a`
+ * @param a  The vector
+ * @param p  The `p` of the l_pNorm
+ */
 template <typename T>
 inline T l_inf(std::vector<T> const& a)
 {
