@@ -79,4 +79,5 @@ std::ostream& operator<<(std::ostream& o, std::vector<T> const& a)
 
   return o;
 }
+
 #endif
