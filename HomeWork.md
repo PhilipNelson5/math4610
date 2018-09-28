@@ -38,4 +38,5 @@ title: MATH 4610 Software Manual
 | **Problem 1**     | [l_p Vector Norms](./hw3/1-vectorNorms/manual_l_pNorms.md)|
 |                   | [l Infinity Vector Norm](./hw3/1-vectorNorms/manual_l_inf.md)|
 | **Problem 3**     | [Vector Addition and Subtraction](./hw3/3-vectorOperations/manual_vector_addition_subtraction.md)|
+|                   | [Vector Scalar Multiplication](./hw3/3-vectorOperations/manual_vector_scalar_multiplication.md)|
 |                   | [](./hw3/3-vectorOperations/manual_.md)|

@@ -32,3 +32,4 @@ title: MATH 4610 Software Manual
 
 **Vector Operations**
 * Vector Addition and Subtraction - [Addition / Subtraction](./hw3/3-vectorOperations/manual_vector_addition_subtraction.md)|
+* Vector Scalar Multiplication - [Vector Scalar Multiplication](./hw3/3-vectorOperations/manual_vector_scalar_multiplication.md)
