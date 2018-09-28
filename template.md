@@ -31,9 +31,9 @@ will produce an executable **./<++>.out** that can be executed.
 
 **Usage/Example:**
 
-{% highlight c++ %}
+``` cpp
 <++>
-{% endhighlight %}
+```
 
 **Output** from the lines above
 ```
@@ -45,8 +45,8 @@ _explanation of output_:
 
 **Implementation/Code:** The following is the code for <++>
 
-{% highlight c++ %}
+``` cpp
 <++>
-{% endhighlight %}
+```
 
 **Last Modified:** <++>September 2018
