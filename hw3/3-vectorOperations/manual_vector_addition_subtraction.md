@@ -25,6 +25,14 @@ will produce an executable **./vectorOps.out** that can be executed.
 
 **Input:** The operator requires two operands, `a` and `b`, where `a, b` are `std::vector<T>`
 
+```
+@tparam T Type of the elements in the first vector
+@tparam U Type of the elements in the second vector
+@tparam R Type of the elements in the result vector
+@param a  The first vector
+@param b  The second vector
+```
+
 **Output:** The result of vector addition with the two vector operands.
 
 **Usage/Example:**
