@@ -19,7 +19,7 @@ title: MATH 4610 Software Manual
 | **Problem 9**     | [Machine Precision in Practice](./hw1/9-macepsApplications/manual.md)|
 | **Problem 10**    | [Graphs](./hw1/10-graphs/manual.md)|
 
-|| **Homework** 2 <br> _due: 17 September 2018_ <br>|
+|| **Homework** 2 <br> _due: 29 September 2018_ <br>|
 | :-----------------|:---------------------------|
 | **Problem 1**     | [Absolute Error](./hw2/1-error/manual_abs.md)|
 |                   | [Relative Error](./hw2/1-error/manual_rel.md)|
@@ -31,12 +31,15 @@ title: MATH 4610 Software Manual
 | **Problem 7**     | [Secant Method](./hw2/7-secant/manual.md)|
 | **Problem 8**     | [Hybrid Newton's Method](./hw2/8-hybridNewton/manual.md)|
 | **Problem 9**     | [Hybrid secant Method](./hw2/9-hybridSecant/manual.md)|
-| **Problem 10**     | [Online Search for Bracketing of Roots](./hw2/10-bracketingRootsResearch/manual.md)|
+| **Problem 10**    | [Online Search for Bracketing of Roots](./hw2/10-bracketingRootsResearch/manual.md)|
 
 || **Homework** 3 <br> _due: Sometime_ <br>|
 | :-----------------|:---------------------------|
 | **Problem 1**     | [l_p Vector Norms](./hw3/1-vectorNorms/manual_l_pNorms.md)|
 |                   | [l Infinity Vector Norm](./hw3/1-vectorNorms/manual_l_inf.md)|
-| **Problem 3**     | [Vector Addition and Subtraction](./hw3/3-vectorOperations/manual_vector_addition_subtraction.md)|
-|                   | [Vector Scalar Multiplication](./hw3/3-vectorOperations/manual_vector_scalar_multiplication.md)|
+| **Problem 3**     | [a. b. Vector Addition and Subtraction](./hw3/3-vectorOperations/manual_vector_addition_subtraction.md)|
+|                   | [c. Vector Scalar Multiplication](./hw3/3-vectorOperations/manual_vector_scalar_multiplication.md)|
+|                   | [d. Inner Product](./hw3/3-vectorOperations/manual_vector_inner_product.md)|
+|                   | [e. Cross Product](./hw3/3-vectorOperations/manual_vector_cross_product.md)|
+| **Problem 4**     | [](./hw3/3-vectorOperations/manual_.md)|
 |                   | [](./hw3/3-vectorOperations/manual_.md)|
