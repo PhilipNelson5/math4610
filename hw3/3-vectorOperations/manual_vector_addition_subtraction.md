@@ -1,0 +1,87 @@
+---
+title: Vector Addition and Subtraction
+layout: default
+math: true
+---
+{% include mathjax.html %}
+<a href="https://philipnelson5.github.io/math4610/SoftwareManual"> Table of Contents </a>
+# Vector Addition Software Manual
+
+**Routine Name:** Vector Addition and Subtraction
+
+**Author:** Philip Nelson
+
+**Language:** C++. The code can be compiled using the GNU C++ compiler (gcc). A make file is included to compile an example program
+
+For example,
+
+```
+make
+```
+
+will produce an executable **./vectorOps.out** that can be executed.
+
+**Description/Purpose:** This routine overloads the `+` operator in c++ allowing two vectors to be added together with the following syntax, `a + b`.
+
+**Input:** The operator requires two operands, `a` and `b`, where `a, b` are `std::vector<T>`
+
+**Output:** The result of vector addition with the two vector operands.
+
+**Usage/Example:**
+
+``` cpp
+int main()
+{
+  std::vector<double> a = {-1.1, 2.3, 3.5};
+  std::vector<double> b = {4.2, 5.4, 6.6};
+  std::cout << "a\t" << a << '\n';
+  std::cout << "b\t" << b << '\n';
+  std::cout << "a + b\t" << a + b << '\n';
+  std::cout << "a - b\t" << a - b << '\n';
+}
+```
+
+**Output** from the lines above
+```
+a      [        1.1       2.3       3.5 ]
+
+b      [        4.2       5.4       6.6 ]
+
+a + b  [        5.3       7.7      10.1 ]
+
+a - b  [       -3.1      -3.1      -3.1 ]
+```
+
+_explanation of output_:
+
+The first two lines display two vectors `a` and `b`.
+
+The third line is the result of `a+b` and the fourth line is the result of `a-b`.
+
+**Implementation/Code:** The following is the code for vector addition and subtraction
+
+For code re-usability, the implementation takes advantage of the c++ preprocessor to generate the actual addition and subtraction code. The difference between adding and subtracting vectors is simply the difference between using the plus operator or the minus operator. Hence, `vector_add_subtract` defines the generic form of the operation with the operator replaced with a variable. This way `vector_add_subtract(+) vector_add_subtract(-)` can fill in the operator and the preprocessor will generate the code, no branching structure or duplicate code required.
+
+``` cpp
+#define vector_add_subtract(op)                                                \
+  template <typename T, typename U, typename R = decltype(T() op U())>         \
+  std::vector<R> operator op(std::vector<T> const& a, std::vector<U> const& b) \
+  {                                                                            \
+    if (a.size() != b.size())                                                  \
+    {                                                                          \
+      std::cerr << "ERROR: bad size in vector addition\n";                     \
+      exit(EXIT_FAILURE);                                                      \
+    }                                                                          \
+                                                                               \
+    std::vector<R> result(a.size());                                           \
+    for (auto i = 0u; i < a.size(); ++i)                                       \
+    {                                                                          \
+      result[i] = a[i] op b[i];                                                \
+    }                                                                          \
+    return result;                                                             \
+  }
+
+vector_add_subtract(+) vector_add_subtract(-)
+```
+
+**Last Modified:** September 2018
