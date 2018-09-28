@@ -6,8 +6,6 @@ math: true
 {% include mathjax.html %}
 <a href="https://philipnelson5.github.io/math4610/SoftwareManual"> Table of Contents </a>
 # <++> Software Manual
-This is a template file for building an entry in the student software manual project. You should use the formatting below to
-define an entry in your software manual.
 
 **Routine Name:** <++>
 
