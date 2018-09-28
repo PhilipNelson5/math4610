@@ -21,7 +21,7 @@ make
 
 will produce an executable **./vectorOps.out** that can be executed.
 
-**Description/Purpose:** This routine overloads the `*` operator in c++ allowing multiplication a scalar and a vector
+**Description/Purpose:** This routine overloads the `*` operator in c++ allowing multiplication of a scalar and a vector
 
 **Input:** The operator requires two operands, `s` and `a`, where `a` is a `std::vector<T>` and `s` is a scalar value
 
