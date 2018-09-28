@@ -26,7 +26,7 @@ will produce an executable **./release.out** that can be executed.
 **Input:** There are three inputs, a function, the location to approximate the derivative, and the h to use in the approximation.
 
 ```
-@paramt T The type of x, h, and the function f's param and return
+@tparam T The type of x, h, and the function f's param and return
 @param f  The T(T) function to approximate
 @param x  The point to approximate the function at
 @param h  The value of h to use in the approximation
