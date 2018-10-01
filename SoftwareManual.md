@@ -35,3 +35,11 @@ title: MATH 4610 Software Manual
 * Vector Scalar Multiplication - [Vector Scalar Multiplication](./hw3/3-vectorOperations/manual_vector_scalar_multiplication.md)
 * Inner Product [inner_product](./hw3/3-vectorOperations/manual_vector_inner_product.md)
 * Cross Product [cross_product](./hw3/3-vectorOperations/manual_vector_cross_product.md)
+
+**Matrix Operations**
+* Matrix Addition and Subtraction -  [Addition / Subtraction](./hw3/5-matrixOperations/manual_.md)|
+* Transpose - [Matrix Transpose](./hw3/5-matrixOperations/manual_.md)|
+* Trace - [Matrix Trace](./hw3/5-matrixOperations/manual_.md)|
+* Scalar Matrix Multiplication - [Scalar Matrix Multiplication](./hw3/5-matrixOperations/manual_.md)|
+* Matrix Vector Multiplication - [Matrix Vector Multiplication](./hw3/5-matrixOperations/manual_.md)|
+* Matrix Matrix Multiplication - [Matrix Matrix Multiplication](./hw3/5-matrixOperations/manual_.md)|

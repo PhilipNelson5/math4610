@@ -41,5 +41,12 @@ title: MATH 4610 Software Manual
 |                   | [c. Vector Scalar Multiplication](./hw3/3-vectorOperations/manual_vector_scalar_multiplication.md)|
 |                   | [d. Inner Product](./hw3/3-vectorOperations/manual_vector_inner_product.md)|
 |                   | [e. Cross Product](./hw3/3-vectorOperations/manual_vector_cross_product.md)|
-| **Problem 4**     | [](./hw3/3-vectorOperations/manual_.md)|
-|                   | [](./hw3/3-vectorOperations/manual_.md)|
+| **Problem 4**     | [Matrix One Norm](./hw3/4-matrixNorms/manual_one_norm.md)|
+|                   | [Matrix Inf Norm](./hw3/4-matrixNorms/manual_inf_norm.md)|
+| **Problem 5**     | [a. b. Matrix Addition and Subtraction](./hw3/5-matrixOperations/manual_.md)|
+|                   | [c. Matrix Transpose](./hw3/5-matrixOperations/manual_.md)|
+|                   | [d. Matrix Trace](./hw3/5-matrixOperations/manual_.md)|
+|                   | [e. Scalar Matrix Multiplication](./hw3/5-matrixOperations/manual_.md)|
+|                   | [f. Matrix Vector Multiplication](./hw3/5-matrixOperations/manual_.md)|
+|                   | [g. Matrix Matrix Multiplication](./hw3/5-matrixOperations/manual_.md)|
+|                   | [](./hw3/5-matrixOperations/manual_.md)|
