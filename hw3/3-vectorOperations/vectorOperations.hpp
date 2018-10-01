@@ -112,10 +112,10 @@ std::vector<R> cross_product(std::vector<T> const& a, std::vector<U> const& b)
 /**
  * A convenient way to print out the contents of a std::vector<T>
  *
- * @tparam T Type of the elects in the vector
+ * @tparam T Type of the elements in the vector
  * @param o  The ostream to put the vector on
  * @param a  The vector
- * @return   The stream so that the operator can be chained together
+ * @return   Return the stream so that the operator can be chained together
  */
 template <typename T>
 std::ostream& operator<<(std::ostream& o, std::vector<T> const& a)
