@@ -21,7 +21,7 @@ make
 
 will produce an executable **./vectorOps.out** that can be executed.
 
-**Description/Purpose:** This routine overloads the `+` operator in c++ allowing two vectors to be added together with the following syntax, `a + b`.
+**Description/Purpose:** This routine overloads the `+` and `-` operators in c++ allowing two vectors to be added and subtracted with the following syntax, `a + b` and `a - b`.
 
 **Input:** The operator requires two operands, `a` and `b`, where `a, b` are `std::vector<T>`
 
@@ -33,7 +33,7 @@ will produce an executable **./vectorOps.out** that can be executed.
 @param b  The second vector
 ```
 
-**Output:** The result of vector addition with the two vector operands.
+**Output:** A vector with the result of vector addition or subtraction with the two vector operands.
 
 **Usage/Example:**
 
@@ -64,7 +64,7 @@ _explanation of output_:
 
 The first two lines display two vectors `a` and `b`.
 
-The third line is the result of `a+b` and the fourth line is the result of `a-b`.
+The third line is the result of `a + b` and the fourth line is the result of `a - b`.
 
 **Implementation/Code:** The following is the code for vector addition and subtraction
 
