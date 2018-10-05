@@ -46,14 +46,14 @@ using Matrix = std::vector<std::vector<T>>;
 
 matrix_add_subtract(+) matrix_add_subtract(-)
 
-/**
- * A convenient way to print out the contents of a std::vector<std::vector<T>>
- *
- * @tparam T Type of the elements in the matrix
- * @param o  The ostream to put the matrix on
- * @param a  The matrix
- * @return   Return the stream so that the operator can be chained together
- */
+  /**
+   * A convenient way to print out the contents of a std::vector<std::vector<T>>
+   *
+   * @tparam T Type of the elements in the matrix
+   * @param o  The ostream to put the matrix on
+   * @param a  The matrix
+   * @return   Return the stream so that the operator can be chained together
+   */
   template <typename T>
   std::ostream& operator<<(std::ostream& o, Matrix<T> const& m)
 {

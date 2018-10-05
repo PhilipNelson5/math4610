@@ -39,7 +39,7 @@ title: MATH 4610 Software Manual
 * Cross Product [cross_product](./hw3/3-vectorOperations/manual_vector_cross_product.md)
 
 **Matrix Operations**
-* Matrix Addition and Subtraction -  [Addition / Subtraction](./hw3/5-matrixOperations/manual_.md)|
+* Matrix Addition and Subtraction -  [Addition / Subtraction](./hw3/5-matrixOperations/manual_matrix_addition_subtraction.md)|
 * Transpose - [Matrix Transpose](./hw3/5-matrixOperations/manual_.md)|
 * Trace - [Matrix Trace](./hw3/5-matrixOperations/manual_.md)|
 * Scalar Matrix Multiplication - [Scalar Matrix Multiplication](./hw3/5-matrixOperations/manual_.md)|
