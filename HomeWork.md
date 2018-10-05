@@ -1,6 +1,6 @@
 ---
 layout: default
-title: MATH 4610 Software Manual
+title: MATH 4610 Homework Table of Contents
 ---
 
 <a href="https://philipnelson5.github.io">Home</a>
