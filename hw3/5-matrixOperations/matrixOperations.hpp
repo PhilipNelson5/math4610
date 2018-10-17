@@ -56,9 +56,18 @@ matrix_add_subtract(+) matrix_add_subtract(-)
   template <typename T>
   Matrix<T> transpose(Matrix<T> const& m)
 {
-  Matrix<T> transpose(m[0].size());
+  Matrix<T> tp(m[0].size());
   std::for_each(
-    begin(m), end(m), [](std::vector<T> row) { row.resize(m.size() });
+    begin(tp), end(tp), [&](std::vector<T>& row) { row.resize(m.size()); });
+
+  for (auto j = 0u; j < m[0].size(); ++j)
+  {
+    for (auto i = 0u; i < m.size(); ++i)
+    {
+      tp[j][i] = m[i][j];
+    }
+  }
+  return tp;
 }
 
 /**
