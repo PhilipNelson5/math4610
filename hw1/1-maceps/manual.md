@@ -85,6 +85,8 @@ The values labeled std::numeric are the result of std::numeric\_limits<type>::ep
 
 **Implementation/Code:** The following is the code for `maceps`
 
+The code for maceps takes advantage of C++ templates to be able to write single, double and more with a single template function. This is advantageous because the implementation of maceps is essentially the same, only the type changes. Using templates allows the necessary types to be inserted and **multiple** functions are generated at _compile_ time. No branching occurs in the code.
+
 ``` c++
 template <typename T>
 std::tuple<int, T> maceps()
@@ -103,4 +105,62 @@ std::tuple<int, T> maceps()
 }
 ```
 
-**Last Modified:** August 2018
+If the following is written,
+
+``` c++
+int main()
+{
+  auto [float_prec, float_eps] = maceps<float>();
+
+  auto [double_prec, double_eps] = maceps<double>();
+
+  auto [long_double_prec, long_double_eps] = maceps<long double>();
+
+  return EXIT_SUCCESS;
+}
+```
+
+then the following is what the template instantiation would like from the compiler.
+
+``` c++
+template<> std::tuple<int, float> maceps<float>() {
+    float e = 1;
+    float one = 1;
+    float half = 0.5;
+    int prec = 1;
+    while (one + e * half > one)
+        {
+            e *= half;
+            ++prec;
+        }
+    return std::make_tuple(prec, e);
+}
+template<> std::tuple<int, double> maceps<double>() {
+    double e = 1;
+    double one = 1;
+    double half = 0.5;
+    int prec = 1;
+    while (one + e * half > one)
+        {
+            e *= half;
+            ++prec;
+        }
+    return std::make_tuple(prec, e);
+}
+template<> std::tuple<int, long double> maceps<long double>() {
+    long double e = 1;
+    long double one = 1;
+    long double half = 0.5;
+    int prec = 1;
+    while (one + e * half > one)
+        {
+            e *= half;
+            ++prec;
+        }
+    return std::make_tuple(prec, e);
+}
+```
+
+As you can see, three **seperate** function are produced, one for each specified type.
+
+**Last Modified:** September 2018
