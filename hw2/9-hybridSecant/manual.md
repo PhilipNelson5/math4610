@@ -75,6 +75,9 @@ The second line is the root if \\(g(x)\\) on the interval \\((4.1, 5.9)\\)
 **Implementation/Code:** The following is the code for root_finder_hybrid_secant
 
 _note_: `bisection_n` is the [bisection method](../5-bisection/manual.md) where the last argument determines the number of iterations.
+
+The code begins by ensuring \\(a < b\\) and if this is not the case, \\(a\\) and \\(b\\) are swapped. Since these define the interval on which we will be looking for a root, we want \\(a < b\\). \\(f\\) is the function whose roots we are interested in finding so we first determine the value of \\(f\\) on the boundaries. If \\(f(a)\\) and \\(f(b)\\) do not have different signs, then by the intermediate value theorem, a zero does not exist between them. Next, we check if \\(f(a)\\) or \\(f(b)\\) is zero because then we have accomplished our goal of finding a zero so we simply return it. Finally we really begin the hybrid secant method. We will use four iterations of bisection method in order to reduce the interval by approximately one order of magnitude. Then we'll try secant method with the maximum iterations set to 1. This will only do one iteration of secant method and we will test the output to see if it stays within our interval \\([a, b]\\). If it stays within the boundary, then it will converge so the loop ends and we use secant method to finish finding the root. If it doesn't stay in the boundary then we do another four iterations of bisection to reduce the interval again and repeat.
+
 ``` c++
 template <typename T, typename F>
 std::optional<T> root_finder_hybrid_secant(F f, T a, T b, T tol)
@@ -102,7 +105,7 @@ std::optional<T> root_finder_hybrid_secant(F f, T a, T b, T tol)
     // by ~one order of magnitude
     std::tie(a, b) = bisection_n(f, a, b, f(a), 4);
 
-    // check newton's for convergent behavior
+    // check secant method for convergent behavior
     x0 = root_finder_secant(f, a, b, tol, 1);
 
   } while (a > x0 || x0 > b);
