@@ -5,7 +5,7 @@ math: true
 ---
 {% include mathjax.html %}
 <a href="https://philipnelson5.github.io/math4610/SoftwareManual"> Table of Contents </a>
-# <++> Software Manual
+# Matrix Scalar Multiplication Software Manual
 
 **Routine Name:** Matrix Scalar Multiplication
 
