@@ -71,6 +71,31 @@ matrix_add_subtract(+) matrix_add_subtract(-)
 }
 
 /**
+ * Compute the trace of a matrix
+ *
+ * @tparam T Type of the elements in the matrix
+ * @param m  The matrix
+ * @return   The trace of matrix m
+ */
+template <typename T>
+T trace(Matrix<T> const& m)
+{
+  if (m.size() != m[0].size())
+  {
+    std::cerr << "ERROR: non square matrix in trace\n";
+    exit(EXIT_FAILURE);
+  }
+
+  T t = 0;
+
+  for (auto i = 0u; i < m.size(); ++i)
+  {
+    t += m[i][i];
+  }
+  return t;
+}
+
+/**
  * A convenient way to print out the contents of a std::vector<std::vector<T>>
  *
  * @tparam T Type of the elements in the matrix

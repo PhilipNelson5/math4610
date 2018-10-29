@@ -18,4 +18,6 @@ int main()
   std::cout << m2 << std::endl;
   std::cout << "transpose m2\n";
   std::cout << transpose(m2) << std::endl;
+  std::cout << "trace m1\n";
+  std::cout << trace(m1) << std::endl;
 }

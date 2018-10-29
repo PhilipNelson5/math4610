@@ -41,7 +41,7 @@ title: MATH 4610 Software Manual
 **Matrix Operations**
 * Matrix Addition and Subtraction -  [Addition / Subtraction](./hw3/5-matrixOperations/manual_matrix_add_subtract.md)|
 * Transpose - [Matrix Transpose](./hw3/5-matrixOperations/manual_matrix_transpose.md)|
-* Trace - [Matrix Trace](./hw3/5-matrixOperations/manual_.md)|
+* Trace - [Matrix Trace](./hw3/5-matrixOperations/manual_matrix_trace.md)|
 * Scalar Matrix Multiplication - [Scalar Matrix Multiplication](./hw3/5-matrixOperations/manual_.md)|
 * Matrix Vector Multiplication - [Matrix Vector Multiplication](./hw3/5-matrixOperations/manual_.md)|
 * Matrix Matrix Multiplication - [Matrix Matrix Multiplication](./hw3/5-matrixOperations/manual_.md)|
