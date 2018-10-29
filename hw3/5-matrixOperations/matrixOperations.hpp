@@ -96,6 +96,80 @@ T trace(Matrix<T> const& m)
 }
 
 /**
+ * multiplication with a scalar and a matrix ( s * m )
+ *
+ * @tparam T Type of the elements in the matrix
+ * @tparam S Type of the elements in the vector
+ * @tparam R Type of the elements in the result vector
+ * @param s  A scalar value
+ * @param m  An mxn matrix
+ * @return   A vector which holds the result of m * s
+ */
+template <typename T, typename S, typename R = decltype(S() * T())>
+Matrix<R> operator*(S const s, Matrix<T> const& m)
+{
+  Matrix<R> result = m;
+
+  for (auto i = 0u; i < m.size(); ++i)
+  {
+    for (auto j = 0u; j < m[0].size(); ++j)
+    {
+      result[i][j] = s * m[i][j];
+    }
+  }
+  return result;
+}
+
+/**
+ * multiplication with a matrix and a scalar ( m * s )
+ *
+ * @tparam T Type of the elements in the matrix
+ * @tparam S Type of the elements in the vector
+ * @tparam R Type of the elements in the result vector
+ * @param m  An mxn matrix
+ * @param s  A scalar value
+ * @return   A vector which holds the result of m * s
+ */
+template <typename T, typename S, typename R = decltype(T() * S())>
+inline Matrix<R> operator*(Matrix<T> const& m, S const s)
+{
+  return s * m;
+}
+
+/**
+ * multiplication with a matrix and a vector ( m * v )
+ *
+ * @tparam T Type of the elements in the matrix
+ * @tparam U Type of the elements in the vector
+ * @tparam R Type of the elements in the result vector
+ * @param m  An mxn matrix
+ * @param v  A vector with n elements
+ * @return   A vector which holds the result of m * v
+ */
+
+template <typename T, typename U, typename R = decltype(T() + U())>
+std::vector<R> operator*(Matrix<T> const& m, std::vector<U> const& v)
+{
+  if (m[0].size() != v.size())
+  {
+    std::cerr << "ERROR: incorrectly sized matrix or vector in mat * vec\n";
+    exit(EXIT_FAILURE);
+  }
+  std::vector<R> result(m.size());
+
+  for (auto i = 0u; i < m.size(); ++i)
+  {
+    R sum = 0;
+    for (auto j = 0u; j < v.size(); ++j)
+    {
+      sum += m[i][j] * v[j];
+    }
+    result[i] = sum;
+  }
+  return result;
+}
+
+/**
  * A convenient way to print out the contents of a std::vector<std::vector<T>>
  *
  * @tparam T Type of the elements in the matrix

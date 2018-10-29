@@ -1,0 +1,93 @@
+---
+title: Matrix Scalar Multiplication
+layout: default
+math: true
+---
+{% include mathjax.html %}
+<a href="https://philipnelson5.github.io/math4610/SoftwareManual"> Table of Contents </a>
+# <++> Software Manual
+
+**Routine Name:** Matrix Scalar Multiplication
+
+**Author:** Philip Nelson
+
+**Language:** C++. The code can be compiled using the GNU C++ compiler (gcc). A make file is included to compile an example program
+
+For example,
+
+```
+make
+```
+
+will produce an executable **./matrixOpts.out** that can be executed.
+
+**Description/Purpose:** This routine overloads the `*` operator to multiply a matrix by a scalar and a scalar by a matrix. When multiplying scalars and matrices, each element of the matrix is scaled by the scalar.
+
+**Input:** The code takes two parameters, a matrix m and a scalar s. The parameters can be supplied in either order.
+
+```
+@tparam T Type of the elements in the matrix
+@tparam S Type of the elements in the vector
+@tparam R Type of the elements in the result vector
+@param s  A scalar value
+@param m  An mxn matrix
+```
+
+**Output:** The matrix scaled by the scalar
+
+**Usage/Example:**
+
+``` cpp
+int main()
+{
+  Matrix<int> m1 = { {1, 2, 3}, {4, 5, 6}, {7, 8, 9} };
+  std::vector<double> v1 = {1.1, 2.2, 3.3};
+  std::cout << "m1*v1\n";
+  std::cout << m1 * v1 << "\n";
+}
+```
+
+**Output** from the lines above
+```
+m1
+|          1         2         3 |
+|          4         5         6 |
+|          7         8         9 |
+
+v1
+[        1.1       2.2       3.3 ]
+
+m1*v1
+[       15.4      35.2        55 ]
+```
+
+_explanation of output_:
+
+The first two block of output are the matrix m1 and the vector v1. Then the result of m1*v1.
+
+**Implementation/Code:** The following is the code for Matrix Scalar Multiplication
+
+``` cpp
+template <typename T, typename S, typename R = decltype(S() * T())>
+Matrix<R> operator*(S const s, Matrix<T> const& m)
+{
+  Matrix<R> result = m;
+
+  for (auto i = 0u; i < m.size(); ++i)
+  {
+    for (auto j = 0u; j < m[0].size(); ++j)
+    {
+      result[i][j] = s * m[i][j];
+    }
+  }
+  return result;
+}
+
+template <typename T, typename S, typename R = decltype(T() * S())>
+inline Matrix<R> operator*(Matrix<T> const& m, S const s)
+{
+  return s * m;
+}
+```
+
+**Last Modified:** October 2018

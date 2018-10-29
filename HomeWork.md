@@ -46,7 +46,7 @@ title: MATH 4610 Homework Table of Contents
 | **Problem 5**     | [a. b. Matrix Addition and Subtraction](./hw3/5-matrixOperations/manual_matrix_add_subtract.md)|
 |                   | [c. Matrix Transpose](./hw3/5-matrixOperations/manual_matrix_transpose.md)|
 |                   | [d. Matrix Trace](./hw3/5-matrixOperations/manual_matrix_trace.md)|
-|                   | [e. Scalar Matrix Multiplication](./hw3/5-matrixOperations/manual_.md)|
+|                   | [e. Scalar Matrix Multiplication](./hw3/5-matrixOperations/manual_matrix_scalar_multiplication.md)|
 |                   | [f. Matrix Vector Multiplication](./hw3/5-matrixOperations/manual_.md)|
 |                   | [g. Matrix Matrix Multiplication](./hw3/5-matrixOperations/manual_.md)|
 |                   | [](./hw3/5-matrixOperations/manual_.md)|
