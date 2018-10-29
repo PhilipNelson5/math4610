@@ -41,9 +41,10 @@ will produce an executable **./matrixOpts.out** that can be executed.
 int main()
 {
   Matrix<int> m1 = { {1, 2, 3}, {4, 5, 6}, {7, 8, 9} };
-  std::vector<double> v1 = {1.1, 2.2, 3.3};
-  std::cout << "m1*v1\n";
-  std::cout << m1 * v1 << "\n";
+  std::cout << "m1*3\n";
+  std::cout << m1 * 3 << std::endl;
+  std::cout << "3*m1\n";
+  std::cout << 3 * m1 << std::endl;
 }
 ```
 
@@ -54,11 +55,15 @@ m1
 |          4         5         6 |
 |          7         8         9 |
 
-v1
-[        1.1       2.2       3.3 ]
+m1*3
+|          3         6         9 |
+|         12        15        18 |
+|         21        24        27 |
 
-m1*v1
-[       15.4      35.2        55 ]
+3*m1
+|          3         6         9 |
+|         12        15        18 |
+|         21        24        27 |
 ```
 
 _explanation of output_:

@@ -43,5 +43,5 @@ title: MATH 4610 Software Manual
 * Transpose - [Matrix Transpose](./hw3/5-matrixOperations/manual_matrix_transpose.md)
 * Trace - [Matrix Trace](./hw3/5-matrixOperations/manual_matrix_trace.md)
 * Scalar Matrix Multiplication - [Scalar Matrix Multiplication](./hw3/5-matrixOperations/manual_matrix_scalar_multiplication.md)
-* Matrix Vector Multiplication - [Matrix Vector Multiplication](./hw3/5-matrixOperations/manual_.md)
+* Matrix Vector Multiplication - [Matrix Vector Multiplication](./hw3/5-matrixOperations/manual_matrix_vector_multiplication.md)
 * Matrix Matrix Multiplication - [Matrix Matrix Multiplication](./hw3/5-matrixOperations/manual_.md)
