@@ -48,5 +48,5 @@ title: MATH 4610 Homework Table of Contents
 |                   | [d. Matrix Trace](./hw3/5-matrixOperations/manual_matrix_trace.md)|
 |                   | [e. Scalar Matrix Multiplication](./hw3/5-matrixOperations/manual_matrix_scalar_multiplication.md)|
 |                   | [f. Matrix Vector Multiplication](./hw3/5-matrixOperations/manual_matrix_vector_multiplication.md)|
-|                   | [g. Matrix Matrix Multiplication](./hw3/5-matrixOperations/manual_.md)|
+|                   | [g. Matrix Matrix Multiplication](./hw3/5-matrixOperations/manual_matrix_matrix_multiplication.md)|
 |                   | [](./hw3/5-matrixOperations/manual_.md)|

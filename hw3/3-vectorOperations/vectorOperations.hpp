@@ -59,7 +59,7 @@ vector_add_subtract(+) vector_add_subtract(-)
 }
 
 /**
- * The inner product of two vectors
+ * The inner product or dot product of two vectors
  *
  * @tparam T Type of the elements in the first vector
  * @tparam U Type of the elements in the second vector

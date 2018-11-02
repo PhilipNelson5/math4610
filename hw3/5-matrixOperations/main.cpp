@@ -39,4 +39,7 @@ int main()
 
   std::cout << "m1*v1\n";
   std::cout << m1 * v1 << "\n";
+
+  std::cout << "m1*m2\n";
+  std::cout << m1*m2 << std::endl;
 }

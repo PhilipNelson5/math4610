@@ -96,7 +96,7 @@ T trace(Matrix<T> const& m)
 }
 
 /**
- * multiplication with a scalar and a matrix ( s * m )
+ * multiplication of a scalar and a matrix ( s * m )
  *
  * @tparam T Type of the elements in the matrix
  * @tparam S Type of the elements in the vector
@@ -121,7 +121,7 @@ Matrix<R> operator*(S const s, Matrix<T> const& m)
 }
 
 /**
- * multiplication with a matrix and a scalar ( m * s )
+ * multiplication of a matrix and a scalar ( m * s )
  *
  * @tparam T Type of the elements in the matrix
  * @tparam S Type of the elements in the vector
@@ -137,7 +137,7 @@ inline Matrix<R> operator*(Matrix<T> const& m, S const s)
 }
 
 /**
- * multiplication with a matrix and a vector ( m * v )
+ * multiplication of a matrix and a vector ( m * v )
  *
  * @tparam T Type of the elements in the matrix
  * @tparam U Type of the elements in the vector
@@ -165,6 +165,44 @@ std::vector<R> operator*(Matrix<T> const& m, std::vector<U> const& v)
       sum += m[i][j] * v[j];
     }
     result[i] = sum;
+  }
+  return result;
+}
+
+/**
+ * multiplication of a matrix and a matrix ( m * v )
+ *
+ * @tparam T Type of the elements in the first matrix
+ * @tparam U Type of the elements in the second matrix
+ * @tparam R Type of the elements in the result matrix
+ * @param m1 An nxm matrix
+ * @param m2 An mxp matrix
+ * @return   A matrix which holds the result of m1 * m2
+ */
+template <typename T, typename U, typename R = decltype(T() + U())>
+Matrix<R> operator*(Matrix<T> const& m1, Matrix<U> const& m2)
+{
+  if (m1[0].size() != m2.size())
+  {
+    std::cerr << "ERROR: incorrectly sized matrices in mat * mat\n";
+    exit(EXIT_FAILURE);
+  }
+
+  Matrix<R> result(m1.size());
+  std::for_each(begin(result), end(result), [&m2](std::vector<R>& row) {
+    row.resize(m2[0].size());
+  });
+
+  for (auto i = 0u; i < result.size(); ++i)
+  {
+    for (auto j = 0u; j < result[0].size(); ++j)
+    {
+      result[i][j] = 0;
+      for (auto k = 0u; k < m2.size(); ++k)
+      {
+        result[i][j] += m1[i][k] * m2[k][j];
+      }
+    }
   }
   return result;
 }
