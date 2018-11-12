@@ -53,4 +53,6 @@ title: MATH 4610 Homework Table of Contents
 | **Problem 6**     | [a. Matrix Outer Product](./hw3/6-matrixAdditionalOperations/manual_matrix_outer_product.md)|
 |                   | [b. Kronecker Product](./hw3/6-matrixAdditionalOperations/manual_kronecker_product.md)|
 |                   | [c. Matrix Determinant](./hw3/6-matrixAdditionalOperations/manual_determinant.md)|
+| **Problem 8**     | [a. Inner Product (Dot Product)](./hw3/3-vectorOperations/manual_vector_inner_product.md)|
+|                   | [b. Cross Product](./hw3/3-vectorOperations/manual_vector_cross_product.md)|
 |                   | [](./hw3/5-matrixOperations/manual_.md)|
