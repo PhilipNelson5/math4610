@@ -21,7 +21,7 @@ make
 
 will produce an executable **./matrixOpts2.out** that can be executed.
 
-**Description/Purpose:** The determinant is a value that can be computed from the elements of a square matrix. The determinant of a matrix A is denoted det(A), det A, or |A|. Geometrically, it can be viewed as the scaling factor of the linear transformation described by the matrix.
+**Description/Purpose:** The determinant is a value that can be computed from the elements of a square matrix. The determinant of a matrix A is denoted det(A), det A, or \|A\|. Geometrically, it can be viewed as the scaling factor of the linear transformation described by the matrix.
 
 **Input:** A matrix
 
