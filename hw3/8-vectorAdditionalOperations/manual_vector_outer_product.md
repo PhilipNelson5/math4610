@@ -41,17 +41,20 @@ int main()
 {
   std::vector<double> v1{1, 2, 3, 4};
   std::vector<double> v2{1, 2, 3, 4};
-  std::cout << v1 << '\n' << v2 << '\n';
+  std::cout << "v1\n" << v1 << '\n' << "v2\n" << v2 << "\nv1 * v2^t";
   std::cout << outer_product(v1, v2) << '\n';
 }
 ```
 
 **Output** from the lines above
 ```
+v1
 [          1         2         3         4 ]
 
+v2
 [          1         2         3         4 ]
 
+v1 * v2^t
 |          1         2         3         4 |
 |          2         4         6         8 |
 |          3         6         9        12 |
