@@ -50,7 +50,7 @@ title: MATH 4610 Homework Table of Contents
 |                   | [e. Scalar Matrix Multiplication](./hw3/5-matrixOperations/manual_matrix_scalar_multiplication.md)|
 |                   | [f. Matrix Vector Multiplication](./hw3/5-matrixOperations/manual_matrix_vector_multiplication.md)|
 |                   | [g. Matrix Matrix Multiplication](./hw3/5-matrixOperations/manual_matrix_matrix_multiplication.md)|
-| **Problem 6**     | [a. Matrix Outer Product](./hw3/6-matrixAdditionalOperations/manual_.md)|
+| **Problem 6**     | [a. Matrix Outer Product](./hw3/6-matrixAdditionalOperations/manual_matrix_outer_product.md)|
 |                   | [b. Kronecker Product](./hw3/6-matrixAdditionalOperations/manual_kronecker_product.md)|
 |                   | [c. Matrix Determinant](./hw3/6-matrixAdditionalOperations/manual_determinant.md)|
 |                   | [](./hw3/5-matrixOperations/manual_.md)|
