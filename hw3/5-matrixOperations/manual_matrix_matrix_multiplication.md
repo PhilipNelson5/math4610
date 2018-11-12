@@ -32,8 +32,8 @@ will produce an executable **./matrixOpts.out** that can be executed.
 ``` cpp
 int main()
 {
-  Matrix<int> m1 = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
-  Matrix<int> m2 = {{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}};
+  Matrix<int> m1 = { {1, 2, 3}, {4, 5, 6}, {7, 8, 9} };
+  Matrix<int> m2 = { {1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12} };
 
   std::cout << "m1*m2\n";
   std::cout << m1*m2 << std::endl;
