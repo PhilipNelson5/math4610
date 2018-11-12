@@ -9,4 +9,5 @@ int main()
   std::cout << m << std::endl;
   std::cout << "one norm: " << one_norm(m) << std::endl;
   std::cout << "inf norm: " << inf_norm(m) << std::endl;
+  std::cout << "Frobenius norm: " << frobenius_norm(m) << std::endl;
 }

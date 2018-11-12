@@ -6,6 +6,7 @@
 #include <iostream>
 #include <numeric>
 #include <vector>
+#include <cmath>
 
 template <typename T>
 using Matrix = std::vector<std::vector<T>>;
@@ -53,6 +54,26 @@ T inf_norm(Matrix<T> m)
   });
 
   return *std::max_element(begin(colSums), end(colSums));
+}
+
+/**
+ * Determine the infinity norm for a matrix
+ *
+ * @tparam The type of the elements in the matrix
+ * @param  The matrix to take the norm of
+ */
+template <typename T>
+double frobenius_norm(Matrix<T> m)
+{
+  double elems_squared = 0;
+
+  std::for_each(begin(m), end(m), [&elems_squared](auto const& row) {
+    std::for_each(begin(row), end(row), [&elems_squared](auto const& elem) {
+      elems_squared += elem * elem;
+    });
+  });
+
+  return std::sqrt(elems_squared);
 }
 
 #endif
