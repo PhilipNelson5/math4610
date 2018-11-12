@@ -52,5 +52,5 @@ title: MATH 4610 Homework Table of Contents
 |                   | [g. Matrix Matrix Multiplication](./hw3/5-matrixOperations/manual_matrix_matrix_multiplication.md)|
 | **Problem 6**     | [a. Matrix Outer Product](./hw3/6-matrixAdditionalOperations/manual_.md)|
 |                   | [b. Kronecker Product](./hw3/6-matrixAdditionalOperations/manual_kronecker_product.md)|
-|                   | [c. Matrix Determinant](./hw3/6-matrixAdditionalOperations/manual_.md)|
+|                   | [c. Matrix Determinant](./hw3/6-matrixAdditionalOperations/manual_determinant.md)|
 |                   | [](./hw3/5-matrixOperations/manual_.md)|

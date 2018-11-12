@@ -47,3 +47,4 @@ title: MATH 4610 Software Manual
 * Matrix Vector Multiplication - [Matrix Vector Multiplication](./hw3/5-matrixOperations/manual_matrix_vector_multiplication.md)
 * Matrix Matrix Multiplication - [Matrix Matrix Multiplication](./hw3/5-matrixOperations/manual_matrix_matrix_multiplication.md)
 * Kronecker Product - [kronecker_product](./hw3/6-matrixAdditionalOperations/manual_kronecker_product.md)
+* Matrix Determinant - [determinant](./hw3/6-matrixAdditionalOperations/manual_determinant.md)
