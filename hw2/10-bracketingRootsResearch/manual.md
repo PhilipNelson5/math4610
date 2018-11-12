@@ -7,6 +7,10 @@ layout: default
 
 **Author:** Philip Nelson
 
+Bisection is a simple bracketing method to find the roots of a nonlinear equation. It starts with two initial values \\(a\\) and \\(b\\) where \\(f(a)\cdot f(b) < 0\\) which means that by the intermediate value theorem a zero must exist in between \\(a\\) and \\(b\\). Then the interval is split in half and the new interval is evaluated.
+
+
+
 * [A Review of Bracketing Methods for Finding Zeros of Nonlinear Functions](http://www.m-hikari.com/ams/ams-2018/ams-1-4-2018/p/intepAMS1-4-2018.pdf)
 
 * [Numerical Methods for the Root Finding Problem](http://www.math.niu.edu/~dattab/MATH435.2013/ROOT_FINDING.pdf)
