@@ -13,6 +13,8 @@ title: MATH 4610 Software Manual
 **Error Routines**
 * Absolute Error - [absolute_error](./hw2/1-error/manual_abs.md)
 * Relative Error - [relative_error](./hw2/1-error/manual_rel.md)
+* Absolute Vector Error - [absolute_error](./hw3/2-vectorError/manual_abs.md)
+* Relative Vector Error - [relative_error](./hw3/2-vectorError/manual_rel.md)
 
 **Root Finding**
 * Quadratic Equation - [quadratic_equation](./hw1/7-quadraticEquation/manual.md)

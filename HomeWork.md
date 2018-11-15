@@ -37,6 +37,8 @@ title: MATH 4610 Homework Table of Contents
 | :-----------------|:---------------------------|
 | **Problem 1**     | [l_p Vector Norms](./hw3/1-vectorNorms/manual_l_pNorms.md)|
 |                   | [l Infinity Vector Norm](./hw3/1-vectorNorms/manual_l_inf.md)|
+| **Problem 2**     | [Absolute Vector Error](./hw3/2-vectorError/manual_abs.md)|
+|                   | [Relative Vector Error](./hw3/2-vectorError/manual_rel.md)|
 | **Problem 3**     | [a. b. Vector Addition and Subtraction](./hw3/3-vectorOperations/manual_vector_addition_subtraction.md)|
 |                   | [c. Vector Scalar Multiplication](./hw3/3-vectorOperations/manual_vector_scalar_multiplication.md)|
 |                   | [d. Inner Product](./hw3/3-vectorOperations/manual_vector_inner_product.md)|
