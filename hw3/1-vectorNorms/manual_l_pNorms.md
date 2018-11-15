@@ -64,6 +64,8 @@ The third line is the \\(l_2\\) norm of  \\(v\\)
 
 **Implementation/Code:** The following is the code for `l_pNorm`
 
+The implementation for `l_pNorm` uses [std::accumulate](https://en.cppreference.com/w/cpp/algorithm/accumulate). In this case, it accumulates the values of the vector `a` from the beginning of the vector to the end of the vector starting with an initial sum of `0.0`. Before adding each element, it applies the [std::pow](https://en.cppreference.com/w/cpp/numeric/math/pow) function, raising the absolute value of the element, with [std::abs](https://en.cppreference.com/w/cpp/numeric/math/abs), to the specified power `p`. At the end, it uses `std::pow` again to raise the accumulated sum to `1.0/p`. This is the definition of the pNorm.
+
 ``` c++
 template <typename T>
 inline T l_pNorm(std::vector<T> const& a, P const p)

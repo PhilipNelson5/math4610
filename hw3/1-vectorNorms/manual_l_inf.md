@@ -54,6 +54,8 @@ The second line is the \\(l_\infty\\) norm of \\(v\\)
 
 **Implementation/Code:** The following is the code for `l_inf`
 
+The implementation of `l_inf` uses [std::max_element](https://en.cppreference.com/w/cpp/algorithm/max_element) which takes a lambda function that compares two elements by their absolute values using [std::abs](https://en.cppreference.com/w/cpp/numeric/math/abs). Once the absolute largest element has been identified, it's absolute value is returned. This is the definition of the infinity norm.
+
 ``` c++
 /**
  * Determine the l_pNorm of a vector
