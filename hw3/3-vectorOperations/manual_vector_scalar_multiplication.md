@@ -65,6 +65,8 @@ In order to make vector scalar multiplication intuitive to use, the routine is i
 
 In order to make vector scalar multiplication more generalized, this routine takes advantage of c++ templates allowing the multiplication of a scalar of one type by a vector of another as long as the `*` operator is defined for the two types. No branching structure required.
 
+This code uses [std::transform](https://en.cppreference.com/w/cpp/algorithm/transform). It transforms each element of the vector `a` and it puts the result of the transformation into the result vector. The transformation is is a unary operation that takes the element of the vector and multiplies it by the scalar `s`. The transformed result vector is then returned.
+
 
 ``` cpp
   template <typename T, typename U, typename R = decltype(T() * U())>
@@ -77,4 +79,4 @@ In order to make vector scalar multiplication more generalized, this routine tak
 }
 ```
 
-**Last Modified:** September 2018
+**Last Modified:** October 2018
