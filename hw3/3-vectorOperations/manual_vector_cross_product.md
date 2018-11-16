@@ -65,16 +65,20 @@ The third line is the result of `a x b`.
 
 **Implementation/Code:** The following is the code for cross_product
 
+This code implements the [cross product](https://en.wikipedia.org/wiki/Cross_product) in 3 dimensions. It ensures the sizes of the vectors are the same then returns a vector with the cross product.
+
 ``` cpp
 template <typename T, typename U, typename R = decltype(T() * U())>
 std::vector<R> cross_product(std::vector<T> const& a, std::vector<U> const& b)
 {
+  // check sizes are 3
   if (a.size() != 3 || b.size() != 3)
   {
     std::cerr << "ERROR: bad size in vector cross product\n";
     exit(EXIT_FAILURE);
   }
 
+  // return the cross product
   return {a[1] * b[2] - a[2] * b[1],
           a[2] * b[0] - a[0] * b[2],
           a[0] * b[1] - a[1] * b[0]};

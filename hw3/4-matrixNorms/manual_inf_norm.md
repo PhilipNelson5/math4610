@@ -60,19 +60,24 @@ The second line is the inf norm of that matrix
 
 **Implementation/Code:** The following is the code for inf_norm
 
+The code finds the sum of the absolute values of the elements of the rows. First it uses [std::for_each](https://en.cppreference.com/w/cpp/algorithm/for_each) to iterate over the rows. Then for each row it uses [std::accumulate](https://en.cppreference.com/w/cpp/algorithm/accumulate) to add the absolute value of the elements of the rows  using [std::abs](https://en.cppreference.com/w/cpp/numeric/math/abs). It then uses [std::max_element](https://en.cppreference.com/w/cpp/algorithm/max_element) to identify the largest of the rowSums and returns it.
+
 ``` cpp
 template <typename T>
 T inf_norm(Matrix<T> m)
 {
-  std::vector<T> colSums;
-  colSums.reserve(m[0].size());
+  // initialize the array to put the row sums
+  std::vector<T> rowSums;
+  rowSums.reserve(m[0].size());
 
+  // for each row
   std::for_each(begin(m), end(m), [&colSums](auto const& row) {
-    colSums.push_back(std::accumulate(
+    // sum the absolute values of the elements
+    rowSums.push_back(std::accumulate(
       begin(row), end(row), 0.0, [](T acc, T e) { return acc + std::abs(e); }));
   });
 
-  return *std::max_element(begin(colSums), end(colSums));
+  return *std::max_element(begin(rowSums), end(rowSums));
 }
 ```
 

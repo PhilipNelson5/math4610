@@ -60,18 +60,25 @@ The second line is the Frobenius norm of that matrix
 
 **Implementation/Code:** The following is the code for frobenius_norm
 
+This code uses [std::for_each](https://en.cppreference.com/w/cpp/algorithm/for_each) to iterate over the entire matrix summing up the elements squared. It then return the square root using [std::sqrt](https://en.cppreference.com/w/cpp/numeric/math/sqrt) of the sum of the elements squared. This is the definition of the Frobenius Norm](https://en.wikipedia.org/wiki/Matrix_norm#Frobenius_norm).
+
 ``` cpp
 template <typename T>
 double frobenius_norm(Matrix<T> m)
 {
-  double elems_squared = 0;
+  // initalize the sum of the elements squared
+  double elems_squared = 0.0;
 
+  // for each row
   std::for_each(begin(m), end(m), [&elems_squared](auto const& row) {
+    // for each element
     std::for_each(begin(row), end(row), [&elems_squared](auto const& elem) {
+      // add the elem^2 to the sum
       elems_squared += elem * elem;
     });
   });
 
+  // return the square root of the sum of the lements squared
   return std::sqrt(elems_squared);
 }
 ```

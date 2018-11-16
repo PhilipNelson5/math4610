@@ -45,15 +45,15 @@ T one_norm(Matrix<T> m)
 template <typename T>
 T inf_norm(Matrix<T> m)
 {
-  std::vector<T> colSums;
-  colSums.reserve(m[0].size());
+  std::vector<T> rowSums;
+  rowSums.reserve(m[0].size());
 
-  std::for_each(begin(m), end(m), [&colSums](auto const& row) {
-    colSums.push_back(std::accumulate(
+  std::for_each(begin(m), end(m), [&rowSums](auto const& row) {
+    rowSums.push_back(std::accumulate(
       begin(row), end(row), 0.0, [](T acc, T e) { return acc + std::abs(e); }));
   });
 
-  return *std::max_element(begin(colSums), end(colSums));
+  return *std::max_element(begin(rowSums), end(rowSums));
 }
 
 /**

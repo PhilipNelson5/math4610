@@ -60,23 +60,31 @@ The second line is the one norm of that matrix
 
 **Implementation/Code:** The following is the code for one_norm
 
+The code finds the sum of the absolute values of the columns using [std::abs](https://en.cppreference.com/w/cpp/numeric/math/abs). It then uses [std::max_element](https://en.cppreference.com/w/cpp/algorithm/max_element) to identify the 
+
 ``` cpp
 template <typename T>
 T one_norm(Matrix<T> m)
 {
+  // initalize the array to hold the sums of the columns
   std::vector<T> colSums;
   colSums.reserve(m[0].size());
 
+  // for every column
   for (auto j = 0u; j < m[0].size(); ++j)
   {
+    // for every element column wise
     T sum = 0;
     for (auto i = 0u; i < m.size(); ++i)
     {
+      // sum the absolute values of the column elements
       sum += std::abs(m[i][j]);
     }
+    // push the column sum on the end of the colSum array
     colSums.push_back(sum);
   }
 
+  // find and return the maximum element of the column sums
   return *std::max_element(begin(colSums), end(colSums));
 }
 ```
