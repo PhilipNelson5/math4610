@@ -75,21 +75,28 @@ For code re-usability, the implementation takes advantage of the c++ preprocesso
   template <typename T, typename U, typename R = decltype(T() op U())>         \
   std::vector<R> operator op(std::vector<T> const& a, std::vector<U> const& b) \
   {                                                                            \
+    // check the sizes are equal                                               \
     if (a.size() != b.size())                                                  \
     {                                                                          \
       std::cerr << "ERROR: bad size in vector addition\n";                     \
       exit(EXIT_FAILURE);                                                      \
     }                                                                          \
                                                                                \
+    // initalize it result vector                                              \
     std::vector<R> result(a.size());                                           \
+                                                                               \
+    // add or subtract the vectors elementwise                                 \
     for (auto i = 0u; i < a.size(); ++i)                                       \
     {                                                                          \
       result[i] = a[i] op b[i];                                                \
     }                                                                          \
+                                                                               \
+    // return the result                                                       \
     return result;                                                             \
   }
 
+// Call the macro with addition and subtraction operator
 vector_add_subtract(+) vector_add_subtract(-)
 ```
 
-**Last Modified:** September 2018
+**Last Modified:** October 2018
