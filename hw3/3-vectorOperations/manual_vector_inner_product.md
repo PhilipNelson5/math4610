@@ -71,11 +71,25 @@ The third line is the result of `a·b`.
 template <typename T, typename U, typename R = decltype(T() * U())>
 R inner_product(std::vector<T> const& a, std::vector<U> const& b)
 {
+  // check the sizes are the same
   if (a.size() != b.size())
   {
     std::cerr << "ERROR: bad size in vector inner product\n";
     exit(EXIT_FAILURE);
   }
+
+  // initalize the result of the inner product
+  R product = 0.0;
+
+  // multiply the vectors element wise and add to the result
+  for (auto i = 0u; i < a.size(); ++i)
+  {
+    product += a[i] * b[i];
+  }
+
+  // return the inner product
+  return product;
+}
 ```
 
-**Last Modified:** September 2018
+**Last Modified:** October 2018
