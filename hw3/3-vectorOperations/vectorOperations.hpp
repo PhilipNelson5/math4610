@@ -38,23 +38,32 @@
 
 vector_add_subtract(+) vector_add_subtract(-)
 
-/**
- * Multiplication of a scalar and a std::vector<T>
- * used to represent a mathematics vector
- *
- * @tparam T Type of the elements in the first vector
- * @tparam U Type of the scalar
- * @tparam R Type of the elements in the result vector
- * @param s  The scalar
- * @param a  The first vector
- * @return   The result of the scalar multiplication
- */
+  /**
+   * Multiplication of a scalar and a std::vector<T>
+   * used to represent a mathematics vector
+   *
+   * @tparam T Type of the elements in the first vector
+   * @tparam U Type of the scalar
+   * @tparam R Type of the elements in the result vector
+   * @param s  The scalar
+   * @param a  The first vector
+   * @return   The result of the scalar multiplication
+   */
   template <typename T, typename U, typename R = decltype(T() * U())>
   std::vector<R> operator*(U const s, std::vector<T> const& a)
 {
   std::vector<R> result(a.size());
   std::transform(
     std::begin(a), std::end(a), std::begin(result), [s](T e) { return e * s; });
+  return result;
+}
+
+template <typename T, typename U, typename R = decltype(T() * U())>
+std::vector<R> operator/(std::vector<T> const& a, U const s)
+{
+  std::vector<R> result(a.size());
+  std::transform(
+    std::begin(a), std::end(a), std::begin(result), [s](T e) { return e / s; });
   return result;
 }
 
