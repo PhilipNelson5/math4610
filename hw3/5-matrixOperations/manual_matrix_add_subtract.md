@@ -78,25 +78,35 @@ For code re-usability, the implementation takes advantage of the c++ preprocesso
   template <typename T, typename U, typename R = decltype(T() + U())>          \
   Matrix<R> operator op(Matrix<T> const& a, Matrix<U> const& b)                \
   {                                                                            \
+    // check sizes are compatible                                              \
     if (a.size() != b.size() || a[1].size() != b[0].size())                    \
     {                                                                          \
       std::cerr << "ERROR: bad size in matrix_add_subtract\n";                 \
       exit(EXIT_FAILURE);                                                      \
     }                                                                          \
                                                                                \
+    // initalize the result matrix                                             \
     Matrix<R> result(a.size());                                                \
+                                                                               \
+    // for every row in a                                                      \
     for (auto i = 0u; i < a.size(); ++i)                                       \
     {                                                                          \
+      // initalize the next row of the result                                  \
       result[i].reserve(a[i].size());                                          \
+                                                                               \
+      // for every column of a                                                 \
       for (auto j = 0u; j < a[i].size(); ++j)                                  \
       {                                                                        \
+        // push the ij'th elements of a and b added or subtracted              \
         result[i].push_back(a[i][j] op b[i][j]);                               \
       }                                                                        \
     }                                                                          \
                                                                                \
+    // return the result matrix                                                \
     return result;                                                             \
   }
 
+// call the macro with the addition and subtraction operator
 matrix_add_subtract(+) matrix_add_subtract(-)
 ```
 

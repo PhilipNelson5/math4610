@@ -65,18 +65,23 @@ First it checks to guarantee that the matrix is square. Then initialize the vari
 template <typename T>
 T trace(Matrix<T> const& m)
 {
+  // check the matrix is square
   if (m.size() != m[0].size())
   {
     std::cerr << "ERROR: non square matrix in trace\n";
     exit(EXIT_FAILURE);
   }
 
+  // initialize the trace to zero
   T t = 0;
 
+  // sum the diagonal elements
   for (auto i = 0u; i < m.size(); ++i)
   {
     t += m[i][i];
   }
+
+  // return the trace
   return t;
 }
 ```

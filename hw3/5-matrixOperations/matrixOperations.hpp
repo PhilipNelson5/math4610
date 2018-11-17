@@ -110,13 +110,12 @@ Matrix<R> operator*(S const s, Matrix<T> const& m)
 {
   Matrix<R> result = m;
 
-  for (auto i = 0u; i < m.size(); ++i)
-  {
-    for (auto j = 0u; j < m[0].size(); ++j)
-    {
-      result[i][j] = s * m[i][j];
-    }
-  }
+  std::for_each(std::begin(result), std::end(result), [&](auto& row) {
+    std::for_each(std::begin(row), std::end(row), [&](auto& elem) {
+      elem *= s;
+    });
+  });
+
   return result;
 }
 

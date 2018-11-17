@@ -83,20 +83,25 @@ The matrix is printed then it's transpose. This is done for two matricies, `m1` 
 This code is generic for a matrix of any dimensionality and any type;
 
 ``` cpp
-  template <typename T>
-  Matrix<T> transpose(Matrix<T> const& m)
+template <typename T>
+Matrix<T> transpose(Matrix<T> const& m)
 {
+  // initialize the result matrix
   Matrix<T> tp(m[0].size());
   std::for_each(
     begin(tp), end(tp), [&](std::vector<T>& row) { row.resize(m.size()); });
 
+  // for every column of m
   for (auto j = 0u; j < m[0].size(); ++j)
   {
+    // for every row of m
     for (auto i = 0u; i < m.size(); ++i)
     {
       tp[j][i] = m[i][j];
     }
   }
+
+  // return the transpose
   return tp;
 }
 ```

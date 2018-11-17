@@ -72,22 +72,29 @@ The first two block of output are the matrix m1 and the vector v1. Then the resu
 
 **Implementation/Code:** The following is the code for Matrix Scalar Multiplication
 
+This code uses [std::for_each](https://en.cppreference.com/w/cpp/algorithm/for_each) to iterate through each row and column of the matrix and multiply it by the given scalar `s`.The result is then returned.
+
 ``` cpp
 template <typename T, typename S, typename R = decltype(S() * T())>
 Matrix<R> operator*(S const s, Matrix<T> const& m)
 {
+  // initialize the result matrix to the passed in matrix
   Matrix<R> result = m;
 
-  for (auto i = 0u; i < m.size(); ++i)
-  {
-    for (auto j = 0u; j < m[0].size(); ++j)
-    {
-      result[i][j] = s * m[i][j];
-    }
-  }
+  // for each row
+  std::for_each(std::begin(result), std::end(result), [&](auto& row) {
+    // for each column
+    std::for_each(std::begin(row), std::end(row), [&](auto& elem) {
+      // multiply the element by s
+      elem *= s;
+    });
+  });
+
+  // return the result
   return result;
 }
 
+// this just lets you multiply s * m as well as m * s
 template <typename T, typename S, typename R = decltype(T() * S())>
 inline Matrix<R> operator*(Matrix<T> const& m, S const s)
 {

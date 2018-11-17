@@ -64,25 +64,32 @@ First m1 and m2 are displayed, then the product of m1 * m2 is displayed
 
 **Implementation/Code:** The following is the code for Matrix Matrix Multiplication
 
+This code uses [std::for_each](https://en.cppreference.com/w/cpp/algorithm/for_each) to initialize the result matrix to the correct size by sizing each row to the correct final size. Then the value of each element are calculated.
+
 ``` cpp
 template <typename T, typename U, typename R = decltype(T() + U())>
 Matrix<R> operator*(Matrix<T> const& m1, Matrix<U> const& m2)
 {
+  // check the sizes are compatible
   if (m1[0].size() != m2.size())
   {
     std::cerr << "ERROR: incorrectly sized matrices in mat * mat\n";
     exit(EXIT_FAILURE);
   }
 
+  // initalize the result matrix
   Matrix<R> result(m1.size());
   std::for_each(begin(result), end(result), [&m2](std::vector<R>& row) {
     row.resize(m2[0].size());
   });
 
+  // for each row of m1
   for (auto i = 0u; i < result.size(); ++i)
   {
+    // for each column of m2
     for (auto j = 0u; j < result[0].size(); ++j)
     {
+      // calculate the ij'th element of the result
       result[i][j] = 0;
       for (auto k = 0u; k < m2.size(); ++k)
       {
@@ -90,6 +97,8 @@ Matrix<R> operator*(Matrix<T> const& m1, Matrix<U> const& m2)
       }
     }
   }
+
+  // return the result
   return result;
 }
 ```

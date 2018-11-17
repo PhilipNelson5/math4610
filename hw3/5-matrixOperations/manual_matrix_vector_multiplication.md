@@ -65,28 +65,35 @@ _explanation of output_:
 
 The first two block of output are the matrix m1 and the vector v1. Then the result of m1*v1.
 
-**Implementation/Code:** The following is the code for <++>
+**Implementation/Code:** The following is the code for Matrix Vector Multiplication
 
 ``` cpp
 template <typename T, typename U, typename R = decltype(T() + U())>
 std::vector<R> operator*(Matrix<T> const& m, std::vector<U> const& v)
 {
+  // check that the sizes are compatible
   if (m[0].size() != v.size())
   {
     std::cerr << "ERROR: incorrectly sized matrix or vector in mat * vec\n";
     exit(EXIT_FAILURE);
   }
+
+  // initalize the result vector
   std::vector<R> result(m.size());
 
+  // for every row of m
   for (auto i = 0u; i < m.size(); ++i)
   {
     R sum = 0;
+    // for every element of v
     for (auto j = 0u; j < v.size(); ++j)
     {
       sum += m[i][j] * v[j];
     }
     result[i] = sum;
   }
+
+  // return the result vector
   return result;
 }
 ```
