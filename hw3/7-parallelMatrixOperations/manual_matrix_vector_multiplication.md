@@ -1,50 +1,87 @@
 ---
-title: <++>
+title: Parallel Matrix Vector Multiply
 layout: default
 math: true
 ---
 {% include mathjax.html %}
 <a href="https://philipnelson5.github.io/math4610/SoftwareManual"> Table of Contents </a>
-# <++> Software Manual
-
-**Routine Name:** <++>
+# Parallel Matrix Vector Multiply
 
 **Author:** Philip Nelson
 
-**Language:** C++. The code can be compiled using the GNU C++ compiler (gcc). A make file is included to compile an example program
+**Language:** C++. The code can be compiled using the GNU C++ compiler (gcc)
 
-For example,
+**Description/Purpose:** This page demonstrates the utility of OpenMP in parallelization.
 
-```
-make
-```
+**Findings**
 
-will produce an executable **./<++>.out** that can be executed.
+![Matrix Matrix Multiply](./images/parallelMatrixVector.png)
 
-**Description/Purpose:**
+**Implementation/Code:** The following is the code for parallel_multiply
 
-**Input:**
+These results are impressive for the low amount of work that is required to utilize OpenMP directives.
 
-**Output:**
-
-**Usage/Example:**
+Two versions were tested. Version one used `#pragma omp for` to parallelize the outer for loop. Version 2 used `#pragma omp for collapse(2)` to parallelize the outer and inner loops. 
 
 ``` cpp
-<++>
+template <typename T>
+using Matrix = std::vector<std::vector<T>>;
+
+template <typename T, typename U, typename R = decltype(T() + U())>
+std::vector<R> parallel_multiply(Matrix<T> const& m, std::vector<U> const& v)
+{
+  if (m[0].size() != v.size())
+  {
+    std::cerr
+      << "ERROR: incorrectly sized matrix or vector in parallel mat * vec\n";
+    exit(EXIT_FAILURE);
+  }
+
+  std::vector<R> result(m.size(), 0);
+
+  auto i = 0u, j = 0u;
+#pragma omp parallel
+  {
+#pragma omp for
+    for (i = 0u; i < m.size(); ++i)
+    {
+      for (j = 0u; j < m[0].size(); ++j)
+      {
+        result[i] += m[i][j] * v[j];
+      }
+    }
+  }
+
+  return result;
+}
+
+template <typename T, typename U, typename R = decltype(T() + U())>
+std::vector<R> parallel_multiply2(Matrix<T> const& m, std::vector<U> const& v)
+{
+  if (m[0].size() != v.size())
+  {
+    std::cerr
+      << "ERROR: incorrectly sized matrix or vector in parallel mat * vec\n";
+    exit(EXIT_FAILURE);
+  }
+
+  std::vector<R> result(m.size(), 0);
+
+  auto i = 0u, j = 0u;
+#pragma omp parallel
+  {
+#pragma omp for collapse(2)
+    for (i = 0u; i < m.size(); ++i)
+    {
+      for (j = 0u; j < m[0].size(); ++j)
+      {
+        result[i] += m[i][j] * v[j];
+      }
+    }
+  }
+
+  return result;
+}
 ```
 
-**Output** from the lines above
-```
-<++>
-```
-
-_explanation of output_:
-<++>
-
-**Implementation/Code:** The following is the code for <++>
-
-``` cpp
-<++>
-```
-
-**Last Modified:** <++>September 2018
+**Last Modified:** October 2018
