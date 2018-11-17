@@ -17,9 +17,9 @@ math: true
 
 ![Matrix Matrix Multiply](./images/parallelMatrixVector.png)
 
-**Implementation/Code:** The following is the code for parallel_multiply
+These results are impressive overall but there are some anomalies. I don't know why it takes the parallel functions longer sometimes. We can see that both parallel methods outperform the serial version. With the largest matrices the first parallel function outperforms the second.
 
-These results are impressive for the low amount of work that is required to utilize OpenMP directives.
+**Implementation/Code:** The following is the code for parallel_multiply
 
 Two versions were tested. Version one used `#pragma omp for` to parallelize the outer for loop. Version 2 used `#pragma omp for collapse(2)` to parallelize the outer and inner loops. 
 

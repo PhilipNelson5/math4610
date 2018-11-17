@@ -1,5 +1,5 @@
-#include "../5-matrixOperations/matrixOperations.hpp"
 #include "../3-vectorOperations/vectorOperations.hpp"
+#include "../5-matrixOperations/matrixOperations.hpp"
 #include "vectorOuterProduct.hpp"
 #include <iomanip>
 #include <iostream>
