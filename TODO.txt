@@ -39,7 +39,7 @@
 
 [X] 9
 
-[ ] 10 25
+[X] 10 25 <-- 11/19
 
  ---- HW4 ----
 [ ] 1
@@ -104,14 +104,7 @@
 
 ======================================
 
-54 problems to do
-18 week days between 11/14 and 12/7
------------------------------------
- 3 problems to do per day
-
-======================================
-
 33 problems left
-21 week days between 11/17 and 12/7
+14 week days between 11/20 and 12/7
 -----------------------------------
- 1.5 problems per day
+ 2.2 problems per day
