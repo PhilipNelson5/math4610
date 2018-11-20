@@ -61,4 +61,8 @@ title: MATH 4610 Homework Table of Contents
 |                   | [b. Cross Product](./hw3/3-vectorOperations/manual_vector_cross_product.md)|
 | **Problem 9**     | [Orthogonal Basis](./hw3/9-orthogonalBasis/manual_orthogonal_basis.md)|
 | **Problem 10**    | [Kronecker Product Applications](./hw3/10-kroneckerResearch/kroneckerResearch.md)|
-|                   | [](./hw3/5-matrixOperations/manual_.md)|
+
+|| **Homework** 4 <br> _due: Sometime_ <br>|
+| :-----------------|:---------------------------|
+| **Problem 1**     | [Gaussian Elimination](./hw4/1-GaussianElimination/manual_gaussian_elimination.md)|
+| **Problem 2**     | [Gaussian Elimination](./hw4/2-GaussianElimination/manual_gaussian_elimination.md)|
