@@ -60,4 +60,5 @@ title: MATH 4610 Homework Table of Contents
 | **Problem 8**     | [a. Inner Product (Dot Product)](./hw3/3-vectorOperations/manual_vector_inner_product.md)|
 |                   | [b. Cross Product](./hw3/3-vectorOperations/manual_vector_cross_product.md)|
 | **Problem 9**     | [Orthogonal Basis](./hw3/9-orthogonalBasis/manual_orthogonal_basis.md)|
+| **Problem 10**    | [Kronecker Product Applications](./hw3/10-kroneckerResearch/kroneckerResearch.md)|
 |                   | [](./hw3/5-matrixOperations/manual_.md)|
