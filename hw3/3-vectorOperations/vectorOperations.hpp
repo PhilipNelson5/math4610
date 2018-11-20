@@ -59,6 +59,21 @@ vector_add_subtract(+) vector_add_subtract(-)
 }
 
 template <typename T, typename U, typename R = decltype(T() * U())>
+std::vector<R> operator*(std::vector<T> const& v1, std::vector<U> const& v2)
+{
+  std::vector<R> result;
+  result.reserve(v1.size());
+
+  std::transform(std::begin(v1),
+                 std::end(v1),
+                 std::begin(v2),
+                 std::back_inserter(result),
+                 [](auto const& e1, auto const& e2) { return e1 * e2; });
+
+  return result;
+}
+
+template <typename T, typename U, typename R = decltype(T() * U())>
 std::vector<R> operator/(std::vector<T> const& a, U const s)
 {
   std::vector<R> result(a.size());

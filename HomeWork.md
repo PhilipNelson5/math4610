@@ -59,4 +59,5 @@ title: MATH 4610 Homework Table of Contents
 |                   | [b. Parallel Matrix Multiplication](./hw3/7-parallelMatrixOperations/manual_matrix_multiplication.md)|
 | **Problem 8**     | [a. Inner Product (Dot Product)](./hw3/3-vectorOperations/manual_vector_inner_product.md)|
 |                   | [b. Cross Product](./hw3/3-vectorOperations/manual_vector_cross_product.md)|
+| **Problem 9**     | [Orthogonal Basis](./hw3/9-orthogonalBasis/manual_orthogonal_basis.md)|
 |                   | [](./hw3/5-matrixOperations/manual_.md)|
