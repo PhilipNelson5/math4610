@@ -57,3 +57,4 @@ title: MATH 4610 Software Manual
 **Linear Solvers**
 * Gaussian Elimination - [gaussian_elimination](./hw4/1-GaussianElimination/manual_gaussian_elimination.md)
 * Forward Substitution - [forward_substitution](./hw4/3-ForwardSubstitution/manual_forward_sub.md)
+* Back Substitution - [back_substitution](./hw4/4-BackSubstitution/manual_back_sub.md)

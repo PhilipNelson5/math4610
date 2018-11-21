@@ -53,8 +53,9 @@ int main()
   std::cout << " b\n" << b << std::endl;
   std::cout << " Actual y\n" << y << std::endl;
   std::cout << " Calculated y\n";
-  std::cout << forwardSub(L, b) << std::endl;
+  std::cout << forward_sub(L, b) << std::endl;
 }
+```
 
 **Output** from the lines above
 

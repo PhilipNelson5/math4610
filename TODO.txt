@@ -48,7 +48,7 @@
 
 [X] 3
 
-[ ] 4
+[X] 4
 
 [ ] 5 30
 
@@ -105,6 +105,6 @@
 ======================================
 
 33 problems left
-14 week days between 11/20 and 12/7
+13 week days between 11/20 and 12/7
 -----------------------------------
- 2.2 problems per day
+ 2.07 problems per day
