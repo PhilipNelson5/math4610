@@ -38,7 +38,11 @@ will produce an executable **./gaussianEliminationout** that can be executed.
 ``` cpp
 int main()
 {
-  // Matrix<double> m1 = {{1, -1, 2, -3}, {4, 4, -2, 1}, {-2, 2, -4, 6}};
+  Matrix<double> m1 = {
+    {1, -1, 2, -3},
+    {4, 4, -2, 1},
+    {-2, 2, -4, 6}
+  };
   std::cout << "m1\n" << m1 << std::endl;
   gaussian_emlimination(m1);
   std::cout << m1 << std::endl;
