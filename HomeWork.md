@@ -66,3 +66,4 @@ title: MATH 4610 Homework Table of Contents
 | :-----------------|:---------------------------|
 | **Problem 1**     | [Gaussian Elimination](./hw4/1-GaussianElimination/manual_gaussian_elimination.md)|
 | **Problem 2**     | [Gaussian Elimination](./hw4/2-GaussianElimination/manual_gaussian_elimination.md)|
+| **Problem 3**     | [Forward Substitution](./hw4/3-ForwardSubstitution/manual_forward_sub.md)|
