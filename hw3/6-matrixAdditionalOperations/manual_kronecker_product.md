@@ -38,8 +38,16 @@ will produce an executable **./matrixOpts2.out** that can be executed.
 ``` cpp
 int main()
 {
-  std::vector<std::vector<double>> m1 = { {1, 2}, {3, 4}, {1, 0} },
-                                   m2 = { {0, 5, 2}, {6, 7, 3} };
+  Matrix<double>
+  m1 = {
+    {1, 2},
+    {3, 4},
+    {1, 0}
+  },
+  m2 = {
+    {0, 5, 2},
+    {6, 7, 3}
+  };
   std::cout << m1 << '\n' << m2 << '\n';
 
   std::cout << kronecker_product(m1, m2) << '\n';

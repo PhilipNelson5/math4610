@@ -36,7 +36,11 @@ will produce an executable **./matrixOpts.out** that can be executed.
 ``` cpp
 int main()
 {
-  Matrix<int> m1 = { {1, 2, 3}, {4, 5, 6}, {7, 8, 9} };
+  Matrix<int> m1 = {
+    {1, 2, 3},
+    {4, 5, 6},
+    {7, 8, 9}
+  };
   std::cout << m1 << std::endl;
   std::cout << trace(m1) << std::endl;
 }

@@ -37,7 +37,11 @@ will produce an executable **./matrixOpts2.out** that can be executed.
 ``` cpp
 int main()
 {
-  Matrix<double> m1 = { {1, 3, 2}, {-3, -1, -3}, {2, 3, 1} };
+  Matrix<double> m1 = {
+    { 1,  3,  2},
+    {-3, -1, -3},
+    { 2,  3,  1}
+  };
 
   std::cout << m1 << '\n';
 

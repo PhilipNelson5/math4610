@@ -40,7 +40,11 @@ will produce an executable **./matrixOpts.out** that can be executed.
 ``` cpp
 int main()
 {
-  Matrix<int> m1 = { {1, 2, 3}, {4, 5, 6}, {7, 8, 9} };
+  Matrix<int> m1 = {
+    {1, 2, 3},
+    {4, 5, 6},
+    {7, 8, 9}
+  };
   std::vector<double> v1 = {1.1, 2.2, 3.3};
   std::cout << "m1*v1\n";
   std::cout << m1 * v1 << "\n";

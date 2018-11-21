@@ -8,7 +8,7 @@ using Matrix = std::vector<std::vector<T>>;
 
 int main()
 {
-  Matrix<double> L({ {1, 0, 0, 0}, {5, 1, 0, 0}, {4, -6, 1, 0}, {-4, 5, -9, 1} });
+  Matrix<double> L({{1, 0, 0, 0}, {5, 1, 0, 0}, {4, -6, 1, 0}, {-4, 5, -9, 1}});
 
   std::vector<double> y{3, 5, -6, 8};
 

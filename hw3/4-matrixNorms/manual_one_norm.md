@@ -37,7 +37,11 @@ will produce an executable **./matrixNorms.out** that can be executed.
 ``` cpp
 int main()
 {
-  std::vector<std::vector<int>> m = { {-3, 5, 7}, {2, 6, 4}, {0, 2, 8} };
+  std::vector<std::vector<int>> m = {
+    {-3, 5, 7},
+    {2, 6, 4},
+    {0, 2, 8}
+  };
   std::cout << m << std::endl;
   std::cout << "one norm: " << one_norm(m) << std::endl;
 }
