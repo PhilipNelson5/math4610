@@ -60,3 +60,4 @@ title: MATH 4610 Software Manual
   * LU Factorization - [LU_factorization](./hw4/6-LUFactorization/manual_LU_factorization.md)
   * Forward Substitution - [forward_substitution](./hw4/3-ForwardSubstitution/manual_forward_sub.md)
   * Back Substitution - [back_substitution](./hw4/4-BackSubstitution/manual_back_sub.md)
+* Cholesky Factorization - [cholesky_factorization](./hw4/8-CholeskyFactorization/manual_cholesky_factorization.md)|

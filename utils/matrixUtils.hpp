@@ -1,6 +1,7 @@
 #ifndef MATRIX_UTILS_HPP
 #define MATRIX_UTILS_HPP
 
+#include "random.hpp"
 #include <algorithm>
 #include <vector>
 
@@ -31,6 +32,23 @@ Matrix<T> zeros(unsigned int n)
     Z[i] = std::vector<T>(n, 0);
   }
   return Z;
+}
+
+Matrix<double> rand_double_NxM(unsigned int const& n,
+                             unsigned int const& m,
+                             double const& min,
+                             double const& max)
+{
+  Matrix<double> A(n);
+  for (auto i = 0u; i < A.size(); ++i)
+  {
+    for (auto j = 0u; j < m; ++j)
+    {
+      A[i].push_back(random_double(min, max));
+    }
+  }
+
+  return A;
 }
 
 #endif
