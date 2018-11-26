@@ -56,7 +56,7 @@ title: MATH 4610 Software Manual
 
 **Linear Solvers**
 * Gaussian Elimination - [gaussian_elimination](./hw4/1-GaussianElimination/manual_gaussian_elimination.md)
-* Solve By LU Factorization [solve_linear_system_lu](./hw4/manual_solve_lu_factorization.md)
+* Solve By LU Factorization [solve_linear_system_lu](./hw4/7-SolveSystemLUFactorization/manual_solve_lu_factorization.md)
   * LU Factorization - [LU_factorization](./hw4/6-LUFactorization/manual_LU_factorization.md)
   * Forward Substitution - [forward_substitution](./hw4/3-ForwardSubstitution/manual_forward_sub.md)
   * Back Substitution - [back_substitution](./hw4/4-BackSubstitution/manual_back_sub.md)
