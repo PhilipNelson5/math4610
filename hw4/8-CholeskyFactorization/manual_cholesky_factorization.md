@@ -80,12 +80,14 @@ First a random matrix A is generated, then Cholesky Factorization is applied and
 template <typename T>
 Matrix<T> cholesky_factorization(Matrix<T> const& A)
 {
+  // check for square matrix
   if (A.size() != A[0].size())
   {
     std::cerr << "ERROR: non-square matrix in cholesky_factorization"
               << std::endl;
   }
 
+  // setup the result matrix
   Matrix<T> L(A.size());
   std::for_each(
     std::begin(L), std::end(L), [&](auto& row) { row.resize(A.size()); });
@@ -103,10 +105,12 @@ Matrix<T> cholesky_factorization(Matrix<T> const& A)
         s += L[i][k] * L[j][k];
       }
 
+      // diagonal
       if (i == j)
       {
         L[i][j] = std::sqrt(A[i][i] - s);
       }
+      // non diagonal
       else
       {
         L[i][j] = 1.0 / L[j][j] * (A[i][j] - s);
@@ -114,6 +118,7 @@ Matrix<T> cholesky_factorization(Matrix<T> const& A)
     }
   }
 
+  // return the result
   return L;
 }
 ```
