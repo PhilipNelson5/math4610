@@ -69,3 +69,4 @@ title: MATH 4610 Homework Table of Contents
 | **Problem 3**     | [Forward Substitution](./hw4/3-ForwardSubstitution/manual_forward_sub.md)|
 | **Problem 4**     | [Back Substitution](./hw4/4-BackSubstitution/manual_back_sub.md)|
 | **Problem 6**     | [LU Factorization](./hw4/6-LUFactorization/manual_LU_factorization.md)|
+| **Problem 7**     | [Solve Linear System LU Factorization](./hw4/manual_solve_lu_factorization.md)|
