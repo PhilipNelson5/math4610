@@ -50,7 +50,12 @@ Solve a linear system of equations \\(Ax = b\\) by LU Factorization. The method 
 ``` cpp
 int main()
 {
-  Matrix<double> A = {{1, 2, 3, 4}, {4, 5, 6, 6}, {2, 5, 1, 2}, {7, 8, 9, 7}};
+  Matrix<double> A = {
+    {1, 2, 3, 4},
+    {4, 5, 6, 6},
+    {2, 5, 1, 2},
+    {7, 8, 9, 7}
+  };
   std::vector<double> x = {4, 7, 2, 5};
   auto b = A * x;
   std::cout << " A\n" << A << std::endl;
