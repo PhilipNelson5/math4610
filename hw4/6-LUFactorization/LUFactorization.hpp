@@ -27,6 +27,14 @@ unsigned int findLargestInCol(Matrix<T> const& m,
   return max;
 }
 
+/**
+ * @tparam T The type of the elements of A
+ * @param m  The matrix to be decomposed
+ * @return A tuple composed of the decomposed matrix m into 
+ * L - Lower triangular
+ * U - Upper triangular
+ * P - Permutation matrix
+ */
 template <typename T>
 std::tuple<Matrix<T>, Matrix<T>, Matrix<T>> LU_factorize(Matrix<T> m)
 {
@@ -70,15 +78,6 @@ std::tuple<Matrix<T>, Matrix<T>, Matrix<T>> LU_factorize(Matrix<T> m)
   L = I + L;
 
   return {L, U, P};
-}
-
-template <typename T>
-std::vector<T> solve_linear_system_LU(Matrix<T> A, std::vector<T> b)
-{
-  auto [L, U, P] = LU_factorize(A);
-  auto y = forward_substitution(L, P * b);
-  auto x = back_substitution(U, y);
-  return x;
 }
 
 #endif
