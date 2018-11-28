@@ -21,7 +21,7 @@ make
 
 will produce an executable **./matrixNorms.out** that can be executed.
 
-**Description/Purpose:** This is a template function that can be used to calculate the \\(|| M ||_1\\) of any matrix s.t. \\(|| M ||_1 = \max_{1 \leq j \leq n} \sum_{i=1}^m |a_{ij}|\\), ie the max of the absolute column sums.
+**Description/Purpose:** This is a template function that can be used to calculate the \\(\| M \|_1\\) of any matrix s.t. \\(\| M \|_1 = \max_{1 \leq j \leq n} \sum_{i=1}^m |a_{ij}|\\), ie the max of the absolute column sums.
 
 **Input:** The routine takes one argument, the matrix
 
