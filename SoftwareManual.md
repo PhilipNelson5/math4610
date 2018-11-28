@@ -55,8 +55,8 @@ title: MATH 4610 Software Manual
 * Matrix Outer Product - [a. Matrix Outer Product](./hw3/6-matrixAdditionalOperations/manual_matrix_outer_product.md)
 
 **Generators**
-Matrix Generator[generate_square_symmetric_diagonally_dominant_matrix](./hw5/manual_generate_matrix)
-Right Side Generator[generate_right_side](./hw5/manual_generate_right_side.md)
+* Matrix Generator[generate_square_symmetric_diagonally_dominant_matrix](./hw5/2-MatrixGenerator/2-MatrixGenerator/manual_generate_matrix)
+* Right Side Generator[generate_right_side](./hw5/2-MatrixGenerator/2-MatrixGenerator/manual_generate_right_side.md)
 
 **Linear Solvers**
 * Gaussian Elimination - [gaussian_elimination](./hw4/1-GaussianElimination/manual_gaussian_elimination.md)
