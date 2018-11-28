@@ -74,5 +74,5 @@ title: MATH 4610 Homework Table of Contents
 
 || **Homework** 5 <br> _due: Sometime_ <br>|
 | :-----------------|:---------------------|
-| **Problem 2**     | [Matrix Generator](./hw5/manual_generate_matrix)|
-|                   | [Right Side Generator](./hw5/manual_generate_right_side.md)|
+| **Problem 2**     | [Matrix Generator](./hw5/2-MatrixGenerator/manual_generate_matrix)|
+|                   | [Right Side Generator](./hw5/2-MatrixGenerator/manual_generate_right_side.md)|
