@@ -20,7 +20,7 @@ title: MATH 4610 Homework Table of Contents
 | **Problem 10**    | [Graphs](./hw1/10-graphs/manual.md)|
 
 || **Homework** 2 <br> _due: 29 September 2018_ <br>|
-| :-----------------|:---------------------------|
+| :-----------------|:------------------------------|
 | **Problem 1**     | [Absolute Error](./hw2/1-error/manual_abs.md)|
 |                   | [Relative Error](./hw2/1-error/manual_rel.md)|
 | **Problem 2**     | [Derivative Approximation](./hw2/2-derivativeApproximation/manual.md)|
@@ -34,7 +34,7 @@ title: MATH 4610 Homework Table of Contents
 | **Problem 10**    | [Online Search for Bracketing of Roots](./hw2/10-bracketingRootsResearch/manual.md)|
 
 || **Homework** 3 <br> _due: Sometime_ <br>|
-| :-----------------|:---------------------------|
+| :-----------------|:---------------------|
 | **Problem 1**     | [l_p Vector Norms](./hw3/1-vectorNorms/manual_l_pNorms.md)|
 |                   | [l Infinity Vector Norm](./hw3/1-vectorNorms/manual_l_inf.md)|
 | **Problem 2**     | [Absolute Vector Error](./hw3/2-vectorError/manual_abs.md)|
@@ -63,7 +63,7 @@ title: MATH 4610 Homework Table of Contents
 | **Problem 10**    | [Kronecker Product Applications](./hw3/10-kroneckerResearch/kroneckerResearch.md)|
 
 || **Homework** 4 <br> _due: Sometime_ <br>|
-| :-----------------|:---------------------------|
+| :-----------------|:---------------------|
 | **Problem 1**     | [Gaussian Elimination Square](./hw4/1-GaussianElimination/manual_gaussian_elimination.md)|
 | **Problem 2**     | [Gaussian Elimination Rectangular](./hw4/2-GaussianElimination/manual_gaussian_elimination.md)|
 | **Problem 3**     | [Forward Substitution](./hw4/3-ForwardSubstitution/manual_forward_sub.md)|
@@ -71,3 +71,8 @@ title: MATH 4610 Homework Table of Contents
 | **Problem 6**     | [LU Factorization](./hw4/6-LUFactorization/manual_LU_factorization.md)|
 | **Problem 7**     | [Solve Linear System LU Factorization](./hw4/7-SolveSystemLUFactorization/manual_solve_lu_factorization.md)|
 | **Problem 8**     | [Cholesky Factorization](./hw4/8-CholeskyFactorization/manual_cholesky_factorization.md)|
+
+|| **Homework** 5 <br> _due: Sometime_ <br>|
+| :-----------------|:---------------------|
+| **Problem 2**     | [Matrix Generator](./hw5/manual_generate_matrix)|
+|                   | [Right Side Generator](./hw5/manual_generate_right_side.md)|

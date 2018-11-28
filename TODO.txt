@@ -67,7 +67,7 @@
  ---- HW5 ----
 [ ] 1
 
-[ ] 2
+[X] 2
 
 [ ] 3
 
@@ -104,7 +104,7 @@
 
 ======================================
 
-33 problems left
-13 week days between 11/20 and 12/7
+21 problems left
+ 8 week days between 11/28 and 12/7
 -----------------------------------
- 2.07 problems per day
+ 2.625 problems per day

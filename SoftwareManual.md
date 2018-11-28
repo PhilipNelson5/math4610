@@ -54,10 +54,15 @@ title: MATH 4610 Software Manual
 * Matrix Determinant - [determinant](./hw3/6-matrixAdditionalOperations/manual_determinant.md)
 * Matrix Outer Product - [a. Matrix Outer Product](./hw3/6-matrixAdditionalOperations/manual_matrix_outer_product.md)
 
+**Generators**
+Matrix Generator[generate_square_symmetric_diagonally_dominant_matrix](./hw5/manual_generate_matrix)
+Right Side Generator[generate_right_side](./hw5/manual_generate_right_side.md)
+
 **Linear Solvers**
 * Gaussian Elimination - [gaussian_elimination](./hw4/1-GaussianElimination/manual_gaussian_elimination.md)
 * Solve By LU Factorization [solve_linear_system_lu](./hw4/7-SolveSystemLUFactorization/manual_solve_lu_factorization.md)
   * LU Factorization - [LU_factorization](./hw4/6-LUFactorization/manual_LU_factorization.md)
   * Forward Substitution - [forward_substitution](./hw4/3-ForwardSubstitution/manual_forward_sub.md)
   * Back Substitution - [back_substitution](./hw4/4-BackSubstitution/manual_back_sub.md)
-* Cholesky Factorization - [cholesky_factorization](./hw4/8-CholeskyFactorization/manual_cholesky_factorization.md)|
+* Cholesky Factorization - [cholesky_factorization](./hw4/8-CholeskyFactorization/manual_cholesky_factorization.md)
+
