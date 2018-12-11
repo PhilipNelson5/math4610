@@ -35,9 +35,9 @@ Matrix<T> zeros(unsigned int n)
 }
 
 Matrix<double> rand_double_NxM(unsigned int const& n,
-                             unsigned int const& m,
-                             double const& min,
-                             double const& max)
+                               unsigned int const& m,
+                               double const& min,
+                               double const& max)
 {
   Matrix<double> A(n);
   for (auto i = 0u; i < A.size(); ++i)
@@ -49,6 +49,14 @@ Matrix<double> rand_double_NxM(unsigned int const& n,
   }
 
   return A;
+}
+
+template <typename T>
+bool allclose(std::vector<T> a, std::vector<T> b, double tol)
+{
+  for (auto i = 0u; i < a.size(); ++i)
+    if (std::abs(a[i] - b[i]) > tol) return false;
+  return true;
 }
 
 #endif
