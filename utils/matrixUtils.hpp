@@ -59,4 +59,13 @@ bool allclose(std::vector<T> a, std::vector<T> b, double tol)
   return true;
 }
 
+template <typename T>
+bool allclose(Matrix<T> a, Matrix<T> b, double tol)
+{
+  for (auto i = 0u; i < a.size(); ++i)
+    for (auto j = 0u; j < a[i].size(); ++j)
+      if (std::abs(a[i][j] - b[i][j]) > tol) return false;
+  return true;
+}
+
 #endif
