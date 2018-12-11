@@ -59,12 +59,13 @@ title: MATH 4610 Software Manual
 * Right Side Generator[generate_right_side](./hw5/2-MatrixGenerator/manual_generate_right_side.md)
 
 **Linear Solvers**
-* Solve System Gaussian Elimination - [solve_linear_system_gaussian_elimination](./hw4/5-SolveSystemGaussianElimination/manual_solve_linear_system_gaussian_elimination.md)
+* Solve By Gaussian Elimination - [solve_linear_system_gaussian_elimination](./hw4/5-SolveSystemGaussianElimination/manual_solve_linear_system_gaussian_elimination.md)
   * Gaussian Elimination - [gaussian_elimination](./hw4/1-GaussianElimination/manual_gaussian_elimination.md)
   * Back Substitution - [back_substitution](./hw4/4-BackSubstitution/manual_back_sub.md)
 * Solve By LU Factorization [solve_linear_system_lu](./hw4/7-SolveSystemLUFactorization/manual_solve_lu_factorization.md)
   * LU Factorization - [LU_factorization](./hw4/6-LUFactorization/manual_LU_factorization.md)
   * Forward Substitution - [forward_substitution](./hw4/3-ForwardSubstitution/manual_forward_sub.md)
   * Back Substitution - [back_substitution](./hw4/4-BackSubstitution/manual_back_sub.md)
-* Cholesky Factorization - [cholesky_factorization](./hw4/8-CholeskyFactorization/manual_cholesky_factorization.md)
+* Solve By System Cholesky Factorization - [solve_linear_system_cholesky](./hw4/10-SolveSystemCholeskyFactorization/manual_solve_cholesky.md)
+  * Cholesky Factorization - [cholesky_factorization](./hw4/8-CholeskyFactorization/manual_cholesky_factorization.md)
 

@@ -73,6 +73,7 @@ title: MATH 4610 Homework Table of Contents
 | **Problem 7**     | [Solve Linear System LU Factorization](./hw4/7-SolveSystemLUFactorization/manual_solve_lu_factorization.md)|
 | **Problem 8**     | [Cholesky Factorization](./hw4/8-CholeskyFactorization/manual_cholesky_factorization.md)|
 | **Problem 9**     | [Cholesky Factorization Test](./hw4/9-CholeskyTest/manual_cholesky_factorization_test.md)|
+| **Problem 10**    | [Solve Linear System Cholesky Factorization](./hw4/10-SolveSystemCholeskyFactorization/manual_solve_cholesky.md)|
 
 || **Homework** 5 <br> _due: Sometime_ <br>|
 | :-----------------|:---------------------|
