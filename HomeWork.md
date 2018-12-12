@@ -78,5 +78,7 @@ title: MATH 4610 Homework Table of Contents
 
 || **Homework** 5 <br> _due: 14 December 2018_ <br>|
 | :-----------------|:---------------------|
+| **Problem 1**     | [Induced Matrix One Norm](./hw3/4-matrixNorms/manual_one_norm.md)|
+|                   | [Induced Matrix Inf Norm](./hw3/4-matrixNorms/manual_inf_norm.md)|
 | **Problem 2**     | [Matrix Generator](./hw5/2-MatrixGenerator/manual_generate_matrix)|
 |                   | [Right Side Generator](./hw5/2-MatrixGenerator/manual_generate_right_side.md)|

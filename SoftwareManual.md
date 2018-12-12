@@ -32,7 +32,7 @@ title: MATH 4610 Software Manual
 * l_p Vector Norms - [l_pNorm](./hw3/1-vectorNorms/manual_l_pNorms.md)
 * l Infinity Vector Norm - [l_inf](./hw3/1-vectorNorms/manual_l_inf.md)
 * One Matrix Norm - [one_norm](./hw3/4-matrixNorms/manual_one_norm.md)
-* Infinity Matrix Norm - [inf_norm](./hw3/1-vectorNorms/manual_inf_norm.md)
+* Infinity Matrix Norm - [inf_norm](./hw3/4-matrixNorms/manual_inf_norm.md)
 * Frobenius Matrix Norm - [frobenius_norm](./hw3/4-matrixNorms/manual_frobenius_norm.md)
 
 **Vector Operations**
