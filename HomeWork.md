@@ -82,3 +82,4 @@ title: MATH 4610 Homework Table of Contents
 |                   | [Induced Matrix Inf Norm](./hw3/4-matrixNorms/manual_inf_norm.md)|
 | **Problem 2**     | [Matrix Generator](./hw5/2-MatrixGenerator/manual_generate_matrix)|
 |                   | [Right Side Generator](./hw5/2-MatrixGenerator/manual_generate_right_side.md)|
+| **Problem 3**     | [Jacobi Iteration](./hw5/3-JacobiIteration/manual_jacobi_iteration.md)|

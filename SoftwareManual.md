@@ -68,4 +68,4 @@ title: MATH 4610 Software Manual
   * Back Substitution - [back_substitution](./hw4/4-BackSubstitution/manual_back_sub.md)
 * Solve By System Cholesky Factorization - [solve_linear_system_cholesky](./hw4/10-SolveSystemCholeskyFactorization/manual_solve_cholesky.md)
   * Cholesky Factorization - [cholesky_factorization](./hw4/8-CholeskyFactorization/manual_cholesky_factorization.md)
-
+* Jacobi Iteration - [jacobi_iteration](./hw5/3-JacobiIteration/manual_jacobi_iteration.md)
