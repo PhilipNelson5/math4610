@@ -84,7 +84,8 @@ title: MATH 4610 Homework Table of Contents
 |                   | [Right Side Generator](./hw5/2-MatrixGenerator/manual_generate_right_side.md)|
 | **Problem 3**     | [Jacobi Iteration](./hw5/3-JacobiIteration/manual_jacobi_iteration.md)|
 | **Problem 4**     | [Gauss Seidel](./hw5/4-GaussSeidel/manual_gauss_sidel.md)|
-| **Problem 5**     | [Conjugate Gradient / Steepest Descent](./hw5/5-SteepestDescent/manual_conjugate_gradient.md)|
+| **Problem 5**     | [Steepest Descent](./hw5/5-SteepestDescent/manual_steepest_descent.md)|
+| **Problem 6**     | [Conjugate Gradient](./hw5/6-ConjugateGradient/manual_conjugate_gradient.md)|
 | **Problem 7**     | [Parallel Jacobi Iteration](./hw5/7-ParallelJacobiIteration/manual_parallel_jacobi_iteration.md)|
 | **Problem 8**     | [Parallel Gauss Seidel](./hw5/8-ParallelGaussSeidel/manual_parallel_gauss_sidel.md)|
 | **Problem 9**     | [Parallel Conjugate Gradient](./hw5/9-ParallelConjugateGradient/manual_parallel_conjugate_gradient.md)|
