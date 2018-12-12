@@ -33,7 +33,7 @@ title: MATH 4610 Homework Table of Contents
 | **Problem 9**     | [Hybrid secant Method](./hw2/9-hybridSecant/manual.md)|
 | **Problem 10**    | [Online Search for Bracketing of Roots](./hw2/10-bracketingRootsResearch/manual.md)|
 
-|| **Homework** 3 <br> _due: Sometime_ <br>|
+|| **Homework** 3 <br> _due: 14 December 2018_ <br>|
 | :-----------------|:---------------------|
 | **Problem 1**     | [l_p Vector Norms](./hw3/1-vectorNorms/manual_l_pNorms.md)|
 |                   | [l Infinity Vector Norm](./hw3/1-vectorNorms/manual_l_inf.md)|
@@ -62,7 +62,7 @@ title: MATH 4610 Homework Table of Contents
 | **Problem 9**     | [Orthogonal Basis](./hw3/9-orthogonalBasis/manual_orthogonal_basis.md)|
 | **Problem 10**    | [Kronecker Product Applications](./hw3/10-kroneckerResearch/kroneckerResearch.md)|
 
-|| **Homework** 4 <br> _due: Sometime_ <br>|
+|| **Homework** 4 <br> _due: 14 December 2018_ <br>|
 | :-----------------|:---------------------|
 | **Problem 1**     | [Gaussian Elimination Square](./hw4/1-GaussianElimination/manual_gaussian_elimination.md)|
 | **Problem 2**     | [Gaussian Elimination Rectangular](./hw4/2-GaussianElimination/manual_gaussian_elimination.md)|
@@ -74,8 +74,9 @@ title: MATH 4610 Homework Table of Contents
 | **Problem 8**     | [Cholesky Factorization](./hw4/8-CholeskyFactorization/manual_cholesky_factorization.md)|
 | **Problem 9**     | [Cholesky Factorization Test](./hw4/9-CholeskyTest/manual_cholesky_factorization_test.md)|
 | **Problem 10**    | [Solve Linear System Cholesky Factorization](./hw4/10-SolveSystemCholeskyFactorization/manual_solve_cholesky.md)|
+| **Problem 11**    | [Test Problems](./hw4/11-TestMatricies/test_matricies.md)|
 
-|| **Homework** 5 <br> _due: Sometime_ <br>|
+|| **Homework** 5 <br> _due: 14 December 2018_ <br>|
 | :-----------------|:---------------------|
 | **Problem 2**     | [Matrix Generator](./hw5/2-MatrixGenerator/manual_generate_matrix)|
 |                   | [Right Side Generator](./hw5/2-MatrixGenerator/manual_generate_right_side.md)|
