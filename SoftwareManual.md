@@ -69,3 +69,4 @@ title: MATH 4610 Software Manual
 * Solve By System Cholesky Factorization - [solve_linear_system_cholesky](./hw4/10-SolveSystemCholeskyFactorization/manual_solve_cholesky.md)
   * Cholesky Factorization - [cholesky_factorization](./hw4/8-CholeskyFactorization/manual_cholesky_factorization.md)
 * Jacobi Iteration - [jacobi_iteration](./hw5/3-JacobiIteration/manual_jacobi_iteration.md)
+* Gauss Seidel - [gauss_seidel](./hw5/4-GaussSeidel/manual_gauss_sidel.md)

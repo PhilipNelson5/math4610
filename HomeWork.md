@@ -83,3 +83,4 @@ title: MATH 4610 Homework Table of Contents
 | **Problem 2**     | [Matrix Generator](./hw5/2-MatrixGenerator/manual_generate_matrix)|
 |                   | [Right Side Generator](./hw5/2-MatrixGenerator/manual_generate_right_side.md)|
 | **Problem 3**     | [Jacobi Iteration](./hw5/3-JacobiIteration/manual_jacobi_iteration.md)|
+| **Problem 4**     | [Gauss Seidel](./hw5/4-GaussSeidel/manual_gauss_sidel.md)|
