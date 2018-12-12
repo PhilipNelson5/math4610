@@ -70,7 +70,7 @@ First, the matrix A is generated and displayed. It is a square matrix with unifo
 
 **Implementation/Code:** The following is the code for parallel_jacobi_iteration
 
-This code uses [std::fill](https://en.cppreference.com/w/cpp/algorithm/fill) to reset the x_new to all zeros each iteration.
+In this code, maceps returns a [std::tuple](https://en.cppreference.com/w/cpp/utility/tuple) with the machine epsilon and the precision. [std::get](https://en.cppreference.com/w/cpp/utility/tuple/get) is used to extract only the first value, the machine epsilon, from the returned tuple. The code also uses [std::fill](https://en.cppreference.com/w/cpp/algorithm/fill) to reset the x_new to all zeros each iteration.
 
 ``` cpp
 template <typename T>

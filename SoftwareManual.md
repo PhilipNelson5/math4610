@@ -69,6 +69,8 @@ title: MATH 4610 Software Manual
 * Solve By System Cholesky Factorization - [solve_linear_system_cholesky](./hw4/10-SolveSystemCholeskyFactorization/manual_solve_cholesky.md)
   * Cholesky Factorization - [cholesky_factorization](./hw4/8-CholeskyFactorization/manual_cholesky_factorization.md)
 * Jacobi Iteration - [jacobi_iteration](./hw5/3-JacobiIteration/manual_jacobi_iteration.md)
-* Parallel Jacobi Iteration - [parallel_jacobi_iteration](./hw5/7-ParallelJacobiIteration/manual_parallel_jacobi_iteration.md)
 * Gauss Seidel - [gauss_seidel](./hw5/4-GaussSeidel/manual_gauss_sidel.md)
 * Conjugate Gradient / Steepest Descent - [conjugate_gradient](./hw5/5-SteepestDescent/manual_conjugate_gradient.md)
+* Parallel Jacobi Iteration - [parallel_jacobi_iteration](./hw5/7-ParallelJacobiIteration/manual_parallel_jacobi_iteration.md)
+* Parallel Gauss Seidel - [parallel_gauss_seidel](./hw5/8-ParallelGaussSeidel/manual_parallel_gauss_sidel.md)|
+* Parallel Conjugate Gradient - [parallel_conjugate_gradient](./hw5/9-ParallelConjugateGradient/manual_parallel_conjugate_gradient.md)|

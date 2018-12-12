@@ -86,3 +86,5 @@ title: MATH 4610 Homework Table of Contents
 | **Problem 4**     | [Gauss Seidel](./hw5/4-GaussSeidel/manual_gauss_sidel.md)|
 | **Problem 5**     | [Conjugate Gradient / Steepest Descent](./hw5/5-SteepestDescent/manual_conjugate_gradient.md)|
 | **Problem 7**     | [Parallel Jacobi Iteration](./hw5/7-ParallelJacobiIteration/manual_parallel_jacobi_iteration.md)|
+| **Problem 8**     | [Parallel Gauss Seidel](./hw5/8-ParallelGaussSeidel/manual_parallel_gauss_sidel.md)|
+| **Problem 9**     | [Parallel Conjugate Gradient](./hw5/9-ParallelConjugateGradient/manual_parallel_conjugate_gradient.md)|
