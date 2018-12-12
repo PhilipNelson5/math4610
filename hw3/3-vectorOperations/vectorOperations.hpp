@@ -73,7 +73,16 @@ std::vector<R> operator*(std::vector<T> const& v1, std::vector<U> const& v2)
   return result;
 }
 
-template <typename T, typename U, typename R = decltype(T() * U())>
+//template <typename T, typename U, typename R = decltype(T() / U())>
+//std::vector<R> operator/(std::vector<T> const& a, std::vector<U> const b)
+//{
+  //std::vector<R> result(a.size());
+  //for (auto i = 0u; i < a.size(); ++i)
+    //result[i] = a[i] / b[i];
+  //return result;
+//}
+
+template <typename T, typename U, typename R = decltype(T() / U())>
 std::vector<R> operator/(std::vector<T> const& a, U const s)
 {
   std::vector<R> result(a.size());

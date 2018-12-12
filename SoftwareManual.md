@@ -70,3 +70,4 @@ title: MATH 4610 Software Manual
   * Cholesky Factorization - [cholesky_factorization](./hw4/8-CholeskyFactorization/manual_cholesky_factorization.md)
 * Jacobi Iteration - [jacobi_iteration](./hw5/3-JacobiIteration/manual_jacobi_iteration.md)
 * Gauss Seidel - [gauss_seidel](./hw5/4-GaussSeidel/manual_gauss_sidel.md)
+* Conjugate Gradient / Steepest Descent - [conjugate_gradient](./hw5/5-SteepestDescent/manual_conjugate_gradient.md)
