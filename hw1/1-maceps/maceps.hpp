@@ -1,9 +1,10 @@
 #ifndef MACEPS_HPP
 #define MACEPS_HPP
+
 #include <tuple>
 
 template <typename T>
-std::tuple<int, T> maceps()
+constexpr std::tuple<int, T> maceps()
 {
   T e = 1;
   T one = 1;

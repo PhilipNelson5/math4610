@@ -252,6 +252,36 @@ template<> struct conditional<false, std::integral_constant<bool, false>, std::_
 template<> struct conditional<false, std::integral_constant<bool, false>, std::__is_empty_non_tuple<int>> {
         typedef std::__is_empty_non_tuple<int> type;
     }
+template<> struct conditional<true, std::is_constructible<float, const float &>, std::is_constructible<int, const int &>> {
+        typedef std::is_constructible<float, const float &> type;
+    }
+template<> struct conditional<false, std::is_void<const int &>, std::__or_<std::is_function<int>, std::is_array<int> >> {
+        typedef std::__or_<std::is_function<int>, std::is_array<int> > type;
+    }
+template<> struct conditional<false, std::is_function<int>, std::is_array<int>> {
+        typedef std::is_array<int> type;
+    }
+template<> struct conditional<true, std::is_convertible<const float &, float>, std::is_convertible<const int &, int>> {
+        typedef std::is_convertible<const float &, float> type;
+    }
+template<> struct conditional<false, std::is_void<const float &>, std::__or_<std::is_function<float>, std::is_array<float> >> {
+        typedef std::__or_<std::is_function<float>, std::is_array<float> > type;
+    }
+template<> struct conditional<false, std::is_function<float>, std::is_array<float>> {
+        typedef std::is_array<float> type;
+    }
+template<> struct conditional<true, std::is_constructible<float, float &>, std::is_constructible<int, int &>> {
+        typedef std::is_constructible<float, float &> type;
+    }
+template<> struct conditional<false, std::is_void<int &>, std::__or_<std::is_function<int>, std::is_array<int> >> {
+        typedef std::__or_<std::is_function<int>, std::is_array<int> > type;
+    }
+template<> struct conditional<true, std::is_convertible<float &, float>, std::is_convertible<int &, int>> {
+        typedef std::is_convertible<float &, float> type;
+    }
+template<> struct conditional<false, std::is_void<float &>, std::__or_<std::is_function<float>, std::is_array<float> >> {
+        typedef std::__or_<std::is_function<float>, std::is_array<float> > type;
+    }
 template<> struct conditional<false, std::__and_<std::__is_convertible_to_basic_ostream<std::basic_ostream<char> &>, std::__is_insertable<std::basic_ostream<char> &, char const (&)[7], void> >, std::__not_<std::is_lvalue_reference<std::basic_ostream<char> &> >> {
         typedef std::__not_<std::is_lvalue_reference<std::basic_ostream<char> &> > type;
     }
@@ -279,6 +309,27 @@ template<> struct conditional<false, std::__and_<std::__is_convertible_to_basic_
 template<> struct conditional<false, std::integral_constant<bool, false>, std::__is_empty_non_tuple<double>> {
         typedef std::__is_empty_non_tuple<double> type;
     }
+template<> struct conditional<true, std::is_constructible<double, const double &>, std::is_constructible<int, const int &>> {
+        typedef std::is_constructible<double, const double &> type;
+    }
+template<> struct conditional<true, std::is_convertible<const double &, double>, std::is_convertible<const int &, int>> {
+        typedef std::is_convertible<const double &, double> type;
+    }
+template<> struct conditional<false, std::is_void<const double &>, std::__or_<std::is_function<double>, std::is_array<double> >> {
+        typedef std::__or_<std::is_function<double>, std::is_array<double> > type;
+    }
+template<> struct conditional<false, std::is_function<double>, std::is_array<double>> {
+        typedef std::is_array<double> type;
+    }
+template<> struct conditional<true, std::is_constructible<double, double &>, std::is_constructible<int, int &>> {
+        typedef std::is_constructible<double, double &> type;
+    }
+template<> struct conditional<true, std::is_convertible<double &, double>, std::is_convertible<int &, int>> {
+        typedef std::is_convertible<double &, double> type;
+    }
+template<> struct conditional<false, std::is_void<double &>, std::__or_<std::is_function<double>, std::is_array<double> >> {
+        typedef std::__or_<std::is_function<double>, std::is_array<double> > type;
+    }
 template<> struct conditional<false, std::__and_<std::__is_convertible_to_basic_ostream<std::basic_ostream<char> &>, std::__is_insertable<std::basic_ostream<char> &, char const (&)[8], void> >, std::__not_<std::is_lvalue_reference<std::basic_ostream<char> &> >> {
         typedef std::__not_<std::is_lvalue_reference<std::basic_ostream<char> &> > type;
     }
@@ -287,6 +338,27 @@ template<> struct conditional<false, std::__and_<std::__is_convertible_to_basic_
     }
 template<> struct conditional<false, std::integral_constant<bool, false>, std::__is_empty_non_tuple<long double>> {
         typedef std::__is_empty_non_tuple<long double> type;
+    }
+template<> struct conditional<true, std::is_constructible<long double, const long double &>, std::is_constructible<int, const int &>> {
+        typedef std::is_constructible<long double, const long double &> type;
+    }
+template<> struct conditional<true, std::is_convertible<const long double &, long double>, std::is_convertible<const int &, int>> {
+        typedef std::is_convertible<const long double &, long double> type;
+    }
+template<> struct conditional<false, std::is_void<const long double &>, std::__or_<std::is_function<long double>, std::is_array<long double> >> {
+        typedef std::__or_<std::is_function<long double>, std::is_array<long double> > type;
+    }
+template<> struct conditional<false, std::is_function<long double>, std::is_array<long double>> {
+        typedef std::is_array<long double> type;
+    }
+template<> struct conditional<true, std::is_constructible<long double, long double &>, std::is_constructible<int, int &>> {
+        typedef std::is_constructible<long double, long double &> type;
+    }
+template<> struct conditional<true, std::is_convertible<long double &, long double>, std::is_convertible<int &, int>> {
+        typedef std::is_convertible<long double &, long double> type;
+    }
+template<> struct conditional<false, std::is_void<long double &>, std::__or_<std::is_function<long double>, std::is_array<long double> >> {
+        typedef std::__or_<std::is_function<long double>, std::is_array<long double> > type;
     }
 template<> struct conditional<false, std::__and_<std::__is_convertible_to_basic_ostream<std::basic_ostream<char> &>, std::__is_insertable<std::basic_ostream<char> &, char const (&)[13], void> >, std::__not_<std::is_lvalue_reference<std::basic_ostream<char> &> >> {
         typedef std::__not_<std::is_lvalue_reference<std::basic_ostream<char> &> > type;
@@ -365,78 +437,6 @@ template<> struct conditional<false, std::is_void<const std::__cxx11::basic_stri
     }
 template<> struct conditional<false, std::__not_<std::is_convertible<const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > &, const char *> >, std::__not_<std::is_convertible<const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > *, const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > *> >> {
         typedef std::__not_<std::is_convertible<const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > *, const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > *> > type;
-    }
-template<> struct conditional<true, std::is_constructible<float, const float &>, std::is_constructible<int, const int &>> {
-        typedef std::is_constructible<float, const float &> type;
-    }
-template<> struct conditional<false, std::is_void<const int &>, std::__or_<std::is_function<int>, std::is_array<int> >> {
-        typedef std::__or_<std::is_function<int>, std::is_array<int> > type;
-    }
-template<> struct conditional<false, std::is_function<int>, std::is_array<int>> {
-        typedef std::is_array<int> type;
-    }
-template<> struct conditional<true, std::is_convertible<const float &, float>, std::is_convertible<const int &, int>> {
-        typedef std::is_convertible<const float &, float> type;
-    }
-template<> struct conditional<false, std::is_void<const float &>, std::__or_<std::is_function<float>, std::is_array<float> >> {
-        typedef std::__or_<std::is_function<float>, std::is_array<float> > type;
-    }
-template<> struct conditional<false, std::is_function<float>, std::is_array<float>> {
-        typedef std::is_array<float> type;
-    }
-template<> struct conditional<true, std::is_constructible<float, float &>, std::is_constructible<int, int &>> {
-        typedef std::is_constructible<float, float &> type;
-    }
-template<> struct conditional<false, std::is_void<int &>, std::__or_<std::is_function<int>, std::is_array<int> >> {
-        typedef std::__or_<std::is_function<int>, std::is_array<int> > type;
-    }
-template<> struct conditional<true, std::is_convertible<float &, float>, std::is_convertible<int &, int>> {
-        typedef std::is_convertible<float &, float> type;
-    }
-template<> struct conditional<false, std::is_void<float &>, std::__or_<std::is_function<float>, std::is_array<float> >> {
-        typedef std::__or_<std::is_function<float>, std::is_array<float> > type;
-    }
-template<> struct conditional<true, std::is_constructible<double, const double &>, std::is_constructible<int, const int &>> {
-        typedef std::is_constructible<double, const double &> type;
-    }
-template<> struct conditional<true, std::is_convertible<const double &, double>, std::is_convertible<const int &, int>> {
-        typedef std::is_convertible<const double &, double> type;
-    }
-template<> struct conditional<false, std::is_void<const double &>, std::__or_<std::is_function<double>, std::is_array<double> >> {
-        typedef std::__or_<std::is_function<double>, std::is_array<double> > type;
-    }
-template<> struct conditional<false, std::is_function<double>, std::is_array<double>> {
-        typedef std::is_array<double> type;
-    }
-template<> struct conditional<true, std::is_constructible<double, double &>, std::is_constructible<int, int &>> {
-        typedef std::is_constructible<double, double &> type;
-    }
-template<> struct conditional<true, std::is_convertible<double &, double>, std::is_convertible<int &, int>> {
-        typedef std::is_convertible<double &, double> type;
-    }
-template<> struct conditional<false, std::is_void<double &>, std::__or_<std::is_function<double>, std::is_array<double> >> {
-        typedef std::__or_<std::is_function<double>, std::is_array<double> > type;
-    }
-template<> struct conditional<true, std::is_constructible<long double, const long double &>, std::is_constructible<int, const int &>> {
-        typedef std::is_constructible<long double, const long double &> type;
-    }
-template<> struct conditional<true, std::is_convertible<const long double &, long double>, std::is_convertible<const int &, int>> {
-        typedef std::is_convertible<const long double &, long double> type;
-    }
-template<> struct conditional<false, std::is_void<const long double &>, std::__or_<std::is_function<long double>, std::is_array<long double> >> {
-        typedef std::__or_<std::is_function<long double>, std::is_array<long double> > type;
-    }
-template<> struct conditional<false, std::is_function<long double>, std::is_array<long double>> {
-        typedef std::is_array<long double> type;
-    }
-template<> struct conditional<true, std::is_constructible<long double, long double &>, std::is_constructible<int, int &>> {
-        typedef std::is_constructible<long double, long double &> type;
-    }
-template<> struct conditional<true, std::is_convertible<long double &, long double>, std::is_convertible<int &, int>> {
-        typedef std::is_convertible<long double &, long double> type;
-    }
-template<> struct conditional<false, std::is_void<long double &>, std::__or_<std::is_function<long double>, std::is_array<long double> >> {
-        typedef std::__or_<std::is_function<long double>, std::is_array<long double> > type;
     };
     template <typename ...> struct __or_
 template<> struct __or_<<std::is_void<const char *const &>, std::is_function<std::basic_string_view<char, std::char_traits<char> > >, std::is_array<std::basic_string_view<char, std::char_traits<char> > >>> : public conditional<is_void<const char *const &>::value, is_void<const char *const &>, __or_<is_function<basic_string_view<char, char_traits<char> > >, is_array<basic_string_view<char, char_traits<char> > > > >::type {
@@ -491,26 +491,6 @@ template<> struct __or_<<std::is_void<const char &>, std::is_function<std::basic
     }
 template<> struct __or_<<std::is_void<const int &>, std::is_function<std::basic_string_view<char, std::char_traits<char> > >, std::is_array<std::basic_string_view<char, std::char_traits<char> > >>> : public conditional<is_void<const int &>::value, is_void<const int &>, __or_<is_function<basic_string_view<char, char_traits<char> > >, is_array<basic_string_view<char, char_traits<char> > > > >::type {
     }
-template<> struct __or_<<std::is_void<std::random_access_iterator_tag>, std::is_function<std::input_iterator_tag>, std::is_array<std::input_iterator_tag>>> : public conditional<is_void<random_access_iterator_tag>::value, is_void<random_access_iterator_tag>, __or_<is_function<input_iterator_tag>, is_array<input_iterator_tag> > >::type {
-    }
-template<> struct __or_<<std::is_function<std::input_iterator_tag>, std::is_array<std::input_iterator_tag>>> : public conditional<is_function<input_iterator_tag>::value, is_function<input_iterator_tag>, is_array<input_iterator_tag> >::type {
-    }
-template<> struct __or_<<std::is_void<char *const &>, std::is_function<std::basic_string_view<char, std::char_traits<char> > >, std::is_array<std::basic_string_view<char, std::char_traits<char> > >>> : public conditional<is_void<char *const &>::value, is_void<char *const &>, __or_<is_function<basic_string_view<char, char_traits<char> > >, is_array<basic_string_view<char, char_traits<char> > > > >::type {
-    }
-template<> struct __or_<<std::is_void<char *const *>, std::is_function<const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > *>, std::is_array<const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > *>>> : public conditional<is_void<char *const *>::value, is_void<char *const *>, __or_<is_function<const basic_string<char, char_traits<char>, allocator<char> > *>, is_array<const basic_string<char, char_traits<char>, allocator<char> > *> > >::type {
-    }
-template<> struct __or_<<std::is_void<char *const &>, std::is_function<const char *>, std::is_array<const char *>>> : public conditional<is_void<char *const &>::value, is_void<char *const &>, __or_<is_function<const char *>, is_array<const char *> > >::type {
-    }
-template<> struct __or_<<std::is_void<wchar_t *const &>, std::is_function<std::basic_string_view<wchar_t, std::char_traits<wchar_t> > >, std::is_array<std::basic_string_view<wchar_t, std::char_traits<wchar_t> > >>> : public conditional<is_void<wchar_t *const &>::value, is_void<wchar_t *const &>, __or_<is_function<basic_string_view<wchar_t, char_traits<wchar_t> > >, is_array<basic_string_view<wchar_t, char_traits<wchar_t> > > > >::type {
-    }
-template<> struct __or_<<std::is_void<wchar_t *const *>, std::is_function<const std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> > *>, std::is_array<const std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> > *>>> : public conditional<is_void<wchar_t *const *>::value, is_void<wchar_t *const *>, __or_<is_function<const basic_string<wchar_t, char_traits<wchar_t>, allocator<wchar_t> > *>, is_array<const basic_string<wchar_t, char_traits<wchar_t>, allocator<wchar_t> > *> > >::type {
-    }
-template<> struct __or_<<std::is_void<wchar_t *const &>, std::is_function<const wchar_t *>, std::is_array<const wchar_t *>>> : public conditional<is_void<wchar_t *const &>::value, is_void<wchar_t *const &>, __or_<is_function<const wchar_t *>, is_array<const wchar_t *> > >::type {
-    }
-template<> struct __or_<<std::is_void<const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > &>, std::is_function<std::basic_string_view<char, std::char_traits<char> > >, std::is_array<std::basic_string_view<char, std::char_traits<char> > >>> : public conditional<is_void<const basic_string<char, char_traits<char>, allocator<char> > &>::value, is_void<const basic_string<char, char_traits<char>, allocator<char> > &>, __or_<is_function<basic_string_view<char, char_traits<char> > >, is_array<basic_string_view<char, char_traits<char> > > > >::type {
-    }
-template<> struct __or_<<std::is_void<const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > *>, std::is_function<const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > *>, std::is_array<const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > *>>> : public conditional<is_void<const basic_string<char, char_traits<char>, allocator<char> > *>::value, is_void<const basic_string<char, char_traits<char>, allocator<char> > *>, __or_<is_function<const basic_string<char, char_traits<char>, allocator<char> > *>, is_array<const basic_string<char, char_traits<char>, allocator<char> > *> > >::type {
-    }
 template<> struct __or_<<std::is_void<const int &>, std::is_function<int>, std::is_array<int>>> : public conditional<is_void<const int &>::value, is_void<const int &>, __or_<is_function<int>, is_array<int> > >::type {
     }
 template<> struct __or_<<std::is_function<int>, std::is_array<int>>> : public conditional<is_function<int>::value, is_function<int>, is_array<int> >::type {
@@ -534,6 +514,26 @@ template<> struct __or_<<std::is_void<const long double &>, std::is_function<lon
 template<> struct __or_<<std::is_function<long double>, std::is_array<long double>>> : public conditional<is_function<long double>::value, is_function<long double>, is_array<long double> >::type {
     }
 template<> struct __or_<<std::is_void<long double &>, std::is_function<long double>, std::is_array<long double>>> : public conditional<is_void<long double &>::value, is_void<long double &>, __or_<is_function<long double>, is_array<long double> > >::type {
+    }
+template<> struct __or_<<std::is_void<std::random_access_iterator_tag>, std::is_function<std::input_iterator_tag>, std::is_array<std::input_iterator_tag>>> : public conditional<is_void<random_access_iterator_tag>::value, is_void<random_access_iterator_tag>, __or_<is_function<input_iterator_tag>, is_array<input_iterator_tag> > >::type {
+    }
+template<> struct __or_<<std::is_function<std::input_iterator_tag>, std::is_array<std::input_iterator_tag>>> : public conditional<is_function<input_iterator_tag>::value, is_function<input_iterator_tag>, is_array<input_iterator_tag> >::type {
+    }
+template<> struct __or_<<std::is_void<char *const &>, std::is_function<std::basic_string_view<char, std::char_traits<char> > >, std::is_array<std::basic_string_view<char, std::char_traits<char> > >>> : public conditional<is_void<char *const &>::value, is_void<char *const &>, __or_<is_function<basic_string_view<char, char_traits<char> > >, is_array<basic_string_view<char, char_traits<char> > > > >::type {
+    }
+template<> struct __or_<<std::is_void<char *const *>, std::is_function<const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > *>, std::is_array<const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > *>>> : public conditional<is_void<char *const *>::value, is_void<char *const *>, __or_<is_function<const basic_string<char, char_traits<char>, allocator<char> > *>, is_array<const basic_string<char, char_traits<char>, allocator<char> > *> > >::type {
+    }
+template<> struct __or_<<std::is_void<char *const &>, std::is_function<const char *>, std::is_array<const char *>>> : public conditional<is_void<char *const &>::value, is_void<char *const &>, __or_<is_function<const char *>, is_array<const char *> > >::type {
+    }
+template<> struct __or_<<std::is_void<wchar_t *const &>, std::is_function<std::basic_string_view<wchar_t, std::char_traits<wchar_t> > >, std::is_array<std::basic_string_view<wchar_t, std::char_traits<wchar_t> > >>> : public conditional<is_void<wchar_t *const &>::value, is_void<wchar_t *const &>, __or_<is_function<basic_string_view<wchar_t, char_traits<wchar_t> > >, is_array<basic_string_view<wchar_t, char_traits<wchar_t> > > > >::type {
+    }
+template<> struct __or_<<std::is_void<wchar_t *const *>, std::is_function<const std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> > *>, std::is_array<const std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> > *>>> : public conditional<is_void<wchar_t *const *>::value, is_void<wchar_t *const *>, __or_<is_function<const basic_string<wchar_t, char_traits<wchar_t>, allocator<wchar_t> > *>, is_array<const basic_string<wchar_t, char_traits<wchar_t>, allocator<wchar_t> > *> > >::type {
+    }
+template<> struct __or_<<std::is_void<wchar_t *const &>, std::is_function<const wchar_t *>, std::is_array<const wchar_t *>>> : public conditional<is_void<wchar_t *const &>::value, is_void<wchar_t *const &>, __or_<is_function<const wchar_t *>, is_array<const wchar_t *> > >::type {
+    }
+template<> struct __or_<<std::is_void<const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > &>, std::is_function<std::basic_string_view<char, std::char_traits<char> > >, std::is_array<std::basic_string_view<char, std::char_traits<char> > >>> : public conditional<is_void<const basic_string<char, char_traits<char>, allocator<char> > &>::value, is_void<const basic_string<char, char_traits<char>, allocator<char> > &>, __or_<is_function<basic_string_view<char, char_traits<char> > >, is_array<basic_string_view<char, char_traits<char> > > > >::type {
+    }
+template<> struct __or_<<std::is_void<const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > *>, std::is_function<const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > *>, std::is_array<const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > *>>> : public conditional<is_void<const basic_string<char, char_traits<char>, allocator<char> > *>::value, is_void<const basic_string<char, char_traits<char>, allocator<char> > *>, __or_<is_function<const basic_string<char, char_traits<char>, allocator<char> > *>, is_array<const basic_string<char, char_traits<char>, allocator<char> > *> > >::type {
     };
     template<> struct __or_<<>> : public std::false_type {
     };
@@ -576,6 +576,14 @@ template<> struct __and_<<std::__not_<std::is_lvalue_reference<std::basic_istrea
     }
 template<> struct __and_<<std::__not_<std::is_lvalue_reference<std::basic_istream<wchar_t> &> >, std::__is_convertible_to_basic_istream<std::basic_istream<wchar_t> &>, std::__is_extractable<std::basic_istream<wchar_t> &, wchar_t &, void>>> : public conditional<__not_<is_lvalue_reference<basic_istream<wchar_t> &> >::value, __and_<__is_convertible_to_basic_istream<basic_istream<wchar_t> &>, __is_extractable<basic_istream<wchar_t> &, wchar_t &, void> >, __not_<is_lvalue_reference<basic_istream<wchar_t> &> > >::type {
     }
+template<> struct __and_<<std::is_constructible<int, const int &>, std::is_constructible<float, const float &>>> : public conditional<is_constructible<int, const int &>::value, is_constructible<float, const float &>, is_constructible<int, const int &> >::type {
+    }
+template<> struct __and_<<std::is_convertible<const int &, int>, std::is_convertible<const float &, float>>> : public conditional<is_convertible<const int &, int>::value, is_convertible<const float &, float>, is_convertible<const int &, int> >::type {
+    }
+template<> struct __and_<<std::is_constructible<int, int &>, std::is_constructible<float, float &>>> : public conditional<is_constructible<int, int &>::value, is_constructible<float, float &>, is_constructible<int, int &> >::type {
+    }
+template<> struct __and_<<std::is_convertible<int &, int>, std::is_convertible<float &, float>>> : public conditional<is_convertible<int &, int>::value, is_convertible<float &, float>, is_convertible<int &, int> >::type {
+    }
 template<> struct __and_<<std::__not_<std::is_lvalue_reference<std::basic_ostream<char> &> >, std::__is_convertible_to_basic_ostream<std::basic_ostream<char> &>, std::__is_insertable<std::basic_ostream<char> &, char const (&)[7], void>>> : public conditional<__not_<is_lvalue_reference<basic_ostream<char> &> >::value, __and_<__is_convertible_to_basic_ostream<basic_ostream<char> &>, __is_insertable<basic_ostream<char> &, char const (&)[7], void> >, __not_<is_lvalue_reference<basic_ostream<char> &> > >::type {
     }
 template<> struct __and_<<std::__not_<std::is_lvalue_reference<std::basic_ostream<char> &> >, std::__is_convertible_to_basic_ostream<std::basic_ostream<char> &>, std::__is_insertable<std::basic_ostream<char> &, char const (&)[12], void>>> : public conditional<__not_<is_lvalue_reference<basic_ostream<char> &> >::value, __and_<__is_convertible_to_basic_ostream<basic_ostream<char> &>, __is_insertable<basic_ostream<char> &, char const (&)[12], void> >, __not_<is_lvalue_reference<basic_ostream<char> &> > >::type {
@@ -592,9 +600,25 @@ template<> struct __and_<<std::__not_<std::is_lvalue_reference<std::basic_ostrea
     }
 template<> struct __and_<<std::__not_<std::is_lvalue_reference<std::basic_ostream<char> &> >, std::__is_convertible_to_basic_ostream<std::basic_ostream<char> &>, std::__is_insertable<std::basic_ostream<char> &, char const (&)[3], void>>> : public conditional<__not_<is_lvalue_reference<basic_ostream<char> &> >::value, __and_<__is_convertible_to_basic_ostream<basic_ostream<char> &>, __is_insertable<basic_ostream<char> &, char const (&)[3], void> >, __not_<is_lvalue_reference<basic_ostream<char> &> > >::type {
     }
+template<> struct __and_<<std::is_constructible<int, const int &>, std::is_constructible<double, const double &>>> : public conditional<is_constructible<int, const int &>::value, is_constructible<double, const double &>, is_constructible<int, const int &> >::type {
+    }
+template<> struct __and_<<std::is_convertible<const int &, int>, std::is_convertible<const double &, double>>> : public conditional<is_convertible<const int &, int>::value, is_convertible<const double &, double>, is_convertible<const int &, int> >::type {
+    }
+template<> struct __and_<<std::is_constructible<int, int &>, std::is_constructible<double, double &>>> : public conditional<is_constructible<int, int &>::value, is_constructible<double, double &>, is_constructible<int, int &> >::type {
+    }
+template<> struct __and_<<std::is_convertible<int &, int>, std::is_convertible<double &, double>>> : public conditional<is_convertible<int &, int>::value, is_convertible<double &, double>, is_convertible<int &, int> >::type {
+    }
 template<> struct __and_<<std::__not_<std::is_lvalue_reference<std::basic_ostream<char> &> >, std::__is_convertible_to_basic_ostream<std::basic_ostream<char> &>, std::__is_insertable<std::basic_ostream<char> &, char const (&)[8], void>>> : public conditional<__not_<is_lvalue_reference<basic_ostream<char> &> >::value, __and_<__is_convertible_to_basic_ostream<basic_ostream<char> &>, __is_insertable<basic_ostream<char> &, char const (&)[8], void> >, __not_<is_lvalue_reference<basic_ostream<char> &> > >::type {
     }
 template<> struct __and_<<std::__not_<std::is_lvalue_reference<std::basic_ostream<char> &> >, std::__is_convertible_to_basic_ostream<std::basic_ostream<char> &>, std::__is_insertable<std::basic_ostream<char> &, const double &, void>>> : public conditional<__not_<is_lvalue_reference<basic_ostream<char> &> >::value, __and_<__is_convertible_to_basic_ostream<basic_ostream<char> &>, __is_insertable<basic_ostream<char> &, const double &, void> >, __not_<is_lvalue_reference<basic_ostream<char> &> > >::type {
+    }
+template<> struct __and_<<std::is_constructible<int, const int &>, std::is_constructible<long double, const long double &>>> : public conditional<is_constructible<int, const int &>::value, is_constructible<long double, const long double &>, is_constructible<int, const int &> >::type {
+    }
+template<> struct __and_<<std::is_convertible<const int &, int>, std::is_convertible<const long double &, long double>>> : public conditional<is_convertible<const int &, int>::value, is_convertible<const long double &, long double>, is_convertible<const int &, int> >::type {
+    }
+template<> struct __and_<<std::is_constructible<int, int &>, std::is_constructible<long double, long double &>>> : public conditional<is_constructible<int, int &>::value, is_constructible<long double, long double &>, is_constructible<int, int &> >::type {
+    }
+template<> struct __and_<<std::is_convertible<int &, int>, std::is_convertible<long double &, long double>>> : public conditional<is_convertible<int &, int>::value, is_convertible<long double &, long double>, is_convertible<int &, int> >::type {
     }
 template<> struct __and_<<std::__not_<std::is_lvalue_reference<std::basic_ostream<char> &> >, std::__is_convertible_to_basic_ostream<std::basic_ostream<char> &>, std::__is_insertable<std::basic_ostream<char> &, char const (&)[13], void>>> : public conditional<__not_<is_lvalue_reference<basic_ostream<char> &> >::value, __and_<__is_convertible_to_basic_ostream<basic_ostream<char> &>, __is_insertable<basic_ostream<char> &, char const (&)[13], void> >, __not_<is_lvalue_reference<basic_ostream<char> &> > >::type {
     }
@@ -611,30 +635,6 @@ template<> struct __and_<<std::__not_<std::is_convertible<wchar_t *const *, cons
 template<> struct __and_<<std::is_convertible<const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > &, std::basic_string_view<char, std::char_traits<char> > >, std::__not_<std::is_convertible<const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > *, const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > *> >, std::__not_<std::is_convertible<const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > &, const char *> >>> : public conditional<is_convertible<const basic_string<char, char_traits<char>, allocator<char> > &, basic_string_view<char, char_traits<char> > >::value, __and_<__not_<is_convertible<const basic_string<char, char_traits<char>, allocator<char> > *, const basic_string<char, char_traits<char>, allocator<char> > *> >, __not_<is_convertible<const basic_string<char, char_traits<char>, allocator<char> > &, const char *> > >, is_convertible<const basic_string<char, char_traits<char>, allocator<char> > &, basic_string_view<char, char_traits<char> > > >::type {
     }
 template<> struct __and_<<std::__not_<std::is_convertible<const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > *, const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > *> >, std::__not_<std::is_convertible<const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > &, const char *> >>> : public conditional<__not_<is_convertible<const basic_string<char, char_traits<char>, allocator<char> > *, const basic_string<char, char_traits<char>, allocator<char> > *> >::value, __not_<is_convertible<const basic_string<char, char_traits<char>, allocator<char> > &, const char *> >, __not_<is_convertible<const basic_string<char, char_traits<char>, allocator<char> > *, const basic_string<char, char_traits<char>, allocator<char> > *> > >::type {
-    }
-template<> struct __and_<<std::is_constructible<int, const int &>, std::is_constructible<float, const float &>>> : public conditional<is_constructible<int, const int &>::value, is_constructible<float, const float &>, is_constructible<int, const int &> >::type {
-    }
-template<> struct __and_<<std::is_convertible<const int &, int>, std::is_convertible<const float &, float>>> : public conditional<is_convertible<const int &, int>::value, is_convertible<const float &, float>, is_convertible<const int &, int> >::type {
-    }
-template<> struct __and_<<std::is_constructible<int, int &>, std::is_constructible<float, float &>>> : public conditional<is_constructible<int, int &>::value, is_constructible<float, float &>, is_constructible<int, int &> >::type {
-    }
-template<> struct __and_<<std::is_convertible<int &, int>, std::is_convertible<float &, float>>> : public conditional<is_convertible<int &, int>::value, is_convertible<float &, float>, is_convertible<int &, int> >::type {
-    }
-template<> struct __and_<<std::is_constructible<int, const int &>, std::is_constructible<double, const double &>>> : public conditional<is_constructible<int, const int &>::value, is_constructible<double, const double &>, is_constructible<int, const int &> >::type {
-    }
-template<> struct __and_<<std::is_convertible<const int &, int>, std::is_convertible<const double &, double>>> : public conditional<is_convertible<const int &, int>::value, is_convertible<const double &, double>, is_convertible<const int &, int> >::type {
-    }
-template<> struct __and_<<std::is_constructible<int, int &>, std::is_constructible<double, double &>>> : public conditional<is_constructible<int, int &>::value, is_constructible<double, double &>, is_constructible<int, int &> >::type {
-    }
-template<> struct __and_<<std::is_convertible<int &, int>, std::is_convertible<double &, double>>> : public conditional<is_convertible<int &, int>::value, is_convertible<double &, double>, is_convertible<int &, int> >::type {
-    }
-template<> struct __and_<<std::is_constructible<int, const int &>, std::is_constructible<long double, const long double &>>> : public conditional<is_constructible<int, const int &>::value, is_constructible<long double, const long double &>, is_constructible<int, const int &> >::type {
-    }
-template<> struct __and_<<std::is_convertible<const int &, int>, std::is_convertible<const long double &, long double>>> : public conditional<is_convertible<const int &, int>::value, is_convertible<const long double &, long double>, is_convertible<const int &, int> >::type {
-    }
-template<> struct __and_<<std::is_constructible<int, int &>, std::is_constructible<long double, long double &>>> : public conditional<is_constructible<int, int &>::value, is_constructible<long double, long double &>, is_constructible<int, int &> >::type {
-    }
-template<> struct __and_<<std::is_convertible<int &, int>, std::is_convertible<long double &, long double>>> : public conditional<is_convertible<int &, int>::value, is_convertible<long double &, long double>, is_convertible<int &, int> >::type {
     };
     template<> struct __and_<<>> : public std::true_type {
     };
@@ -743,6 +743,39 @@ template<> struct remove_cv<std::allocator<char>> {
 template<> struct remove_cv<const int &> {
         typedef typename remove_const<typename remove_volatile<const int &>::type>::type type;
     }
+template<> struct remove_cv<int> {
+        typedef typename remove_const<typename remove_volatile<int>::type>::type type;
+    }
+template<> struct remove_cv<float> {
+        typedef typename remove_const<typename remove_volatile<float>::type>::type type;
+    }
+template<> struct remove_cv<const float &> {
+        typedef typename remove_const<typename remove_volatile<const float &>::type>::type type;
+    }
+template<> struct remove_cv<int &> {
+        typedef typename remove_const<typename remove_volatile<int &>::type>::type type;
+    }
+template<> struct remove_cv<float &> {
+        typedef typename remove_const<typename remove_volatile<float &>::type>::type type;
+    }
+template<> struct remove_cv<double> {
+        typedef typename remove_const<typename remove_volatile<double>::type>::type type;
+    }
+template<> struct remove_cv<const double &> {
+        typedef typename remove_const<typename remove_volatile<const double &>::type>::type type;
+    }
+template<> struct remove_cv<double &> {
+        typedef typename remove_const<typename remove_volatile<double &>::type>::type type;
+    }
+template<> struct remove_cv<long double> {
+        typedef typename remove_const<typename remove_volatile<long double>::type>::type type;
+    }
+template<> struct remove_cv<const long double &> {
+        typedef typename remove_const<typename remove_volatile<const long double &>::type>::type type;
+    }
+template<> struct remove_cv<long double &> {
+        typedef typename remove_const<typename remove_volatile<long double &>::type>::type type;
+    }
 template<> struct remove_cv<std::random_access_iterator_tag> {
         typedef typename remove_const<typename remove_volatile<random_access_iterator_tag>::type>::type type;
     }
@@ -778,39 +811,6 @@ template<> struct remove_cv<const std::__cxx11::basic_string<char, std::char_tra
     }
 template<> struct remove_cv<const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > *> {
         typedef typename remove_const<typename remove_volatile<const basic_string<char, char_traits<char>, allocator<char> > *>::type>::type type;
-    }
-template<> struct remove_cv<int> {
-        typedef typename remove_const<typename remove_volatile<int>::type>::type type;
-    }
-template<> struct remove_cv<float> {
-        typedef typename remove_const<typename remove_volatile<float>::type>::type type;
-    }
-template<> struct remove_cv<const float &> {
-        typedef typename remove_const<typename remove_volatile<const float &>::type>::type type;
-    }
-template<> struct remove_cv<int &> {
-        typedef typename remove_const<typename remove_volatile<int &>::type>::type type;
-    }
-template<> struct remove_cv<float &> {
-        typedef typename remove_const<typename remove_volatile<float &>::type>::type type;
-    }
-template<> struct remove_cv<double> {
-        typedef typename remove_const<typename remove_volatile<double>::type>::type type;
-    }
-template<> struct remove_cv<const double &> {
-        typedef typename remove_const<typename remove_volatile<const double &>::type>::type type;
-    }
-template<> struct remove_cv<double &> {
-        typedef typename remove_const<typename remove_volatile<double &>::type>::type type;
-    }
-template<> struct remove_cv<long double> {
-        typedef typename remove_const<typename remove_volatile<long double>::type>::type type;
-    }
-template<> struct remove_cv<const long double &> {
-        typedef typename remove_const<typename remove_volatile<const long double &>::type>::type type;
-    }
-template<> struct remove_cv<long double &> {
-        typedef typename remove_const<typename remove_volatile<long double &>::type>::type type;
     };
     template <typename > struct __is_void_helper : public std::false_type {
     };
@@ -836,6 +836,20 @@ template<> struct __is_void_helper<std::allocator<char>> : public std::false_typ
     };
 template<> struct __is_void_helper<const int &> : public std::false_type {
     };
+template<> struct __is_void_helper<const float &> : public std::false_type {
+    };
+template<> struct __is_void_helper<int &> : public std::false_type {
+    };
+template<> struct __is_void_helper<float &> : public std::false_type {
+    };
+template<> struct __is_void_helper<const double &> : public std::false_type {
+    };
+template<> struct __is_void_helper<double &> : public std::false_type {
+    };
+template<> struct __is_void_helper<const long double &> : public std::false_type {
+    };
+template<> struct __is_void_helper<long double &> : public std::false_type {
+    };
 template<> struct __is_void_helper<std::random_access_iterator_tag> : public std::false_type {
     };
 template<> struct __is_void_helper<char *const &> : public std::false_type {
@@ -857,20 +871,6 @@ template<> struct __is_void_helper<char32_t> : public std::false_type {
 template<> struct __is_void_helper<const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > &> : public std::false_type {
     };
 template<> struct __is_void_helper<const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > *> : public std::false_type {
-    };
-template<> struct __is_void_helper<const float &> : public std::false_type {
-    };
-template<> struct __is_void_helper<int &> : public std::false_type {
-    };
-template<> struct __is_void_helper<float &> : public std::false_type {
-    };
-template<> struct __is_void_helper<const double &> : public std::false_type {
-    };
-template<> struct __is_void_helper<double &> : public std::false_type {
-    };
-template<> struct __is_void_helper<const long double &> : public std::false_type {
-    };
-template<> struct __is_void_helper<long double &> : public std::false_type {
     };
     template<> struct __is_void_helper<void> : public std::true_type {
     };
@@ -897,6 +897,20 @@ template<> struct is_void<const char &> : public __is_void_helper<typename remov
 template<> struct is_void<std::allocator<char>> : public __is_void_helper<typename remove_cv<allocator<char> >::type>::type {
     };
 template<> struct is_void<const int &> : public __is_void_helper<typename remove_cv<const int &>::type>::type {
+    };
+template<> struct is_void<const float &> : public __is_void_helper<typename remove_cv<const float &>::type>::type {
+    };
+template<> struct is_void<int &> : public __is_void_helper<typename remove_cv<int &>::type>::type {
+    };
+template<> struct is_void<float &> : public __is_void_helper<typename remove_cv<float &>::type>::type {
+    };
+template<> struct is_void<const double &> : public __is_void_helper<typename remove_cv<const double &>::type>::type {
+    };
+template<> struct is_void<double &> : public __is_void_helper<typename remove_cv<double &>::type>::type {
+    };
+template<> struct is_void<const long double &> : public __is_void_helper<typename remove_cv<const long double &>::type>::type {
+    };
+template<> struct is_void<long double &> : public __is_void_helper<typename remove_cv<long double &>::type>::type {
     };
 template<> struct is_void<std::random_access_iterator_tag> : public __is_void_helper<typename remove_cv<random_access_iterator_tag>::type>::type {
     };
@@ -927,20 +941,6 @@ template<> struct is_void<const char32_t> : public __is_void_helper<typename rem
 template<> struct is_void<const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > &> : public __is_void_helper<typename remove_cv<const basic_string<char, char_traits<char>, allocator<char> > &>::type>::type {
     };
 template<> struct is_void<const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > *> : public __is_void_helper<typename remove_cv<const basic_string<char, char_traits<char>, allocator<char> > *>::type>::type {
-    };
-template<> struct is_void<const float &> : public __is_void_helper<typename remove_cv<const float &>::type>::type {
-    };
-template<> struct is_void<int &> : public __is_void_helper<typename remove_cv<int &>::type>::type {
-    };
-template<> struct is_void<float &> : public __is_void_helper<typename remove_cv<float &>::type>::type {
-    };
-template<> struct is_void<const double &> : public __is_void_helper<typename remove_cv<const double &>::type>::type {
-    };
-template<> struct is_void<double &> : public __is_void_helper<typename remove_cv<double &>::type>::type {
-    };
-template<> struct is_void<const long double &> : public __is_void_helper<typename remove_cv<const long double &>::type>::type {
-    };
-template<> struct is_void<long double &> : public __is_void_helper<typename remove_cv<long double &>::type>::type {
     };
     template <typename > struct __is_integral_helper : public std::false_type {
     };
@@ -1024,8 +1024,6 @@ template<> struct is_array<const char32_t *> : public std::false_type {
     };
 template<> struct is_array<std::allocator<char>> : public std::false_type {
     };
-template<> struct is_array<std::input_iterator_tag> : public std::false_type {
-    };
 template<> struct is_array<int> : public std::false_type {
     };
 template<> struct is_array<float> : public std::false_type {
@@ -1033,6 +1031,8 @@ template<> struct is_array<float> : public std::false_type {
 template<> struct is_array<double> : public std::false_type {
     };
 template<> struct is_array<long double> : public std::false_type {
+    };
+template<> struct is_array<std::input_iterator_tag> : public std::false_type {
     };
     template <typename _Tp, std::size_t _Size> struct is_array<type-parameter-0-0 [_Size]> : public std::true_type {
     };
@@ -1083,8 +1083,6 @@ template<> struct is_function<const std::__cxx11::basic_string<char32_t, std::ch
     }
 template<> struct is_function<const char32_t *> : public std::false_type {
     }
-template<> struct is_function<std::input_iterator_tag> : public std::false_type {
-    }
 template<> struct is_function<int> : public std::false_type {
     }
 template<> struct is_function<float> : public std::false_type {
@@ -1092,6 +1090,8 @@ template<> struct is_function<float> : public std::false_type {
 template<> struct is_function<double> : public std::false_type {
     }
 template<> struct is_function<long double> : public std::false_type {
+    }
+template<> struct is_function<std::input_iterator_tag> : public std::false_type {
     };
     template <typename > struct __is_member_object_pointer_helper : public std::false_type {
     };
@@ -1147,8 +1147,6 @@ template<> struct is_function<const std::__cxx11::basic_string<char32_t, std::ch
     };
 template<> struct is_function<const char32_t *> : public std::false_type {
     };
-template<> struct is_function<std::input_iterator_tag> : public std::false_type {
-    };
 template<> struct is_function<int> : public std::false_type {
     };
 template<> struct is_function<float> : public std::false_type {
@@ -1156,6 +1154,8 @@ template<> struct is_function<float> : public std::false_type {
 template<> struct is_function<double> : public std::false_type {
     };
 template<> struct is_function<long double> : public std::false_type {
+    };
+template<> struct is_function<std::input_iterator_tag> : public std::false_type {
     };
     template <typename _Res, typename ..._ArgTypes, bool _NE> struct is_function<type-parameter-0-0 (type-parameter-0-1...) noexcept(_NE)> : public std::true_type {
     };
@@ -1317,7 +1317,14 @@ template<> struct is_empty<long double> : public integral_constant<bool, __is_em
     template<> const int &__declval<const int &, const int &>(int);
     template<> std::basic_istream<char> *&&__declval<std::basic_istream<char> *, std::basic_istream<char> *&&>(int);
     template<> std::basic_istream<wchar_t> *&&__declval<std::basic_istream<wchar_t> *, std::basic_istream<wchar_t> *&&>(int);
+    template<> const float &__declval<const float &, const float &>(int);
+    template<> int &__declval<int &, int &>(int);
+    template<> float &__declval<float &, float &>(int);
     template<> std::basic_ostream<char> *&&__declval<std::basic_ostream<char> *, std::basic_ostream<char> *&&>(int);
+    template<> const double &__declval<const double &, const double &>(int);
+    template<> double &__declval<double &, double &>(int);
+    template<> const long double &__declval<const long double &, const long double &>(int);
+    template<> long double &__declval<long double &, long double &>(int);
     template<> std::random_access_iterator_tag &&__declval<std::random_access_iterator_tag, std::random_access_iterator_tag &&>(int);
     template<> char *const &__declval<char *const &, char *const &>(int);
     template<> char *const *&&__declval<char *const *, char *const *&&>(int);
@@ -1325,13 +1332,6 @@ template<> struct is_empty<long double> : public integral_constant<bool, __is_em
     template<> wchar_t *const *&&__declval<wchar_t *const *, wchar_t *const *&&>(int);
     template<> const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > &__declval<const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > &, const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > &>(int);
     template<> const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > *&&__declval<const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > *, const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > *&&>(int);
-    template<> const float &__declval<const float &, const float &>(int);
-    template<> int &__declval<int &, int &>(int);
-    template<> float &__declval<float &, float &>(int);
-    template<> const double &__declval<const double &, const double &>(int);
-    template<> double &__declval<double &, double &>(int);
-    template<> const long double &__declval<const long double &, const long double &>(int);
-    template<> long double &__declval<long double &, long double &>(int);
     template <typename _Tp> _Tp __declval(long);
     template<> std::allocator<char> &__declval<std::allocator<char> &>(long);
     template<> std::allocator<wchar_t> &__declval<std::allocator<wchar_t> &>(long);
@@ -1349,7 +1349,14 @@ template<> struct is_empty<long double> : public integral_constant<bool, __is_em
     template<> const int &__declval<const int &>(long);
     template<> std::basic_istream<char> *__declval<std::basic_istream<char> *>(long);
     template<> std::basic_istream<wchar_t> *__declval<std::basic_istream<wchar_t> *>(long);
+    template<> const float &__declval<const float &>(long);
+    template<> int &__declval<int &>(long);
+    template<> float &__declval<float &>(long);
     template<> std::basic_ostream<char> *__declval<std::basic_ostream<char> *>(long);
+    template<> const double &__declval<const double &>(long);
+    template<> double &__declval<double &>(long);
+    template<> const long double &__declval<const long double &>(long);
+    template<> long double &__declval<long double &>(long);
     template<> std::random_access_iterator_tag __declval<std::random_access_iterator_tag>(long);
     template<> char *const &__declval<char *const &>(long);
     template<> char *const *__declval<char *const *>(long);
@@ -1357,13 +1364,6 @@ template<> struct is_empty<long double> : public integral_constant<bool, __is_em
     template<> wchar_t *const *__declval<wchar_t *const *>(long);
     template<> const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > &__declval<const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > &>(long);
     template<> const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > *__declval<const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > *>(long);
-    template<> const float &__declval<const float &>(long);
-    template<> int &__declval<int &>(long);
-    template<> float &__declval<float &>(long);
-    template<> const double &__declval<const double &>(long);
-    template<> double &__declval<double &>(long);
-    template<> const long double &__declval<const long double &>(long);
-    template<> long double &__declval<long double &>(long);
     template <typename _Tp> auto declval() noexcept -> decltype(__declval<_Tp>(0));
     template <typename , unsigned int = 0> struct extent;
     template <typename > struct remove_all_extents;
@@ -1599,6 +1599,10 @@ template<> struct is_nothrow_default_constructible<std::allocator<char>> : publi
     };
     template <typename , typename > struct is_same : public std::false_type {
     };
+template<> struct is_same<void, void> : public std::true_type {
+    };
+template<> struct is_same<int, std::allocator_arg_t> : public std::false_type {
+    };
 template<> struct is_same<int, int> : public std::true_type {
     };
 template<> struct is_same<long, int> : public std::false_type {
@@ -1614,10 +1618,6 @@ template<> struct is_same<float, int> : public std::false_type {
 template<> struct is_same<double, int> : public std::false_type {
     };
 template<> struct is_same<long double, int> : public std::false_type {
-    };
-template<> struct is_same<void, void> : public std::true_type {
-    };
-template<> struct is_same<int, std::allocator_arg_t> : public std::false_type {
     };
     template <typename _Tp> struct is_same<_Tp, _Tp> : public std::true_type {
     };
@@ -1754,6 +1754,86 @@ template<> class __is_convertible_helper<const int &, std::basic_string_view<cha
     public:
         typedef decltype(__test<const int &, std::basic_string_view<char, std::char_traits<char> > >(0)) type;
     };
+template<> class __is_convertible_helper<const int &, int, false> {
+        template <typename _To1> static void __test_aux(_To1);
+        template<> static void __test_aux<int>(int);
+        template <typename _From1, typename _To1, typename  = decltype(__test_aux<_To1>(std::declval<_From1>()))> static std::true_type __test(int);
+        template<> static std::true_type __test<const int &, int, void>(int);
+        template <typename , typename > static std::false_type __test(...);
+        template<> static std::false_type __test<const int &, int>(...);
+    public:
+        typedef decltype(__test<const int &, int>(0)) type;
+    };
+template<> class __is_convertible_helper<const float &, float, false> {
+        template <typename _To1> static void __test_aux(_To1);
+        template<> static void __test_aux<float>(float);
+        template <typename _From1, typename _To1, typename  = decltype(__test_aux<_To1>(std::declval<_From1>()))> static std::true_type __test(int);
+        template<> static std::true_type __test<const float &, float, void>(int);
+        template <typename , typename > static std::false_type __test(...);
+        template<> static std::false_type __test<const float &, float>(...);
+    public:
+        typedef decltype(__test<const float &, float>(0)) type;
+    };
+template<> class __is_convertible_helper<int &, int, false> {
+        template <typename _To1> static void __test_aux(_To1);
+        template<> static void __test_aux<int>(int);
+        template <typename _From1, typename _To1, typename  = decltype(__test_aux<_To1>(std::declval<_From1>()))> static std::true_type __test(int);
+        template<> static std::true_type __test<int &, int, void>(int);
+        template <typename , typename > static std::false_type __test(...);
+        template<> static std::false_type __test<int &, int>(...);
+    public:
+        typedef decltype(__test<int &, int>(0)) type;
+    };
+template<> class __is_convertible_helper<float &, float, false> {
+        template <typename _To1> static void __test_aux(_To1);
+        template<> static void __test_aux<float>(float);
+        template <typename _From1, typename _To1, typename  = decltype(__test_aux<_To1>(std::declval<_From1>()))> static std::true_type __test(int);
+        template<> static std::true_type __test<float &, float, void>(int);
+        template <typename , typename > static std::false_type __test(...);
+        template<> static std::false_type __test<float &, float>(...);
+    public:
+        typedef decltype(__test<float &, float>(0)) type;
+    };
+template<> class __is_convertible_helper<const double &, double, false> {
+        template <typename _To1> static void __test_aux(_To1);
+        template<> static void __test_aux<double>(double);
+        template <typename _From1, typename _To1, typename  = decltype(__test_aux<_To1>(std::declval<_From1>()))> static std::true_type __test(int);
+        template<> static std::true_type __test<const double &, double, void>(int);
+        template <typename , typename > static std::false_type __test(...);
+        template<> static std::false_type __test<const double &, double>(...);
+    public:
+        typedef decltype(__test<const double &, double>(0)) type;
+    };
+template<> class __is_convertible_helper<double &, double, false> {
+        template <typename _To1> static void __test_aux(_To1);
+        template<> static void __test_aux<double>(double);
+        template <typename _From1, typename _To1, typename  = decltype(__test_aux<_To1>(std::declval<_From1>()))> static std::true_type __test(int);
+        template<> static std::true_type __test<double &, double, void>(int);
+        template <typename , typename > static std::false_type __test(...);
+        template<> static std::false_type __test<double &, double>(...);
+    public:
+        typedef decltype(__test<double &, double>(0)) type;
+    };
+template<> class __is_convertible_helper<const long double &, long double, false> {
+        template <typename _To1> static void __test_aux(_To1);
+        template<> static void __test_aux<long double>(long double);
+        template <typename _From1, typename _To1, typename  = decltype(__test_aux<_To1>(std::declval<_From1>()))> static std::true_type __test(int);
+        template<> static std::true_type __test<const long double &, long double, void>(int);
+        template <typename , typename > static std::false_type __test(...);
+        template<> static std::false_type __test<const long double &, long double>(...);
+    public:
+        typedef decltype(__test<const long double &, long double>(0)) type;
+    };
+template<> class __is_convertible_helper<long double &, long double, false> {
+        template <typename _To1> static void __test_aux(_To1);
+        template<> static void __test_aux<long double>(long double);
+        template <typename _From1, typename _To1, typename  = decltype(__test_aux<_To1>(std::declval<_From1>()))> static std::true_type __test(int);
+        template<> static std::true_type __test<long double &, long double, void>(int);
+        template <typename , typename > static std::false_type __test(...);
+        template<> static std::false_type __test<long double &, long double>(...);
+    public:
+        typedef decltype(__test<long double &, long double>(0)) type;
+    };
 template<> class __is_convertible_helper<std::random_access_iterator_tag, std::input_iterator_tag, false> {
         template <typename _To1> static void __test_aux(_To1);
         template<> static void __test_aux<std::input_iterator_tag>(std::input_iterator_tag);
@@ -1840,86 +1920,6 @@ template<> class __is_convertible_helper<const std::__cxx11::basic_string<char, 
     public:
         typedef decltype(__test<const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > *, const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > *>(0)) type;
     };
-template<> class __is_convertible_helper<const int &, int, false> {
-        template <typename _To1> static void __test_aux(_To1);
-        template<> static void __test_aux<int>(int);
-        template <typename _From1, typename _To1, typename  = decltype(__test_aux<_To1>(std::declval<_From1>()))> static std::true_type __test(int);
-        template<> static std::true_type __test<const int &, int, void>(int);
-        template <typename , typename > static std::false_type __test(...);
-        template<> static std::false_type __test<const int &, int>(...);
-    public:
-        typedef decltype(__test<const int &, int>(0)) type;
-    };
-template<> class __is_convertible_helper<const float &, float, false> {
-        template <typename _To1> static void __test_aux(_To1);
-        template<> static void __test_aux<float>(float);
-        template <typename _From1, typename _To1, typename  = decltype(__test_aux<_To1>(std::declval<_From1>()))> static std::true_type __test(int);
-        template<> static std::true_type __test<const float &, float, void>(int);
-        template <typename , typename > static std::false_type __test(...);
-        template<> static std::false_type __test<const float &, float>(...);
-    public:
-        typedef decltype(__test<const float &, float>(0)) type;
-    };
-template<> class __is_convertible_helper<int &, int, false> {
-        template <typename _To1> static void __test_aux(_To1);
-        template<> static void __test_aux<int>(int);
-        template <typename _From1, typename _To1, typename  = decltype(__test_aux<_To1>(std::declval<_From1>()))> static std::true_type __test(int);
-        template<> static std::true_type __test<int &, int, void>(int);
-        template <typename , typename > static std::false_type __test(...);
-        template<> static std::false_type __test<int &, int>(...);
-    public:
-        typedef decltype(__test<int &, int>(0)) type;
-    };
-template<> class __is_convertible_helper<float &, float, false> {
-        template <typename _To1> static void __test_aux(_To1);
-        template<> static void __test_aux<float>(float);
-        template <typename _From1, typename _To1, typename  = decltype(__test_aux<_To1>(std::declval<_From1>()))> static std::true_type __test(int);
-        template<> static std::true_type __test<float &, float, void>(int);
-        template <typename , typename > static std::false_type __test(...);
-        template<> static std::false_type __test<float &, float>(...);
-    public:
-        typedef decltype(__test<float &, float>(0)) type;
-    };
-template<> class __is_convertible_helper<const double &, double, false> {
-        template <typename _To1> static void __test_aux(_To1);
-        template<> static void __test_aux<double>(double);
-        template <typename _From1, typename _To1, typename  = decltype(__test_aux<_To1>(std::declval<_From1>()))> static std::true_type __test(int);
-        template<> static std::true_type __test<const double &, double, void>(int);
-        template <typename , typename > static std::false_type __test(...);
-        template<> static std::false_type __test<const double &, double>(...);
-    public:
-        typedef decltype(__test<const double &, double>(0)) type;
-    };
-template<> class __is_convertible_helper<double &, double, false> {
-        template <typename _To1> static void __test_aux(_To1);
-        template<> static void __test_aux<double>(double);
-        template <typename _From1, typename _To1, typename  = decltype(__test_aux<_To1>(std::declval<_From1>()))> static std::true_type __test(int);
-        template<> static std::true_type __test<double &, double, void>(int);
-        template <typename , typename > static std::false_type __test(...);
-        template<> static std::false_type __test<double &, double>(...);
-    public:
-        typedef decltype(__test<double &, double>(0)) type;
-    };
-template<> class __is_convertible_helper<const long double &, long double, false> {
-        template <typename _To1> static void __test_aux(_To1);
-        template<> static void __test_aux<long double>(long double);
-        template <typename _From1, typename _To1, typename  = decltype(__test_aux<_To1>(std::declval<_From1>()))> static std::true_type __test(int);
-        template<> static std::true_type __test<const long double &, long double, void>(int);
-        template <typename , typename > static std::false_type __test(...);
-        template<> static std::false_type __test<const long double &, long double>(...);
-    public:
-        typedef decltype(__test<const long double &, long double>(0)) type;
-    };
-template<> class __is_convertible_helper<long double &, long double, false> {
-        template <typename _To1> static void __test_aux(_To1);
-        template<> static void __test_aux<long double>(long double);
-        template <typename _From1, typename _To1, typename  = decltype(__test_aux<_To1>(std::declval<_From1>()))> static std::true_type __test(int);
-        template<> static std::true_type __test<long double &, long double, void>(int);
-        template <typename , typename > static std::false_type __test(...);
-        template<> static std::false_type __test<long double &, long double>(...);
-    public:
-        typedef decltype(__test<long double &, long double>(0)) type;
-    };
     template <typename _From, typename _To> class __is_convertible_helper<_From, _To, false> {
         template <typename _To1> static void __test_aux(_To1);
         template <typename _From1, typename _To1, typename  = decltype(__test_aux<_To1>(std::declval<_From1>()))> static std::true_type __test(int);
@@ -1957,6 +1957,22 @@ template<> struct is_convertible<const char &, std::basic_string_view<char, std:
     };
 template<> struct is_convertible<const int &, std::basic_string_view<char, std::char_traits<char> >> : public __is_convertible_helper<const int &, basic_string_view<char, char_traits<char> > >::type {
     };
+template<> struct is_convertible<const int &, int> : public __is_convertible_helper<const int &, int>::type {
+    };
+template<> struct is_convertible<const float &, float> : public __is_convertible_helper<const float &, float>::type {
+    };
+template<> struct is_convertible<int &, int> : public __is_convertible_helper<int &, int>::type {
+    };
+template<> struct is_convertible<float &, float> : public __is_convertible_helper<float &, float>::type {
+    };
+template<> struct is_convertible<const double &, double> : public __is_convertible_helper<const double &, double>::type {
+    };
+template<> struct is_convertible<double &, double> : public __is_convertible_helper<double &, double>::type {
+    };
+template<> struct is_convertible<const long double &, long double> : public __is_convertible_helper<const long double &, long double>::type {
+    };
+template<> struct is_convertible<long double &, long double> : public __is_convertible_helper<long double &, long double>::type {
+    };
 template<> struct is_convertible<std::random_access_iterator_tag, std::input_iterator_tag> : public __is_convertible_helper<random_access_iterator_tag, input_iterator_tag>::type {
     };
 template<> struct is_convertible<char *const &, std::basic_string_view<char, std::char_traits<char> >> : public __is_convertible_helper<char *const &, basic_string_view<char, char_traits<char> > >::type {
@@ -1974,22 +1990,6 @@ template<> struct is_convertible<wchar_t *const &, const wchar_t *> : public __i
 template<> struct is_convertible<const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > &, std::basic_string_view<char, std::char_traits<char> >> : public __is_convertible_helper<const basic_string<char, char_traits<char>, allocator<char> > &, basic_string_view<char, char_traits<char> > >::type {
     };
 template<> struct is_convertible<const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > *, const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > *> : public __is_convertible_helper<const basic_string<char, char_traits<char>, allocator<char> > *, const basic_string<char, char_traits<char>, allocator<char> > *>::type {
-    };
-template<> struct is_convertible<const int &, int> : public __is_convertible_helper<const int &, int>::type {
-    };
-template<> struct is_convertible<const float &, float> : public __is_convertible_helper<const float &, float>::type {
-    };
-template<> struct is_convertible<int &, int> : public __is_convertible_helper<int &, int>::type {
-    };
-template<> struct is_convertible<float &, float> : public __is_convertible_helper<float &, float>::type {
-    };
-template<> struct is_convertible<const double &, double> : public __is_convertible_helper<const double &, double>::type {
-    };
-template<> struct is_convertible<double &, double> : public __is_convertible_helper<double &, double>::type {
-    };
-template<> struct is_convertible<const long double &, long double> : public __is_convertible_helper<const long double &, long double>::type {
-    };
-template<> struct is_convertible<long double &, long double> : public __is_convertible_helper<long double &, long double>::type {
     };
     template <typename _Tp> struct remove_const {
         typedef _Tp type;
@@ -2042,6 +2042,39 @@ template<> struct remove_const<std::allocator<char>> {
 template<> struct remove_const<const int &> {
         typedef const int &type;
     };
+template<> struct remove_const<int> {
+        typedef int type;
+    };
+template<> struct remove_const<float> {
+        typedef float type;
+    };
+template<> struct remove_const<const float &> {
+        typedef const float &type;
+    };
+template<> struct remove_const<int &> {
+        typedef int &type;
+    };
+template<> struct remove_const<float &> {
+        typedef float &type;
+    };
+template<> struct remove_const<double> {
+        typedef double type;
+    };
+template<> struct remove_const<const double &> {
+        typedef const double &type;
+    };
+template<> struct remove_const<double &> {
+        typedef double &type;
+    };
+template<> struct remove_const<long double> {
+        typedef long double type;
+    };
+template<> struct remove_const<const long double &> {
+        typedef const long double &type;
+    };
+template<> struct remove_const<long double &> {
+        typedef long double &type;
+    };
 template<> struct remove_const<std::random_access_iterator_tag> {
         typedef std::random_access_iterator_tag type;
     };
@@ -2077,39 +2110,6 @@ template<> struct remove_const<const std::__cxx11::basic_string<char, std::char_
     };
 template<> struct remove_const<const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > *> {
         typedef const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > *type;
-    };
-template<> struct remove_const<int> {
-        typedef int type;
-    };
-template<> struct remove_const<float> {
-        typedef float type;
-    };
-template<> struct remove_const<const float &> {
-        typedef const float &type;
-    };
-template<> struct remove_const<int &> {
-        typedef int &type;
-    };
-template<> struct remove_const<float &> {
-        typedef float &type;
-    };
-template<> struct remove_const<double> {
-        typedef double type;
-    };
-template<> struct remove_const<const double &> {
-        typedef const double &type;
-    };
-template<> struct remove_const<double &> {
-        typedef double &type;
-    };
-template<> struct remove_const<long double> {
-        typedef long double type;
-    };
-template<> struct remove_const<const long double &> {
-        typedef const long double &type;
-    };
-template<> struct remove_const<long double &> {
-        typedef long double &type;
     };
     template <typename _Tp> struct remove_const<_Tp> {
         typedef _Tp type;
@@ -2165,6 +2165,39 @@ template<> struct remove_volatile<std::allocator<char>> {
 template<> struct remove_volatile<const int &> {
         typedef const int &type;
     };
+template<> struct remove_volatile<int> {
+        typedef int type;
+    };
+template<> struct remove_volatile<float> {
+        typedef float type;
+    };
+template<> struct remove_volatile<const float &> {
+        typedef const float &type;
+    };
+template<> struct remove_volatile<int &> {
+        typedef int &type;
+    };
+template<> struct remove_volatile<float &> {
+        typedef float &type;
+    };
+template<> struct remove_volatile<double> {
+        typedef double type;
+    };
+template<> struct remove_volatile<const double &> {
+        typedef const double &type;
+    };
+template<> struct remove_volatile<double &> {
+        typedef double &type;
+    };
+template<> struct remove_volatile<long double> {
+        typedef long double type;
+    };
+template<> struct remove_volatile<const long double &> {
+        typedef const long double &type;
+    };
+template<> struct remove_volatile<long double &> {
+        typedef long double &type;
+    };
 template<> struct remove_volatile<std::random_access_iterator_tag> {
         typedef std::random_access_iterator_tag type;
     };
@@ -2200,39 +2233,6 @@ template<> struct remove_volatile<const std::__cxx11::basic_string<char, std::ch
     };
 template<> struct remove_volatile<const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > *> {
         typedef const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > *type;
-    };
-template<> struct remove_volatile<int> {
-        typedef int type;
-    };
-template<> struct remove_volatile<float> {
-        typedef float type;
-    };
-template<> struct remove_volatile<const float &> {
-        typedef const float &type;
-    };
-template<> struct remove_volatile<int &> {
-        typedef int &type;
-    };
-template<> struct remove_volatile<float &> {
-        typedef float &type;
-    };
-template<> struct remove_volatile<double> {
-        typedef double type;
-    };
-template<> struct remove_volatile<const double &> {
-        typedef const double &type;
-    };
-template<> struct remove_volatile<double &> {
-        typedef double &type;
-    };
-template<> struct remove_volatile<long double> {
-        typedef long double type;
-    };
-template<> struct remove_volatile<const long double &> {
-        typedef const long double &type;
-    };
-template<> struct remove_volatile<long double &> {
-        typedef long double &type;
     };
     template <typename _Tp> struct remove_volatile<_Tp> {
         typedef _Tp type;
@@ -2288,6 +2288,39 @@ template<> struct remove_cv<std::allocator<char>> {
 template<> struct remove_cv<const int &> {
         typedef typename remove_const<typename remove_volatile<const int &>::type>::type type;
     };
+template<> struct remove_cv<int> {
+        typedef typename remove_const<typename remove_volatile<int>::type>::type type;
+    };
+template<> struct remove_cv<float> {
+        typedef typename remove_const<typename remove_volatile<float>::type>::type type;
+    };
+template<> struct remove_cv<const float &> {
+        typedef typename remove_const<typename remove_volatile<const float &>::type>::type type;
+    };
+template<> struct remove_cv<int &> {
+        typedef typename remove_const<typename remove_volatile<int &>::type>::type type;
+    };
+template<> struct remove_cv<float &> {
+        typedef typename remove_const<typename remove_volatile<float &>::type>::type type;
+    };
+template<> struct remove_cv<double> {
+        typedef typename remove_const<typename remove_volatile<double>::type>::type type;
+    };
+template<> struct remove_cv<const double &> {
+        typedef typename remove_const<typename remove_volatile<const double &>::type>::type type;
+    };
+template<> struct remove_cv<double &> {
+        typedef typename remove_const<typename remove_volatile<double &>::type>::type type;
+    };
+template<> struct remove_cv<long double> {
+        typedef typename remove_const<typename remove_volatile<long double>::type>::type type;
+    };
+template<> struct remove_cv<const long double &> {
+        typedef typename remove_const<typename remove_volatile<const long double &>::type>::type type;
+    };
+template<> struct remove_cv<long double &> {
+        typedef typename remove_const<typename remove_volatile<long double &>::type>::type type;
+    };
 template<> struct remove_cv<std::random_access_iterator_tag> {
         typedef typename remove_const<typename remove_volatile<random_access_iterator_tag>::type>::type type;
     };
@@ -2324,39 +2357,6 @@ template<> struct remove_cv<const std::__cxx11::basic_string<char, std::char_tra
 template<> struct remove_cv<const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > *> {
         typedef typename remove_const<typename remove_volatile<const basic_string<char, char_traits<char>, allocator<char> > *>::type>::type type;
     };
-template<> struct remove_cv<int> {
-        typedef typename remove_const<typename remove_volatile<int>::type>::type type;
-    };
-template<> struct remove_cv<float> {
-        typedef typename remove_const<typename remove_volatile<float>::type>::type type;
-    };
-template<> struct remove_cv<const float &> {
-        typedef typename remove_const<typename remove_volatile<const float &>::type>::type type;
-    };
-template<> struct remove_cv<int &> {
-        typedef typename remove_const<typename remove_volatile<int &>::type>::type type;
-    };
-template<> struct remove_cv<float &> {
-        typedef typename remove_const<typename remove_volatile<float &>::type>::type type;
-    };
-template<> struct remove_cv<double> {
-        typedef typename remove_const<typename remove_volatile<double>::type>::type type;
-    };
-template<> struct remove_cv<const double &> {
-        typedef typename remove_const<typename remove_volatile<const double &>::type>::type type;
-    };
-template<> struct remove_cv<double &> {
-        typedef typename remove_const<typename remove_volatile<double &>::type>::type type;
-    };
-template<> struct remove_cv<long double> {
-        typedef typename remove_const<typename remove_volatile<long double>::type>::type type;
-    };
-template<> struct remove_cv<const long double &> {
-        typedef typename remove_const<typename remove_volatile<const long double &>::type>::type type;
-    };
-template<> struct remove_cv<long double &> {
-        typedef typename remove_const<typename remove_volatile<long double &>::type>::type type;
-    };
     template <typename _Tp> struct add_const {
         typedef const _Tp type;
     };
@@ -2381,6 +2381,12 @@ template<> struct remove_reference<std::basic_istream<char> &> {
 template<> struct remove_reference<std::basic_istream<wchar_t> &> {
         typedef std::basic_istream<wchar_t> type;
     };
+template<> struct remove_reference<int &> {
+        typedef int type;
+    };
+template<> struct remove_reference<float &> {
+        typedef float type;
+    };
 template<> struct remove_reference<int &&> {
         typedef int type;
     };
@@ -2390,8 +2396,14 @@ template<> struct remove_reference<float &&> {
 template<> struct remove_reference<std::basic_ostream<char> &> {
         typedef std::basic_ostream<char> type;
     };
+template<> struct remove_reference<double &> {
+        typedef double type;
+    };
 template<> struct remove_reference<double &&> {
         typedef double type;
+    };
+template<> struct remove_reference<long double &> {
+        typedef long double type;
     };
 template<> struct remove_reference<long double &&> {
         typedef long double type;
@@ -2401,18 +2413,6 @@ template<> struct remove_reference<std::allocator<char> &> {
     };
 template<> struct remove_reference<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > &> {
         typedef std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > type;
-    };
-template<> struct remove_reference<int &> {
-        typedef int type;
-    };
-template<> struct remove_reference<float &> {
-        typedef float type;
-    };
-template<> struct remove_reference<double &> {
-        typedef double type;
-    };
-template<> struct remove_reference<long double &> {
-        typedef long double type;
     };
     template <typename _Tp> struct remove_reference<type-parameter-0-0 &> {
         typedef _Tp type;
@@ -2863,12 +2863,12 @@ template<> struct enable_if<false, std::basic_istream<char> &> {
     };
 template<> struct enable_if<false, std::basic_istream<wchar_t> &> {
     };
-template<> struct enable_if<false, std::basic_ostream<char> &> {
-    };
 template<> struct enable_if<true, bool> {
         typedef bool type;
     };
 template<> struct enable_if<false, bool> {
+    };
+template<> struct enable_if<false, std::basic_ostream<char> &> {
     };
     template <typename _Tp> struct enable_if<true, _Tp> {
         typedef _Tp type;
@@ -3027,6 +3027,36 @@ template<> struct conditional<false, std::integral_constant<bool, false>, std::_
 template<> struct conditional<false, std::integral_constant<bool, false>, std::__is_empty_non_tuple<int>> {
         typedef std::__is_empty_non_tuple<int> type;
     };
+template<> struct conditional<true, std::is_constructible<float, const float &>, std::is_constructible<int, const int &>> {
+        typedef std::is_constructible<float, const float &> type;
+    };
+template<> struct conditional<false, std::is_void<const int &>, std::__or_<std::is_function<int>, std::is_array<int> >> {
+        typedef std::__or_<std::is_function<int>, std::is_array<int> > type;
+    };
+template<> struct conditional<false, std::is_function<int>, std::is_array<int>> {
+        typedef std::is_array<int> type;
+    };
+template<> struct conditional<true, std::is_convertible<const float &, float>, std::is_convertible<const int &, int>> {
+        typedef std::is_convertible<const float &, float> type;
+    };
+template<> struct conditional<false, std::is_void<const float &>, std::__or_<std::is_function<float>, std::is_array<float> >> {
+        typedef std::__or_<std::is_function<float>, std::is_array<float> > type;
+    };
+template<> struct conditional<false, std::is_function<float>, std::is_array<float>> {
+        typedef std::is_array<float> type;
+    };
+template<> struct conditional<true, std::is_constructible<float, float &>, std::is_constructible<int, int &>> {
+        typedef std::is_constructible<float, float &> type;
+    };
+template<> struct conditional<false, std::is_void<int &>, std::__or_<std::is_function<int>, std::is_array<int> >> {
+        typedef std::__or_<std::is_function<int>, std::is_array<int> > type;
+    };
+template<> struct conditional<true, std::is_convertible<float &, float>, std::is_convertible<int &, int>> {
+        typedef std::is_convertible<float &, float> type;
+    };
+template<> struct conditional<false, std::is_void<float &>, std::__or_<std::is_function<float>, std::is_array<float> >> {
+        typedef std::__or_<std::is_function<float>, std::is_array<float> > type;
+    };
 template<> struct conditional<false, std::__and_<std::__is_convertible_to_basic_ostream<std::basic_ostream<char> &>, std::__is_insertable<std::basic_ostream<char> &, char const (&)[7], void> >, std::__not_<std::is_lvalue_reference<std::basic_ostream<char> &> >> {
         typedef std::__not_<std::is_lvalue_reference<std::basic_ostream<char> &> > type;
     };
@@ -3054,6 +3084,27 @@ template<> struct conditional<false, std::__and_<std::__is_convertible_to_basic_
 template<> struct conditional<false, std::integral_constant<bool, false>, std::__is_empty_non_tuple<double>> {
         typedef std::__is_empty_non_tuple<double> type;
     };
+template<> struct conditional<true, std::is_constructible<double, const double &>, std::is_constructible<int, const int &>> {
+        typedef std::is_constructible<double, const double &> type;
+    };
+template<> struct conditional<true, std::is_convertible<const double &, double>, std::is_convertible<const int &, int>> {
+        typedef std::is_convertible<const double &, double> type;
+    };
+template<> struct conditional<false, std::is_void<const double &>, std::__or_<std::is_function<double>, std::is_array<double> >> {
+        typedef std::__or_<std::is_function<double>, std::is_array<double> > type;
+    };
+template<> struct conditional<false, std::is_function<double>, std::is_array<double>> {
+        typedef std::is_array<double> type;
+    };
+template<> struct conditional<true, std::is_constructible<double, double &>, std::is_constructible<int, int &>> {
+        typedef std::is_constructible<double, double &> type;
+    };
+template<> struct conditional<true, std::is_convertible<double &, double>, std::is_convertible<int &, int>> {
+        typedef std::is_convertible<double &, double> type;
+    };
+template<> struct conditional<false, std::is_void<double &>, std::__or_<std::is_function<double>, std::is_array<double> >> {
+        typedef std::__or_<std::is_function<double>, std::is_array<double> > type;
+    };
 template<> struct conditional<false, std::__and_<std::__is_convertible_to_basic_ostream<std::basic_ostream<char> &>, std::__is_insertable<std::basic_ostream<char> &, char const (&)[8], void> >, std::__not_<std::is_lvalue_reference<std::basic_ostream<char> &> >> {
         typedef std::__not_<std::is_lvalue_reference<std::basic_ostream<char> &> > type;
     };
@@ -3062,6 +3113,27 @@ template<> struct conditional<false, std::__and_<std::__is_convertible_to_basic_
     };
 template<> struct conditional<false, std::integral_constant<bool, false>, std::__is_empty_non_tuple<long double>> {
         typedef std::__is_empty_non_tuple<long double> type;
+    };
+template<> struct conditional<true, std::is_constructible<long double, const long double &>, std::is_constructible<int, const int &>> {
+        typedef std::is_constructible<long double, const long double &> type;
+    };
+template<> struct conditional<true, std::is_convertible<const long double &, long double>, std::is_convertible<const int &, int>> {
+        typedef std::is_convertible<const long double &, long double> type;
+    };
+template<> struct conditional<false, std::is_void<const long double &>, std::__or_<std::is_function<long double>, std::is_array<long double> >> {
+        typedef std::__or_<std::is_function<long double>, std::is_array<long double> > type;
+    };
+template<> struct conditional<false, std::is_function<long double>, std::is_array<long double>> {
+        typedef std::is_array<long double> type;
+    };
+template<> struct conditional<true, std::is_constructible<long double, long double &>, std::is_constructible<int, int &>> {
+        typedef std::is_constructible<long double, long double &> type;
+    };
+template<> struct conditional<true, std::is_convertible<long double &, long double>, std::is_convertible<int &, int>> {
+        typedef std::is_convertible<long double &, long double> type;
+    };
+template<> struct conditional<false, std::is_void<long double &>, std::__or_<std::is_function<long double>, std::is_array<long double> >> {
+        typedef std::__or_<std::is_function<long double>, std::is_array<long double> > type;
     };
 template<> struct conditional<false, std::__and_<std::__is_convertible_to_basic_ostream<std::basic_ostream<char> &>, std::__is_insertable<std::basic_ostream<char> &, char const (&)[13], void> >, std::__not_<std::is_lvalue_reference<std::basic_ostream<char> &> >> {
         typedef std::__not_<std::is_lvalue_reference<std::basic_ostream<char> &> > type;
@@ -3141,78 +3213,6 @@ template<> struct conditional<false, std::is_void<const std::__cxx11::basic_stri
 template<> struct conditional<false, std::__not_<std::is_convertible<const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > &, const char *> >, std::__not_<std::is_convertible<const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > *, const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > *> >> {
         typedef std::__not_<std::is_convertible<const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > *, const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > *> > type;
     };
-template<> struct conditional<true, std::is_constructible<float, const float &>, std::is_constructible<int, const int &>> {
-        typedef std::is_constructible<float, const float &> type;
-    };
-template<> struct conditional<false, std::is_void<const int &>, std::__or_<std::is_function<int>, std::is_array<int> >> {
-        typedef std::__or_<std::is_function<int>, std::is_array<int> > type;
-    };
-template<> struct conditional<false, std::is_function<int>, std::is_array<int>> {
-        typedef std::is_array<int> type;
-    };
-template<> struct conditional<true, std::is_convertible<const float &, float>, std::is_convertible<const int &, int>> {
-        typedef std::is_convertible<const float &, float> type;
-    };
-template<> struct conditional<false, std::is_void<const float &>, std::__or_<std::is_function<float>, std::is_array<float> >> {
-        typedef std::__or_<std::is_function<float>, std::is_array<float> > type;
-    };
-template<> struct conditional<false, std::is_function<float>, std::is_array<float>> {
-        typedef std::is_array<float> type;
-    };
-template<> struct conditional<true, std::is_constructible<float, float &>, std::is_constructible<int, int &>> {
-        typedef std::is_constructible<float, float &> type;
-    };
-template<> struct conditional<false, std::is_void<int &>, std::__or_<std::is_function<int>, std::is_array<int> >> {
-        typedef std::__or_<std::is_function<int>, std::is_array<int> > type;
-    };
-template<> struct conditional<true, std::is_convertible<float &, float>, std::is_convertible<int &, int>> {
-        typedef std::is_convertible<float &, float> type;
-    };
-template<> struct conditional<false, std::is_void<float &>, std::__or_<std::is_function<float>, std::is_array<float> >> {
-        typedef std::__or_<std::is_function<float>, std::is_array<float> > type;
-    };
-template<> struct conditional<true, std::is_constructible<double, const double &>, std::is_constructible<int, const int &>> {
-        typedef std::is_constructible<double, const double &> type;
-    };
-template<> struct conditional<true, std::is_convertible<const double &, double>, std::is_convertible<const int &, int>> {
-        typedef std::is_convertible<const double &, double> type;
-    };
-template<> struct conditional<false, std::is_void<const double &>, std::__or_<std::is_function<double>, std::is_array<double> >> {
-        typedef std::__or_<std::is_function<double>, std::is_array<double> > type;
-    };
-template<> struct conditional<false, std::is_function<double>, std::is_array<double>> {
-        typedef std::is_array<double> type;
-    };
-template<> struct conditional<true, std::is_constructible<double, double &>, std::is_constructible<int, int &>> {
-        typedef std::is_constructible<double, double &> type;
-    };
-template<> struct conditional<true, std::is_convertible<double &, double>, std::is_convertible<int &, int>> {
-        typedef std::is_convertible<double &, double> type;
-    };
-template<> struct conditional<false, std::is_void<double &>, std::__or_<std::is_function<double>, std::is_array<double> >> {
-        typedef std::__or_<std::is_function<double>, std::is_array<double> > type;
-    };
-template<> struct conditional<true, std::is_constructible<long double, const long double &>, std::is_constructible<int, const int &>> {
-        typedef std::is_constructible<long double, const long double &> type;
-    };
-template<> struct conditional<true, std::is_convertible<const long double &, long double>, std::is_convertible<const int &, int>> {
-        typedef std::is_convertible<const long double &, long double> type;
-    };
-template<> struct conditional<false, std::is_void<const long double &>, std::__or_<std::is_function<long double>, std::is_array<long double> >> {
-        typedef std::__or_<std::is_function<long double>, std::is_array<long double> > type;
-    };
-template<> struct conditional<false, std::is_function<long double>, std::is_array<long double>> {
-        typedef std::is_array<long double> type;
-    };
-template<> struct conditional<true, std::is_constructible<long double, long double &>, std::is_constructible<int, int &>> {
-        typedef std::is_constructible<long double, long double &> type;
-    };
-template<> struct conditional<true, std::is_convertible<long double &, long double>, std::is_convertible<int &, int>> {
-        typedef std::is_convertible<long double &, long double> type;
-    };
-template<> struct conditional<false, std::is_void<long double &>, std::__or_<std::is_function<long double>, std::is_array<long double> >> {
-        typedef std::__or_<std::is_function<long double>, std::is_array<long double> > type;
-    };
     template <typename _Iftrue, typename _Iffalse> struct conditional<false, _Iftrue, _Iffalse> {
         typedef _Iffalse type;
     };
@@ -3254,7 +3254,7 @@ template<> struct conditional<false, std::is_void<long double &>, std::__or_<std
         static_assert(__declval_protector<_Tp>::__stop, "declval() must not be used!");
         return __declval<_Tp>(0);
     }
-    template<> auto declval<std::allocator<char> &>() noexcept -> decltype(__declval<std::allocator<char> &>(0))    template<> auto declval<std::allocator<wchar_t> &>() noexcept -> decltype(__declval<std::allocator<wchar_t> &>(0))    template<> auto declval<std::allocator<char16_t> &>() noexcept -> decltype(__declval<std::allocator<char16_t> &>(0))    template<> auto declval<std::allocator<char32_t> &>() noexcept -> decltype(__declval<std::allocator<char32_t> &>(0))    template<> auto declval<const char *const &>() noexcept -> decltype(__declval<const char *const &>(0))    template<> auto declval<const char *const *>() noexcept -> decltype(__declval<const char *const *>(0))    template<> auto declval<const wchar_t *const &>() noexcept -> decltype(__declval<const wchar_t *const &>(0))    template<> auto declval<const wchar_t *const *>() noexcept -> decltype(__declval<const wchar_t *const *>(0))    template<> auto declval<const char16_t *const &>() noexcept -> decltype(__declval<const char16_t *const &>(0))    template<> auto declval<const char16_t *const *>() noexcept -> decltype(__declval<const char16_t *const *>(0))    template<> auto declval<const char32_t *const &>() noexcept -> decltype(__declval<const char32_t *const &>(0))    template<> auto declval<const char32_t *const *>() noexcept -> decltype(__declval<const char32_t *const *>(0))    template<> auto declval<const char &>() noexcept -> decltype(__declval<const char &>(0))    template<> auto declval<const int &>() noexcept -> decltype(__declval<const int &>(0))    template<> auto declval<std::basic_istream<char> *>() noexcept -> decltype(__declval<std::basic_istream<char> *>(0))    template<> auto declval<std::basic_istream<wchar_t> *>() noexcept -> decltype(__declval<std::basic_istream<wchar_t> *>(0))    template<> auto declval<std::basic_ostream<char> *>() noexcept -> decltype(__declval<std::basic_ostream<char> *>(0))    template<> auto declval<std::random_access_iterator_tag>() noexcept -> decltype(__declval<std::random_access_iterator_tag>(0))    template<> auto declval<char *const &>() noexcept -> decltype(__declval<char *const &>(0))    template<> auto declval<char *const *>() noexcept -> decltype(__declval<char *const *>(0))    template<> auto declval<wchar_t *const &>() noexcept -> decltype(__declval<wchar_t *const &>(0))    template<> auto declval<wchar_t *const *>() noexcept -> decltype(__declval<wchar_t *const *>(0))    template<> auto declval<const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > &>() noexcept -> decltype(__declval<const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > &>(0))    template<> auto declval<const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > *>() noexcept -> decltype(__declval<const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > *>(0))    template<> auto declval<const float &>() noexcept -> decltype(__declval<const float &>(0))    template<> auto declval<int &>() noexcept -> decltype(__declval<int &>(0))    template<> auto declval<float &>() noexcept -> decltype(__declval<float &>(0))    template<> auto declval<const double &>() noexcept -> decltype(__declval<const double &>(0))    template<> auto declval<double &>() noexcept -> decltype(__declval<double &>(0))    template<> auto declval<const long double &>() noexcept -> decltype(__declval<const long double &>(0))    template<> auto declval<long double &>() noexcept -> decltype(__declval<long double &>(0))    template<> struct __make_unsigned<wchar_t> {
+    template<> auto declval<std::allocator<char> &>() noexcept -> decltype(__declval<std::allocator<char> &>(0))    template<> auto declval<std::allocator<wchar_t> &>() noexcept -> decltype(__declval<std::allocator<wchar_t> &>(0))    template<> auto declval<std::allocator<char16_t> &>() noexcept -> decltype(__declval<std::allocator<char16_t> &>(0))    template<> auto declval<std::allocator<char32_t> &>() noexcept -> decltype(__declval<std::allocator<char32_t> &>(0))    template<> auto declval<const char *const &>() noexcept -> decltype(__declval<const char *const &>(0))    template<> auto declval<const char *const *>() noexcept -> decltype(__declval<const char *const *>(0))    template<> auto declval<const wchar_t *const &>() noexcept -> decltype(__declval<const wchar_t *const &>(0))    template<> auto declval<const wchar_t *const *>() noexcept -> decltype(__declval<const wchar_t *const *>(0))    template<> auto declval<const char16_t *const &>() noexcept -> decltype(__declval<const char16_t *const &>(0))    template<> auto declval<const char16_t *const *>() noexcept -> decltype(__declval<const char16_t *const *>(0))    template<> auto declval<const char32_t *const &>() noexcept -> decltype(__declval<const char32_t *const &>(0))    template<> auto declval<const char32_t *const *>() noexcept -> decltype(__declval<const char32_t *const *>(0))    template<> auto declval<const char &>() noexcept -> decltype(__declval<const char &>(0))    template<> auto declval<const int &>() noexcept -> decltype(__declval<const int &>(0))    template<> auto declval<std::basic_istream<char> *>() noexcept -> decltype(__declval<std::basic_istream<char> *>(0))    template<> auto declval<std::basic_istream<wchar_t> *>() noexcept -> decltype(__declval<std::basic_istream<wchar_t> *>(0))    template<> auto declval<const float &>() noexcept -> decltype(__declval<const float &>(0))    template<> auto declval<int &>() noexcept -> decltype(__declval<int &>(0))    template<> auto declval<float &>() noexcept -> decltype(__declval<float &>(0))    template<> auto declval<std::basic_ostream<char> *>() noexcept -> decltype(__declval<std::basic_ostream<char> *>(0))    template<> auto declval<const double &>() noexcept -> decltype(__declval<const double &>(0))    template<> auto declval<double &>() noexcept -> decltype(__declval<double &>(0))    template<> auto declval<const long double &>() noexcept -> decltype(__declval<const long double &>(0))    template<> auto declval<long double &>() noexcept -> decltype(__declval<long double &>(0))    template<> auto declval<std::random_access_iterator_tag>() noexcept -> decltype(__declval<std::random_access_iterator_tag>(0))    template<> auto declval<char *const &>() noexcept -> decltype(__declval<char *const &>(0))    template<> auto declval<char *const *>() noexcept -> decltype(__declval<char *const *>(0))    template<> auto declval<wchar_t *const &>() noexcept -> decltype(__declval<wchar_t *const &>(0))    template<> auto declval<wchar_t *const *>() noexcept -> decltype(__declval<wchar_t *const *>(0))    template<> auto declval<const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > &>() noexcept -> decltype(__declval<const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > &>(0))    template<> auto declval<const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > *>() noexcept -> decltype(__declval<const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > *>(0))    template<> struct __make_unsigned<wchar_t> {
         using __type = typename __make_unsigned_selector<wchar_t, false, true>::__type;
     };
     template<> struct __make_signed<wchar_t> {
@@ -3710,29 +3710,29 @@ namespace std {
     template <typename _Tp> constexpr _Tp &&forward(typename std::remove_reference<_Tp>::type &__t) noexcept     {
         return static_cast<_Tp &&>(__t);
     }
-    template<> constexpr int &&forward<int &&>(typename std::remove_reference<int &&>::type &__t) noexcept     {
-        return static_cast<int &&>(__t);
-    }
-    template<> constexpr float &&forward<float &&>(typename std::remove_reference<float &&>::type &__t) noexcept     {
-        return static_cast<float &&>(__t);
-    }
-    template<> constexpr double &&forward<double &&>(typename std::remove_reference<double &&>::type &__t) noexcept     {
-        return static_cast<double &&>(__t);
-    }
-    template<> constexpr long double &&forward<long double &&>(typename std::remove_reference<long double &&>::type &__t) noexcept     {
-        return static_cast<long double &&>(__t);
-    }
     template<> constexpr int &forward<int &>(typename std::remove_reference<int &>::type &__t) noexcept     {
         return static_cast<int &>(__t);
     }
     template<> constexpr float &forward<float &>(typename std::remove_reference<float &>::type &__t) noexcept     {
         return static_cast<float &>(__t);
     }
+    template<> constexpr int &&forward<int &&>(typename std::remove_reference<int &&>::type &__t) noexcept     {
+        return static_cast<int &&>(__t);
+    }
+    template<> constexpr float &&forward<float &&>(typename std::remove_reference<float &&>::type &__t) noexcept     {
+        return static_cast<float &&>(__t);
+    }
     template<> constexpr double &forward<double &>(typename std::remove_reference<double &>::type &__t) noexcept     {
         return static_cast<double &>(__t);
     }
+    template<> constexpr double &&forward<double &&>(typename std::remove_reference<double &&>::type &__t) noexcept     {
+        return static_cast<double &&>(__t);
+    }
     template<> constexpr long double &forward<long double &>(typename std::remove_reference<long double &>::type &__t) noexcept     {
         return static_cast<long double &>(__t);
+    }
+    template<> constexpr long double &&forward<long double &&>(typename std::remove_reference<long double &&>::type &__t) noexcept     {
+        return static_cast<long double &&>(__t);
     }
     template <typename _Tp> constexpr _Tp &&forward(typename std::remove_reference<_Tp>::type &&__t) noexcept     {
         static_assert(!std::is_lvalue_reference<_Tp>::value, "template argument substituting _Tp is an lvalue reference type");
@@ -19640,7 +19640,7 @@ template<> class tuple<<int, long double>> : public _Tuple_impl<0, int, long dou
         return __make_from_tuple_impl<_Tp>(std::forward<_Tuple>(__t), make_index_sequence<tuple_size_v<decay_t<_Tuple> > >({}));
     }
 }
-template <typename T> std::tuple<int, T> maceps() {
+template <typename T> constexpr std::tuple<int, T> maceps() {
     T e = 1;
     T one = 1;
     T half = 0.5;
@@ -19652,7 +19652,7 @@ template <typename T> std::tuple<int, T> maceps() {
         }
     return std::make_tuple(prec, e);
 }
-template<> std::tuple<int, float> maceps<float>() {
+template<> constexpr std::tuple<int, float> maceps<float>() {
     float e = 1;
     float one = 1;
     float half = 0.5;
@@ -19664,7 +19664,7 @@ template<> std::tuple<int, float> maceps<float>() {
         }
     return std::make_tuple(prec, e);
 }
-template<> std::tuple<int, double> maceps<double>() {
+template<> constexpr std::tuple<int, double> maceps<double>() {
     double e = 1;
     double one = 1;
     double half = 0.5;
@@ -19676,7 +19676,7 @@ template<> std::tuple<int, double> maceps<double>() {
         }
     return std::make_tuple(prec, e);
 }
-template<> std::tuple<int, long double> maceps<long double>() {
+template<> constexpr std::tuple<int, long double> maceps<long double>() {
     long double e = 1;
     long double one = 1;
     long double half = 0.5;
