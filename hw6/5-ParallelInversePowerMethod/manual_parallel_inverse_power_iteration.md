@@ -61,6 +61,8 @@ First the matrix A is displayed, then the smalled eigenvalue is displayed.
 
 **Implementation/Code:** The following is the code for parallel_inverse_power_iteration
 
+The code uses the parallel matrix vector multiply previously written in assignment 3.7
+
 ``` cpp
 template <typename T>
 T parallel_inverse_power_iteration(Matrix<T> const& A, unsigned int const& MAX)
