@@ -89,3 +89,14 @@ title: MATH 4610 Homework Table of Contents
 | **Problem 7**     | [Parallel Jacobi Iteration](./hw5/7-ParallelJacobiIteration/manual_parallel_jacobi_iteration.md)|
 | **Problem 8**     | [Parallel Gauss Seidel](./hw5/8-ParallelGaussSeidel/manual_parallel_gauss_sidel.md)|
 | **Problem 9**     | [Parallel Conjugate Gradient](./hw5/9-ParallelConjugateGradient/manual_parallel_conjugate_gradient.md)|
+
+|| **Homework** 6 <br> _due: 14 December 2018_ <br>|
+| :-----------------|:---------------------|
+| **Problem 1**     | [Power Method](./hw6/1-PowerMethod/manual_power_iteration.md)|
+| **Problem 2**     | [Inverse Power Method](./hw6/2-.md)|
+| **Problem 3**     | [2 Condition](./hw6/3-.md)|
+| **Problem 4**     | [Parallel Power Method](./hw6/4-.md)|
+| **Problem 5**     | [Parallel Inverse Power Method](./hw6/5-.md)|
+| **Problem 6**     | [Parallel 2 Condition](./hw6/6-.md)|
+| **Problem 7**     | [2 Condition Comparison](./hw6/7-.md)|
+| **Problem 8**     | [2 Condition Comparison pt 2](./hw6/8-.md)|

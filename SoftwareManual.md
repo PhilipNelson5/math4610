@@ -74,3 +74,6 @@ title: MATH 4610 Software Manual
 * Parallel Jacobi Iteration - [parallel_jacobi_iteration](./hw5/7-ParallelJacobiIteration/manual_parallel_jacobi_iteration.md)
 * Parallel Gauss Seidel - [parallel_gauss_seidel](./hw5/8-ParallelGaussSeidel/manual_parallel_gauss_sidel.md)|
 * Parallel Conjugate Gradient - [parallel_conjugate_gradient](./hw5/9-ParallelConjugateGradient/manual_parallel_conjugate_gradient.md)|
+
+**Eigenvalue Methods**
+* Power Method[power_method](./hw6/1-PowerMethod/manual_power_iteration.md)
