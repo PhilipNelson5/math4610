@@ -16,12 +16,17 @@ T power_iteration(Matrix<T> const& A, unsigned int const& MAX)
 
   for (auto i = 0u; i < MAX; ++i)
   {
-    auto Ab_k = A * v_k;
-    auto norm = p_norm(Ab_k, 2);
-    auto v_k1 = Ab_k / norm;
+    v_k = A * v_k;
+    v_k = v_k / p_norm(v_k, 2);
   }
 
-  return p_norm(A * v_k, 2);
+  auto pointwise = v_k * (A * v_k);
+  auto lambda = std::accumulate(
+    std::begin(pointwise), std::end(pointwise), T(0.0), [](auto acc, auto val) {
+      return acc + val;
+    });
+
+  return lambda;
 }
 
 #endif

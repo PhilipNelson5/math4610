@@ -43,14 +43,14 @@ int main()
 **Output** from the lines above
 ```
 A
-|      -13.6      -4.6     -5.85      4.77     -3.93 |
-|       -4.6     -7.73     -7.01    -0.677       2.8 |
-|      -5.85     -7.01      7.82     -3.39      7.74 |
-|       4.77    -0.677     -3.39      8.94      6.12 |
-|      -3.93       2.8      7.74      6.12      10.1 |
+|       10.2     -3.01      9.58      -5.4      7.28 |
+|      -3.01      11.8       6.1      5.54      6.94 |
+|       9.58       6.1      12.1      5.53      5.25 |
+|       -5.4      5.54      5.53      8.09      3.99 |
+|       7.28      6.94      5.25      3.99      9.36 |
 
 Largest Eigenvalue
-918
+29.1
 ```
 
 _explanation of output_:
@@ -69,12 +69,16 @@ T power_iteration(Matrix<T> const& A, unsigned int const& MAX)
 
   for (auto i = 0u; i < MAX; ++i)
   {
-    auto Ab_k = A * v_k;
-    auto norm = p_norm(Ab_k, 2);
-    auto v_k1 = Ab_k / norm;
+    v_k = A * v_k;
+    v_k = v_k / p_norm(v_k, 2);
   }
 
-  return p_norm(A * v_k, 2);
+  auto pointwise = v_k * (A * v_k);
+  auto lambda = std::accumulate(
+    std::begin(pointwise), std::end(pointwise), T(0.0), [](auto acc, auto val) {
+      return acc + val;
+    });
+  return lambda;
 }
 ```
 

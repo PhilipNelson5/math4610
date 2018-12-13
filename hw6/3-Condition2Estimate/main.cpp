@@ -1,7 +1,7 @@
 #include "../../hw3/3-vectorOperations/vectorOperations.hpp"
 #include "../../hw3/5-matrixOperations/matrixOperations.hpp"
 #include "../../hw5/2-MatrixGenerator/matrixGenerator.hpp"
-#include "powerIteration.hpp"
+#include "condition2Estimate.hpp"
 #include <vector>
 
 template <typename T>
@@ -10,9 +10,8 @@ using Matrix = std::vector<std::vector<T>>;
 int main()
 {
   auto A = generate_square_symmetric_diagonally_dominant_matrix(5u);
-  //Matrix<double> A = {{1, -3, 3}, {3, -5, 3}, {6, -6, 4}};
 
-  auto eigval = power_iteration(A, 1000u);
+  auto eigval = condition_2_estimate(A, 1000u);
   std::cout << "A\n" << A << std::endl;
-  std::cout << "Largest Eigenvalue\n" << eigval << std::endl;
+  std::cout << "2 Condition Number\n" << eigval << std::endl;
 }
