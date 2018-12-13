@@ -63,6 +63,6 @@ parallel algorithm:
 
 _explanation of output_:
 
-The results were not greatly in favor of the parallel algorithm. Both algorithms performed similarly with the parallel version outperforming the serial version by a small margin. In the output from above, the parallel version was only 1.4\% faster.
+The results were not greatly in favor of the parallel algorithm. Both algorithms performed similarly with the parallel version outperforming the serial version by a small margin. In the output from above, the parallel version was only 1.4% faster.
 
 **Last Modified:** December 2018
