@@ -95,7 +95,7 @@ title: MATH 4610 Homework Table of Contents
 | **Problem 1**     | [Power Method](./hw6/1-PowerMethod/manual_power_iteration.md)|
 | **Problem 2**     | [Inverse Power Method](./hw6/2-InversePowerMethod/manual_inverse_power_iteration.md)|
 | **Problem 3**     | [2 Condition Number Estimate](./hw6/3-Condition2Estimate/manual_condition_estimate.md)|
-| **Problem 4**     | [Parallel Power Method](./hw6/4-.md)|
+| **Problem 4**     | [Parallel Power Method](./hw6/4-ParallelPowerMethod/manual_parallel_power_iteration.md)|
 | **Problem 5**     | [Parallel Inverse Power Method](./hw6/5-.md)|
 | **Problem 6**     | [Parallel 2 Condition](./hw6/6-.md)|
 | **Problem 7**     | [2 Condition Comparison](./hw6/7-.md)|

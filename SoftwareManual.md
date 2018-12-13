@@ -79,3 +79,4 @@ title: MATH 4610 Software Manual
 * Power Method - [power_method](./hw6/1-PowerMethod/manual_power_iteration.md)
 * Inverse Power Method - [inverse_power_iteration](./hw6/2-InversePowerMethod/manual_inverse_power_iteration.md)
 * 2 Condition Number Estimate - [condition_2_estimate](./hw6/3-Condition2Estimate/manual_condition_estimate.md)
+* Parallel Power Method - [parallel_power_iteration](./hw6/4-ParallelPowerMethod/manual_parallel_power_iteration.md)
