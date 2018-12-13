@@ -97,6 +97,6 @@ title: MATH 4610 Homework Table of Contents
 | **Problem 3**     | [2 Condition Number Estimate](./hw6/3-Condition2Estimate/manual_condition_estimate.md)|
 | **Problem 4**     | [Parallel Power Method](./hw6/4-ParallelPowerMethod/manual_parallel_power_iteration.md)|
 | **Problem 5**     | [Parallel Inverse Power Method](./hw6/5-ParallelInversePowerMethod/manual_parallel_inverse_power_iteration.md)|
-| **Problem 6**     | [Parallel 2 Condition](./hw6/6-.md)|
+| **Problem 6**     | [Parallel 2 Condition](./hw6/6-Parallel2ConditionEstimate/manual_parallel_condition_estimate.md)|
 | **Problem 7**     | [2 Condition Comparison](./hw6/7-.md)|
 | **Problem 8**     | [2 Condition Comparison pt 2](./hw6/8-.md)|

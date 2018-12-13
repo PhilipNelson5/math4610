@@ -21,7 +21,7 @@ T parallel_power_iteration(Matrix<T> const& A, unsigned int const& MAX)
     v_k = v_k / p_norm(v_k, 2);
   }
 
-  auto pointwise = v_k * parallel_multiply(A * v_k);
+  auto pointwise = v_k * parallel_multiply(A, v_k);
   auto lambda = std::accumulate(
     std::begin(pointwise), std::end(pointwise), T(0.0), [](auto acc, auto val) {
       return acc + val;

@@ -1,7 +1,7 @@
 #include "../../hw3/3-vectorOperations/vectorOperations.hpp"
 #include "../../hw3/5-matrixOperations/matrixOperations.hpp"
 #include "../../hw5/2-MatrixGenerator/matrixGenerator.hpp"
-#include "condition2Estimate.hpp"
+#include "parallelCondition2Estimate.hpp"
 #include <vector>
 
 template <typename T>
@@ -11,7 +11,7 @@ int main()
 {
   auto A = generate_square_symmetric_diagonally_dominant_matrix(5u);
 
-  auto conditionNum = condition_2_estimate(A, 1000u);
+  auto condtitionNum = parallel_condition_2_estimate(A, 1000u);
   std::cout << "A\n" << A << std::endl;
-  std::cout << "2 Condition Number\n" << conditionNum << std::endl;
+  std::cout << "2 Condition Number\n" << condtitionNum << std::endl;
 }
