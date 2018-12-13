@@ -1,5 +1,5 @@
-#ifndef INVERSE_POWER_ITERATION_HPP
-#define INVERSE_POWER_ITERATION_HPP
+#ifndef PARALLEL_INVERSE_POWER_ITERATION_HPP
+#define PARALLEL_INVERSE_POWER_ITERATION_HPP
 
 #include "../../hw3/1-vectorNorms/vectorNorms.hpp"
 #include "../../hw4/7-SolveSystemLUFactorization/solveLinearSystemLU.hpp"

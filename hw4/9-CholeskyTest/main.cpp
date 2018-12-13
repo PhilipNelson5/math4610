@@ -12,10 +12,11 @@ int main()
   Matrix<double> C = rand_double_NxM(n, n, -10, 10);
 
   auto A = transpose(C) * C;
-  auto start = std::chrono::high_resolution_clock::now();
 
+  auto start = std::chrono::high_resolution_clock::now();
   auto L = cholesky_factorization(A);
   auto end = std::chrono::high_resolution_clock::now();
+
   auto LLT = L * transpose(L);
 
   auto result = std::chrono::duration<double, std::milli>(end - start).count();
