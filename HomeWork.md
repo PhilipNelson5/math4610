@@ -93,7 +93,7 @@ title: MATH 4610 Homework Table of Contents
 || **Homework** 6 <br> _due: 14 December 2018_ <br>|
 | :-----------------|:---------------------|
 | **Problem 1**     | [Power Method](./hw6/1-PowerMethod/manual_power_iteration.md)|
-| **Problem 2**     | [Inverse Power Method](./hw6/2-.md)|
+| **Problem 2**     | [Inverse Power Method](./hw6/2-InversePowerMethod/manual_inverse_power_iteration.md)|
 | **Problem 3**     | [2 Condition](./hw6/3-.md)|
 | **Problem 4**     | [Parallel Power Method](./hw6/4-.md)|
 | **Problem 5**     | [Parallel Inverse Power Method](./hw6/5-.md)|

@@ -1,7 +1,6 @@
 #ifndef POWER_ITERATION_HPP
 #define POWER_ITERATION_HPP
 
-#include "../../hw1/1-maceps/maceps.hpp"
 #include "../../hw3/1-vectorNorms/vectorNorms.hpp"
 #include <vector>
 

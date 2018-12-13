@@ -72,8 +72,9 @@ title: MATH 4610 Software Manual
 * Gauss Seidel - [gauss_seidel](./hw5/4-GaussSeidel/manual_gauss_sidel.md)
 * Conjugate Gradient / Steepest Descent - [conjugate_gradient](./hw5/5-SteepestDescent/manual_conjugate_gradient.md)
 * Parallel Jacobi Iteration - [parallel_jacobi_iteration](./hw5/7-ParallelJacobiIteration/manual_parallel_jacobi_iteration.md)
-* Parallel Gauss Seidel - [parallel_gauss_seidel](./hw5/8-ParallelGaussSeidel/manual_parallel_gauss_sidel.md)|
-* Parallel Conjugate Gradient - [parallel_conjugate_gradient](./hw5/9-ParallelConjugateGradient/manual_parallel_conjugate_gradient.md)|
+* Parallel Gauss Seidel - [parallel_gauss_seidel](./hw5/8-ParallelGaussSeidel/manual_parallel_gauss_sidel.md)
+* Parallel Conjugate Gradient - [parallel_conjugate_gradient](./hw5/9-ParallelConjugateGradient/manual_parallel_conjugate_gradient.md)
 
 **Eigenvalue Methods**
 * Power Method[power_method](./hw6/1-PowerMethod/manual_power_iteration.md)
+* Inverse Power Method[inverse_power_iteration](./hw6/2-InversePowerMethod/manual_inverse_power_iteration.md)
