@@ -13,5 +13,5 @@ int main()
 
   auto eigval = inverse_power_iteration(A, 1000u);
   std::cout << "A\n" << A << std::endl;
-  std::cout << "Largest Eigenvalue\n" << eigval << std::endl;
+  std::cout << "Smallest Eigenvalue\n" << eigval << std::endl;
 }

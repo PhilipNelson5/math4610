@@ -36,7 +36,7 @@ int main()
 
   auto eigval = inverse_power_iteration(A, 1000u);
   std::cout << "A\n" << A << std::endl;
-  std::cout << "Largest Eigenvalue\n" << eigval << std::endl;
+  std::cout << "Smallest Eigenvalue\n" << eigval << std::endl;
 }
 ```
 
@@ -49,7 +49,7 @@ A
 |      -6.44      7.63      6.61      8.36     -3.67 |
 |        8.3     -8.81     -7.91     -3.67       -15 |
 
-Largest Eigenvalue
+Smallest Eigenvalue
 1.98
 ```
 
